@@ -44,7 +44,7 @@ class Branch extends React.Component {
         <br />{" "}
         {key === 1
           ? body.map((b, i) =>
-              <text
+              <span
                 style={{
                   color: "gray"
                 }}
@@ -52,11 +52,11 @@ class Branch extends React.Component {
               >
                 {b.Name}: {b.Type}
                 <br />
-              </text>
+              </span>
             )
           : key === 2
             ? body.map((b, i) =>
-                <text
+                <span
                   key={i}
                   style={{
                     color: "gray"
@@ -65,15 +65,15 @@ class Branch extends React.Component {
                   Type: {b.Name}
                   <br />
                   <hr />
-                </text>
+                </span>
               )
-            : <text
+            : <span
                 style={{
                   color: "gray"
                 }}
               >
                 {body}
-              </text>}
+              </span>}
       </div>
     );
   }

@@ -24,14 +24,14 @@ export default class ExampleFile extends React.Component {
         }}
       >
         <div className="exIcons">
-          <text
+          <span
             style={{
               opacity: "0.45",
               paddingRight: "20px"
             }}
           >
             {dynName}
-          </text>
+          </span>
           <EditButtonFiles
             node={node}
             turnOnModal={props.turnOnModal}
