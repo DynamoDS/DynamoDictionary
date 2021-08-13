@@ -12,6 +12,7 @@ env:
   - DOCKER_CONTAINER : "build-dictionary"
   - URL_REPO_TOOLS : "https://github.com/DynamoDS/DynamoDictionary.git"
   - BRANCH_TOOLS : "cicdresources"
+  - HARMONY_REPO : "DynamoDS/DynamoDictionary"
 
 timeout: 420
 check_changelog_updated_on_pr: false
@@ -33,6 +34,7 @@ soc2:
   run_on_any_branch : true
   harmony:
     hidden_email_list: dynamo_ws_access
+    repository: env.HARMONY_REPO
     third_party_lib_paths:
       - "node_modules"
 
