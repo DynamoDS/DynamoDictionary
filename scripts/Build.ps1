@@ -17,7 +17,7 @@ try
 
    Set-Location $WorkspacePath
 
-   npm install
+   npm ci --production
 
    if($LASTEXITCODE -ne 0)
    {
