@@ -17,7 +17,7 @@ try
 
    Set-Location $WorkspacePath
 
-   npm ci --production
+   npm install
 
    if($LASTEXITCODE -ne 0)
    {
@@ -29,6 +29,14 @@ try
    if($LASTEXITCODE -ne 0)
    {
       throw "Build Failed"
+   }
+
+   # Remove dev dependencies so that only prod remains 
+   npm prune --production
+
+   if($LASTEXITCODE -ne 0)
+   {
+      throw "Prune Dev Dependencies Failed"
    }
 
    $indexPath = "$WorkspacePath\build\index.html"
