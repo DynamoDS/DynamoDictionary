@@ -1,0 +1,36 @@
+<Workspace Version="1.2.1.3083" X="-37.1200508943948" Y="16.3185302266079" zoom="1.11135753276951" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <DSRevitNodesUI.FamilyTypes guid="0b4544e9-1b98-47e8-b8e6-12cb765b29af" type="DSRevitNodesUI.FamilyTypes" nickname="Family Types" x="78.4962026083588" y="307.733498573961" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="36:M_Pile-Steel Pipe:600mm Diameter" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8098c8d5-9585-4241-9fec-782192e76c44" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.OverrideColorInView" x="678.350823462189" y="307.733498573961" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Element.OverrideColorInView@DSCore.Color">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.ColorRange guid="6d454dac-485e-48f2-9403-2338137aae5b" type="CoreNodeModels.ColorRange" nickname="Color Range" x="365.788958454891" y="406.422023744555" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+      <PortInfo index="1" default="False" />
+      <PortInfo index="2" default="False" />
+    </CoreNodeModels.ColorRange>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="f1cde6f2-5ddf-49d1-b900-5ff1dcc39747" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="78.4962026083588" y="406.422023744555" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="a = 200;&#xA;r = 141;&#xA;g = 198;&#xA;b = 217;&#xA;Color.ByARGB(a,r,g,b);&#xA;0;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e7a8db69-4183-492e-aa3f-42034a123cfc" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyInstance.ByFamilyType" x="386.588958454891" y="307.733498573961" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.FamilyInstance.ByFamilyType@Revit.Elements.FamilyType">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="0b4544e9-1b98-47e8-b8e6-12cb765b29af" start_index="0" end="e7a8db69-4183-492e-aa3f-42034a123cfc" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="6d454dac-485e-48f2-9403-2338137aae5b" start_index="0" end="8098c8d5-9585-4241-9fec-782192e76c44" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f1cde6f2-5ddf-49d1-b900-5ff1dcc39747" start_index="4" end="6d454dac-485e-48f2-9403-2338137aae5b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f1cde6f2-5ddf-49d1-b900-5ff1dcc39747" start_index="5" end="6d454dac-485e-48f2-9403-2338137aae5b" end_index="1" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="f1cde6f2-5ddf-49d1-b900-5ff1dcc39747" start_index="5" end="6d454dac-485e-48f2-9403-2338137aae5b" end_index="2" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e7a8db69-4183-492e-aa3f-42034a123cfc" start_index="0" end="8098c8d5-9585-4241-9fec-782192e76c44" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

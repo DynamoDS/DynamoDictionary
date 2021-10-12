@@ -1,0 +1,271 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Reduce",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "8b21469ae7bf422a89c5e4455198a69a",
+      "Inputs": [
+        {
+          "Id": "5c1161dd8deb41e093f0874665019a1b",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "00dfd3b832724ea78b1f679caa3a21d3",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "+@var[]..[],var[]..[]",
+      "Id": "a0e85791fd8d4f56b13051f557dabbad",
+      "Inputs": [
+        {
+          "Id": "80fac5f4f9d34197979983a96a10413c",
+          "Name": "x",
+          "Description": "x value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3cf062630dd7498ba7c28e05dc292962",
+          "Name": "y",
+          "Description": "y value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6a8651c5bbd943b388cdf83173609cd5",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..5..1;",
+      "Id": "90184e0b923947f5822b3118e799a845",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "358835dcfa8641a691d18f41445336da",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.HigherOrder.Reduce, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "9644ee77f8a54692b2b6a8be0fa51e79",
+      "Inputs": [
+        {
+          "Id": "b5d6e0d0fc5c41a9937df419b027cba5",
+          "Name": "reductor",
+          "Description": "Reductor Function: accepts one item from each list being reduced, and the current accumulated value, result is the new accumulated value.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1ab3272f90b64889a67130c21ee10e18",
+          "Name": "seed",
+          "Description": "Starting accumulated value, to be passed into the first call to the Reductor function.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "aafacbbc73964815b1673ce85cbffdc5",
+          "Name": "list1",
+          "Description": "List #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "79307883e0064752aea8adca63307c19",
+          "Name": "reduced",
+          "Description": "Reduced lists",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Reduces a list into a new value by combining each element with an accumulated result."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "10;",
+      "Id": "ccdc9234de204b1c85ad77e6bb56d470",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6bd2fb83dd4f433598825fb2c9ab37e4",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "6a8651c5bbd943b388cdf83173609cd5",
+      "End": "b5d6e0d0fc5c41a9937df419b027cba5",
+      "Id": "d8ce0898dfcc42ea87ba6df7d852ab41"
+    },
+    {
+      "Start": "358835dcfa8641a691d18f41445336da",
+      "End": "aafacbbc73964815b1673ce85cbffdc5",
+      "Id": "9f790111f23e446caefc9bcfae300e1f"
+    },
+    {
+      "Start": "79307883e0064752aea8adca63307c19",
+      "End": "5c1161dd8deb41e093f0874665019a1b",
+      "Id": "60a16249111c4d0aaee1df734bf9a3f2"
+    },
+    {
+      "Start": "6bd2fb83dd4f433598825fb2c9ab37e4",
+      "End": "1ab3272f90b64889a67130c21ee10e18",
+      "Id": "9094266591564bdf93a231af8905e34e"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "8b21469ae7bf422a89c5e4455198a69a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 721.751111175265,
+        "Y": 116.51832522011605
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "+",
+        "Id": "a0e85791fd8d4f56b13051f557dabbad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 182.751111175265,
+        "Y": 19.518325220116054
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "90184e0b923947f5822b3118e799a845",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 182.751111175265,
+        "Y": 262.73165855344939
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Reduce",
+        "Id": "9644ee77f8a54692b2b6a8be0fa51e79",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 451.751111175265,
+        "Y": 116.51832522011605
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ccdc9234de204b1c85ad77e6bb56d470",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 182.751111175265,
+        "Y": 153.73165855344939
+      }
+    ],
+    "Annotations": [],
+    "X": 177.691564990491,
+    "Y": 36.8868999272115,
+    "Zoom": 1.26328763388833
+  }
+}

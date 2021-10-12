@@ -1,0 +1,241 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "FromPixels",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.FromPixels@DSCore.Color[][]",
+      "Id": "3a7c89f1a9be47e4bfc055258f905f1a",
+      "Inputs": [
+        {
+          "Id": "d513c726f70c47c8a3ddf39cb14805c6",
+          "Name": "colors",
+          "Description": "2d rectangular list of colors representing the pixels.\n\nColor[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2a066e846cd548458a10896ee5ce48ae",
+          "Name": "image",
+          "Description": "Image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Constructs an image from a 2d list of pixels.\n\nImage.FromPixels (colors: Color[][]): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Color.ByARGB@int,int,int,int",
+      "Id": "8278afa27d2341acb593d8bc1e3a64ce",
+      "Inputs": [
+        {
+          "Id": "aba6dfaba21e4e68bdacdf283e01f09c",
+          "Name": "a",
+          "Description": "The alpha value.\n\nint\nDefault value : 255",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "00dd2f50e5764862ad9a9eb291f529dd",
+          "Name": "r",
+          "Description": "The red value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5d250ce4b2d942d1b133e1e758e91cbf",
+          "Name": "g",
+          "Description": "The green value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0a4ee3513fd24396b773a1761d375ac2",
+          "Name": "b",
+          "Description": "The blue value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "324fe477e9604ea9a016627afc62995d",
+          "Name": "color",
+          "Description": "Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Construct a color by alpha, red, green, and blue components.\n\nColor.ByARGB (a: int = 255, r: int = 0, g: int = 0, b: int = 0): Color"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..255..1;",
+      "Id": "df695e8d92b040a2a0b2834f7020e9d0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "90fbe800e00a492dabc62eb0aa74387b",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "756e183709e44a1f9e325460846b8933",
+      "Inputs": [
+        {
+          "Id": "c4b8905a1c4949a3acf5826a6425ae7c",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "441525f60400441e92e7a6e44c4d4bb5",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2a066e846cd548458a10896ee5ce48ae",
+      "End": "c4b8905a1c4949a3acf5826a6425ae7c",
+      "Id": "5e9e70c482544f12a7b50cd212771789"
+    },
+    {
+      "Start": "324fe477e9604ea9a016627afc62995d",
+      "End": "d513c726f70c47c8a3ddf39cb14805c6",
+      "Id": "87c2a706eed2425391ca6010994b95e0"
+    },
+    {
+      "Start": "90fbe800e00a492dabc62eb0aa74387b",
+      "End": "00dd2f50e5764862ad9a9eb291f529dd",
+      "Id": "1b1dd5f1952048aba61325bccdc8aadc"
+    },
+    {
+      "Start": "90fbe800e00a492dabc62eb0aa74387b",
+      "End": "5d250ce4b2d942d1b133e1e758e91cbf",
+      "Id": "580b7690158b41f9aeb0b8232856d1ae"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Image.FromPixels",
+        "Id": "3a7c89f1a9be47e4bfc055258f905f1a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 551.400850896942,
+        "Y": 323.35322335766
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color.ByARGB",
+        "Id": "8278afa27d2341acb593d8bc1e3a64ce",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 294.40085089694196,
+        "Y": 323.35322335766
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "df695e8d92b040a2a0b2834f7020e9d0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 82.400850896941961,
+        "Y": 366.56655669099331
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch Image",
+        "Id": "756e183709e44a1f9e325460846b8933",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 844.400850896942,
+        "Y": 323.35322335766
+      }
+    ],
+    "Annotations": [],
+    "X": -97.00062111638681,
+    "Y": -65.796093238083188,
+    "Zoom": 0.93181152849833082
+  }
+}

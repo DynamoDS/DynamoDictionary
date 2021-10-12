@@ -8,7 +8,7 @@
             "SiteLocation"
         ],
         "folderPath": "Analyze/Action",
-        "inDepth": "Location is returned as a name, latitude, and longitude."
+        "inDepth": "Add in-depth information about SiteLocation..."
     },
     {
         "Name": "ByViewNameDivisionsGridBoundary",
@@ -19,7 +19,7 @@
             "ByViewNameDivisionsGridBoundary"
         ],
         "folderPath": "Analyze/Daylighting/CloudDaylightingJob/Create",
-        "inDepth": "To run a cloud daylighting job, the job needs to be uploaded and run using the Upload Cloud Render Data and Do Cloud Render nodes. The respective view needs to be exported as well using the Export Cloud Render Data node."
+        "inDepth": "Add in-depth information about ByViewNameDivisionsGridBoundary..."
     },
     {
         "Name": "Parse",
@@ -30,7 +30,7 @@
             "Parse"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Create",
-        "inDepth": "An SDF file can be queried for data such as color, resolution, illuminance values, etc using the DaylightingResults Action and Query nodes."
+        "inDepth": "Add in-depth information about Parse..."
     },
     {
         "Name": "Colors",
@@ -41,7 +41,7 @@
             "Colors"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Color data is returned as a set of RGB values."
+        "inDepth": "Add in-depth information about Colors..."
     },
     {
         "Name": "IlluminanceValues",
@@ -52,7 +52,7 @@
             "IlluminanceValues"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Illuminance data is returned as RGb lux values."
+        "inDepth": "Add in-depth information about IlluminanceValues..."
     },
     {
         "Name": "Normals",
@@ -63,7 +63,7 @@
             "Normals"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Normal data is returned as vectors with x, y, z values and length."
+        "inDepth": "Add in-depth information about Normals..."
     },
     {
         "Name": "Points",
@@ -74,7 +74,7 @@
             "Points"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "Point data is returned as x, y, z values."
+        "inDepth": "Add in-depth information about Points..."
     },
     {
         "Name": "ToImage",
@@ -85,7 +85,7 @@
             "ToImage"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
-        "inDepth": "The image can be previewed in Dynamo by using the Watch Image node."
+        "inDepth": "Add in-depth information about ToImage..."
     },
     {
         "Name": "Resolution",
@@ -96,7 +96,7 @@
             "Resolution"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
-        "inDepth": "Resolution values are returned for both x and y."
+        "inDepth": "Add in-depth information about Resolution..."
     },
     {
         "Name": "XResolution",
@@ -107,7 +107,7 @@
             "XResolution"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
-        "inDepth": "Resolution is returned as an integer."
+        "inDepth": "Add in-depth information about XResolution..."
     },
     {
         "Name": "YResolution",
@@ -118,7 +118,7 @@
             "YResolution"
         ],
         "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
-        "inDepth": "Resolution is returned as an integer."
+        "inDepth": "Add in-depth information about YResolution..."
     },
     {
         "Name": "ByRGB",
@@ -129,7 +129,7 @@
             "ByRGB"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Create",
-        "inDepth": "The illuminance value is created from r, g, b values."
+        "inDepth": "Add in-depth information about ByRGB..."
     },
     {
         "Name": "ToFootCandles",
@@ -140,7 +140,7 @@
             "ToFootCandles"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Action",
-        "inDepth": "The foot candles value is returned as a double."
+        "inDepth": "Add in-depth information about ToFootCandles..."
     },
     {
         "Name": "ToSRGB",
@@ -151,7 +151,7 @@
             "ToSRGB"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Action",
-        "inDepth": "sRGB is a single value measured in lux."
+        "inDepth": "Add in-depth information about ToSRGB..."
     },
     {
         "Name": "B",
@@ -162,7 +162,7 @@
             "B"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
-        "inDepth": "B returns the blue value of a illuminance data point."
+        "inDepth": "Add in-depth information about B..."
     },
     {
         "Name": "G",
@@ -173,7 +173,7 @@
             "G"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
-        "inDepth": "G returns the green value of a illuminance data point."
+        "inDepth": "Add in-depth information about G..."
     },
     {
         "Name": "R",
@@ -184,7 +184,7 @@
             "R"
         ],
         "folderPath": "Analyze/Daylighting/Illuminance/Query",
-        "inDepth": "R returns the red value of a illuminance data point."
+        "inDepth": "Add in-depth information about R..."
     },
     {
         "Name": "Do Cloud Render",
@@ -195,7 +195,7 @@
             "Do Cloud Render"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Do Cloud Render will bring up a dialog box to confirm the render job and the required cloud credits. If Dynamo is running automatically, the node will run immediately after all inputs are connected. The renderings can be found online in your A360 account."
+        "inDepth": "Add in-depth information about Do Cloud Render..."
     },
     {
         "Name": "Export Cloud Render Data",
@@ -206,7 +206,7 @@
             "Export Cloud Render Data"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Export Cloud Render Data takes 3D view names as strings. This node is used in conjunction with the Upload Cloud Render Data and Do Cloud Render nodes. This node exports a temporary .spd file to the OutputFileName path."
+        "inDepth": "Add in-depth information about Export Cloud Render Data..."
     },
     {
         "Name": "Select RenderQuality",
@@ -217,7 +217,7 @@
             "Select RenderQuality"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Available qualities levels are Best, High, Standard, and Draft. Dynamo must be in Manual mode prior to adding this node to the canvas."
+        "inDepth": "Add in-depth information about Select RenderQuality..."
     },
     {
         "Name": "Select RenderType",
@@ -228,7 +228,7 @@
             "Select RenderType"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Available render types are Image, Panorama, SolarStudyPreview, SolarStudy, and Illuminance. Dynamo must be in Manual mode prior to adding this node to the canvas."
+        "inDepth": "Add in-depth information about Select RenderType..."
     },
     {
         "Name": "Select SkyModelType",
@@ -239,7 +239,7 @@
             "Select SkyModelType"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Available sky model types are Perez, Igawa, Render, DaylightFactor, CIEClear, CIEIntermediate, CIEOvercast, and CIEUniform. Dynamo must be in Manual mode prior to adding this node to the canvas."
+        "inDepth": "Add in-depth information about Select SkyModelType..."
     },
     {
         "Name": "Upload Cloud Render Data",
@@ -250,7 +250,7 @@
             "Upload Cloud Render Data"
         ],
         "folderPath": "Analyze/Render/Action",
-        "inDepth": "Uploaded render view data is sent to Autodesk's A360 rendering service. This node is used in conjunction with the Export Cloud Render Data and Do Cloud Render nodes."
+        "inDepth": "Add in-depth information about Upload Cloud Render Data..."
     },
     {
         "Name": "ByViewNameWidthHeight",
@@ -261,7 +261,7 @@
             "ByViewNameWidthHeight"
         ],
         "folderPath": "Analyze/Render/CloudRenderingJob/Create",
-        "inDepth": "Use this node in conjunction with the Export/Upload Cloud Render Data and Do Cloud Render nodes to create a rendering."
+        "inDepth": "Add in-depth information about ByViewNameWidthHeight..."
     },
     {
         "Name": "ByDateInformation",
@@ -272,7 +272,7 @@
             "ByDateInformation"
         ],
         "folderPath": "Analyze/Render/DateTime/Create",
-        "inDepth": "Multiple DateTimes can be created by providing an input with a list of values. This is especially useful for creating multiple cloud renderings for several times of day."
+        "inDepth": "Add in-depth information about ByDateInformation..."
     },
     {
         "Name": "BySkyModelLocationDate",
@@ -283,7 +283,7 @@
             "BySkyModelLocationDate"
         ],
         "folderPath": "Analyze/Render/RenderingEnvironment/Create",
-        "inDepth": "Rendering environments are used by the Cloud Daylighting Job node."
+        "inDepth": "Add in-depth information about BySkyModelLocationDate..."
     },
     {
         "Name": "ByTypeConstants",
@@ -294,7 +294,7 @@
             "ByTypeConstants"
         ],
         "folderPath": "Analyze/Render/SkyModel/Create",
-        "inDepth": "Sky models are used to create rendering environments."
+        "inDepth": "Add in-depth information about ByTypeConstants..."
     },
     {
         "Name": "Contains",
@@ -305,7 +305,7 @@
             "Contains"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Contains can take integers, strings, doubles, etc as inputs. This node can be useful for creating boolean masks."
+        "inDepth": "Add in-depth information about Contains..."
     },
     {
         "Name": "NewtonRootFind1DNoDeriv",
@@ -338,7 +338,7 @@
             "Rank"
         ],
         "folderPath": "BuiltIn/Action",
-        "inDepth": "Counts how many levels are in a list."
+        "inDepth": "Counts how many levels are in a list"
     },
     {
         "Name": "Format",
@@ -349,7 +349,7 @@
             "Format"
         ],
         "folderPath": "Core/DateTime/Action",
-        "inDepth": "Date time strings are written in a standard format. Refer to this web page for custom date and time format strings: https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings. Refer to this web page for standard formats: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings."
+        "inDepth": "Add in-depth information about Format..."
     },
     {
         "Name": "MinValue (dateTime, format)",
@@ -382,7 +382,7 @@
             "AllIndicesOf"
         ],
         "folderPath": "Core/String/Action",
-        "inDepth": "AllIndicesOf returns the index of where a string begins in another string."
+        "inDepth": "Add in-depth information about AllIndicesOf..."
     },
     {
         "Name": "String from Array",
@@ -393,7 +393,7 @@
             "String from Array"
         ],
         "folderPath": "Core/String/Action",
-        "inDepth": "While a list of integers contains only integers, the string will contain commas that separate the numbers as well as curly brackets that contain the array."
+        "inDepth": "Add in-depth information about String from Array..."
     },
     {
         "Name": "ByGeometry",
@@ -404,7 +404,7 @@
             "ByGeometry"
         ],
         "folderPath": "Geometry/BoundingBox/Create",
-        "inDepth": "The bounding box geometry is returned as a cuboid."
+        "inDepth": "Add in-depth information about ByGeometry..."
     },
     {
         "Name": "ByMatrix",
@@ -437,7 +437,7 @@
             "Scale (coordinateSystem, plane, xamount, yamount, zamount)"
         ],
         "folderPath": "Geometry/CoordinateSystem/Action",
-        "inDepth": "Skewed coordinate systems can be created by scaling non-uniformly from a rotated plane."
+        "inDepth": "Add in-depth information about Scale (coordinateSystem, plane, xamount, yamount, zamount)..."
     },
     {
         "Name": "Join",
@@ -448,7 +448,7 @@
             "Join"
         ],
         "folderPath": "Geometry/Curve/Action",
-        "inDepth": "Some nodes that take curves as inputs may not accept polycurves."
+        "inDepth": "Add in-depth information about Join..."
     },
     {
         "Name": "ByPointsTangentsKnotsDerivatives",
@@ -470,7 +470,7 @@
             "Join"
         ],
         "folderPath": "Geometry/Surface/Action",
-        "inDepth": "Some nodes that take surfaces as inputs may not accept polysurfaces."
+        "inDepth": "Add in-depth information about Join..."
     },
     {
         "Name": "Rotate (vector, plane, degrees)",
@@ -481,7 +481,7 @@
             "Rotate (vector, plane, degrees)"
         ],
         "folderPath": "Geometry/Vector/Action",
-        "inDepth": "Planes can easily be derived from geometry for rotating a vector (i.e. at many points on a surface or curve)."
+        "inDepth": "Add in-depth information about Rotate..."
     },
     {
         "Name": "ByFace",
@@ -492,7 +492,7 @@
             "ByFace"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Create",
-        "inDepth": "A curtain system is a component that comprises panels, curtain grids, and mullions. It usually does not have a rectangular shape. In this example, a curtain system is added to the face of a cylinder mass."
+        "inDepth": "Add in-depth information about ByFace..."
     },
     {
         "Name": "AddCurtainGrid",
@@ -503,7 +503,7 @@
             "AddCurtainGrid"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Action",
-        "inDepth": "Curtain grids and mullions can be added to or removed from curtain systems after they are created. In this example, the faces of a Revit mass are used to place a curtain system and add a grid."
+        "inDepth": "Add in-depth information about AddCurtainGrid..."
     },
     {
         "Name": "RemoveCurtainGrid",
@@ -514,7 +514,7 @@
             "RemoveCurtainGrid"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Action",
-        "inDepth": "Curtain grids and mullions can be added to or removed from curtain systems after they are created. In this example, a curtain grid is removed from an existing curtain system on a Revit mass."
+        "inDepth": "Add in-depth information about RemoveCurtainGrid..."
     },
     {
         "Name": "CurtainSystemType",
@@ -525,7 +525,7 @@
             "CurtainSystemType"
         ],
         "folderPath": "Revit/Elements/CurtainSystem/Query",
-        "inDepth": "Add in-depth information about Name..."
+        "inDepth": "Add in-depth information about CurtainSystemType..."
     },
     {
         "Name": "ByName",
@@ -536,7 +536,7 @@
             "ByName"
         ],
         "folderPath": "Revit/Elements/CurtainSystemType/Create",
-        "inDepth": "CurtainSystemType brings an existing Revit curtain system type into Dynamo for use with the CurtainSystem.ByFace node as well as Add and RemoveCurtainGrid."
+        "inDepth": "Add in-depth information about ByName..."
     },
     {
         "Name": "Name",
@@ -547,7 +547,7 @@
             "Name"
         ],
         "folderPath": "Revit/Elements/CurtainSystemType/Query",
-        "inDepth": "Name returns the name of a curtain system type as a string."
+        "inDepth": "Add in-depth information about Name..."
     },
     {
         "Name": "FromExisting",
@@ -558,7 +558,7 @@
             "FromExisting"
         ],
         "folderPath": "Revit/Elements/DimensionType/Create",
-        "inDepth": "Dimension types created from Dynamo will persist in the Revit document after Dynamo is closed."
+        "inDepth": "Add in-depth information about FromExisting..."
     },
     {
         "Name": "StyleType",
@@ -569,7 +569,7 @@
             "StyleType"
         ],
         "folderPath": "Revit/Elements/DimensionType/Query",
-        "inDepth": "StyleType returns a dimension's style. Several Revit dimension styles are Aligned, Linear, Angular, Radial, etc."
+        "inDepth": "Add in-depth information about StyleType..."
     },
     {
         "Name": "Select Direct Shape Room Bounding Option (geometry, category, material, name)",
@@ -602,7 +602,7 @@
             "MoveByVector"
         ],
         "folderPath": "Revit/Elements/Element/Action",
-        "inDepth": "The distance an element is moved is determined by the input vector's magnitude."
+        "inDepth": "Add in-depth information about MoveByVector..."
     },
     {
         "Name": "ToString",
@@ -624,7 +624,7 @@
             "Description"
         ],
         "folderPath": "Revit/Elements/FailureMessage/Query",
-        "inDepth": "Failure message descriptions contain information about the failure as well as suggestions or tips on how to address the issue."
+        "inDepth": "Add in-depth information about Description..."
     },
     {
         "Name": "FailingElements",
@@ -635,7 +635,7 @@
             "FailingElements"
         ],
         "folderPath": "Revit/Elements/FailureMessage/Query",
-        "inDepth": "Returned elements come with their element ids which can be clicked in Dynamo to see the failing element in a Revit view."
+        "inDepth": "Add in-depth information about FailingElements..."
     },
     {
         "Name": "Severity",
@@ -646,7 +646,7 @@
             "Severity"
         ],
         "folderPath": "Revit/Elements/FailureMessage/Query",
-        "inDepth": "Failure severity levels are Warning, Error, and DocumentCorruption. The severity determines what actions are allowed in the Revit document."
+        "inDepth": "Add in-depth information about Severity..."
     },
     {
         "Name": "ByGeometry",
@@ -657,7 +657,7 @@
             "ByGeometry"
         ],
         "folderPath": "Revit/Elements/FamilyType/Create",
-        "inDepth": "Families created with ByGeometry are actively linked to Revit as long as their name and templatePath inputs do not change."
+        "inDepth": "Add in-depth information about ByGeometry..."
     },
     {
         "Name": "VoidByGeometry",

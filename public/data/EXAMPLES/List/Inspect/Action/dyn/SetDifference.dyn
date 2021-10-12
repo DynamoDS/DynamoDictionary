@@ -1,0 +1,296 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "SetDifference",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.SetDifference@var[],var[]",
+      "Id": "647bd733b221486890ccc5fef650bb58",
+      "Inputs": [
+        {
+          "Id": "84e9cfde78a642d6b71fd848bd94686c",
+          "Name": "list1",
+          "Description": "List of objects to be included in the new list.\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "581228fe67df413794dabbd9b25b51d8",
+          "Name": "list2",
+          "Description": "List of objects to be excluded in the new list.\n\nvar[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fa7f0397cda64f0ba75c45a91e1dca56",
+          "Name": "newList",
+          "Description": "The new list that contains objects in List1 but not in List2.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns a new list that includes objects in List1 but excludes objects in List2.\n\nList.SetDifference (list1: var[], list2: var[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..9..#10;",
+      "Id": "5d5649709ca846848063016ab7f37a4f",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4fa247d7a24740b7a6ade4ea0ceeafd7",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "dd021d0723ff4e19be4a7f341492418b",
+      "Inputs": [
+        {
+          "Id": "aee28f69c6104489b065bac9f87bb380",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f96a929d32de45f3aa0827f46c9a8ef8",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "11a96f5aa7bf484faa44258c648197c2",
+      "Inputs": [
+        {
+          "Id": "7f3cb08f73e94f8b9e54cbf9af9223f3",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bd18ed8d1da647c9bf89a2d373d1552f",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..18..#10;",
+      "Id": "1bf9f8792a9f48ea93327cd72cdbf439",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c10562d53149406b922643dd1e27cd22",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "8459a57057004ca0a003f7c516b7f832",
+      "Inputs": [
+        {
+          "Id": "e330e78e42324820b9ba57bc3dc617b4",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a944d8aba8d64b0db252a6f79a311d2a",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "fa7f0397cda64f0ba75c45a91e1dca56",
+      "End": "e330e78e42324820b9ba57bc3dc617b4",
+      "Id": "743ba85f1b23400cb708a1301ea592b9"
+    },
+    {
+      "Start": "4fa247d7a24740b7a6ade4ea0ceeafd7",
+      "End": "aee28f69c6104489b065bac9f87bb380",
+      "Id": "b9b0c1e96f9c49fdaa54ce72fc8d33b1"
+    },
+    {
+      "Start": "f96a929d32de45f3aa0827f46c9a8ef8",
+      "End": "84e9cfde78a642d6b71fd848bd94686c",
+      "Id": "a1f676a96d6b4e3bbb3a9f4790b23c5e"
+    },
+    {
+      "Start": "bd18ed8d1da647c9bf89a2d373d1552f",
+      "End": "581228fe67df413794dabbd9b25b51d8",
+      "Id": "5a22b40c7a844644bf6aaa782bd24a2e"
+    },
+    {
+      "Start": "c10562d53149406b922643dd1e27cd22",
+      "End": "7f3cb08f73e94f8b9e54cbf9af9223f3",
+      "Id": "b55042d1156e4dc6b6038c0dbd05c728"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -10.351632118225098,
+      "EyeY": 13.915582656860352,
+      "EyeZ": 16.000629425048828,
+      "LookX": 16.128910064697266,
+      "LookY": -8.1650753021240234,
+      "LookZ": -20.504016876220703,
+      "UpX": 0.053885128349065781,
+      "UpY": 0.99619466066360474,
+      "UpZ": -0.068501941859722137
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "List.SetDifference",
+        "Id": "647bd733b221486890ccc5fef650bb58",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 188.32017068583298,
+        "Y": 3033.2268037581052
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "5d5649709ca846848063016ab7f37a4f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -224.67982931416702,
+        "Y": 2900.4401370914384
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "dd021d0723ff4e19be4a7f341492418b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3.6798293141670229,
+        "Y": 2896.2268037581052
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "11a96f5aa7bf484faa44258c648197c2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -3.6798293141670229,
+        "Y": 3196.2268037581052
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1bf9f8792a9f48ea93327cd72cdbf439",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -224.67982931416702,
+        "Y": 3200.4401370914384
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "8459a57057004ca0a003f7c516b7f832",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 478.320170685833,
+        "Y": 3033.2268037581052
+      }
+    ],
+    "Annotations": [],
+    "X": 409.05851776065,
+    "Y": -4019.90296773285,
+    "Zoom": 1.41420854285855
+  }
+}

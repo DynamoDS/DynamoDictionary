@@ -1,0 +1,566 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "GroupByFunction",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "4338850f825f46cdb19a1c1e8bbe75c2",
+      "Name": "Number",
+      "Type": "number",
+      "Value": "3",
+      "NumberType": "Double",
+      "Description": "Creates a number."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "List.GroupByFunction@var[]..[],Function",
+      "Id": "f8ea2e55915244b48a7af52305cfbc3b",
+      "Inputs": [
+        {
+          "Id": "41c3ed555e324ad686c1b6e66637cc93",
+          "Name": "list",
+          "Description": "list of values\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ba54238f8b7a491f8b5b023fdc76302f",
+          "Name": "func",
+          "Description": "Function",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2aad48aceda848cebebad54e713ed860",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Use a function to determine how list items should be grouped.\n\nList.GroupByFunction (list: var[]..[], func: Function): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..9..#10;",
+      "Id": "6cf0d88103594c7eb42d1841b89c8c70",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "73fe2ddc318a40c3ad536b690d14e842",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "245f0cdfef8b4725b4cb6ccd5f9e006d",
+      "Inputs": [
+        {
+          "Id": "f76ee2423ca844b69f4703e4599b644b",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6fecb65727d44017a7f018db0cb4504c",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "c26591742d3c45dea41d15d40618618d",
+      "Inputs": [
+        {
+          "Id": "6463499e82cd4bffaa79591d734a3f24",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "01db2db15b3e434085dc3accdb7762d6",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "5c48ee6328054446b5f11729f8fde98c",
+      "Inputs": [
+        {
+          "Id": "c1f23bd927ab4bdcba36433f6326c700",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b7bc8a8fa7df4a95a1b08a84f415ea2b",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c387f4129d604569b7ec508edb4cd56a",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Chop@var[]..[],int[]",
+      "Id": "6586c8e964bb4cbb931cb8e7fe4e19b9",
+      "Inputs": [
+        {
+          "Id": "ec1bd0543d98408fa0addb5138a267d5",
+          "Name": "list",
+          "Description": "List to chop into sublists\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7f506a4bb76f4b6badf0581696e131f1",
+          "Name": "lengths",
+          "Description": "Lengths of consecutive sublists to be created from the input list\n\nint[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "88cd89b323f84f5d92b6da3cc23e6dc3",
+          "Name": "lists",
+          "Description": "Sublists created from the list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Chop a list into a set of consecutive sublists with the specified lengths. List division begins at the top of the list.\n\nList.Chop (list: var[]..[], lengths: int[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "25ca8f5065904f779aad204c4a931e77",
+      "Inputs": [
+        {
+          "Id": "53279c45e1bb4f8288ebc41dfaddeea4",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fa32a7cd4cb44a22b995fd5342127fcf",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "List.GroupByFunction@var[]..[],Function",
+      "Id": "6d0fc4a55e74404aa66c286ff0d94b06",
+      "Inputs": [
+        {
+          "Id": "33b1363ee268463c890794c5226d93a1",
+          "Name": "list",
+          "Description": "list of values\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "61249752bce84f3fa706e90c33866f18",
+          "Name": "func",
+          "Description": "Function",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "493ad1a619e54b63aacd6bf56a515d3f",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Use a function to determine how list items should be grouped.\n\nList.GroupByFunction (list: var[]..[], func: Function): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.GetItemAtIndex@var[]..[],int",
+      "Id": "69261ce78f7745ca8d0057754ad55920",
+      "Inputs": [
+        {
+          "Id": "94052872823d4bcba2332f691a81b4c2",
+          "Name": "list",
+          "Description": "List to fetch an item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6df39135fe6544d68c50c1892aa3c73c",
+          "Name": "index",
+          "Description": "Index of the item to be fetched.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a2f8b79cfddd412b8bbe19b19923c1fd",
+          "Name": "item",
+          "Description": "Item in the list at the given index.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns an item from the given list that's located at the specified index.\n\nList.GetItemAtIndex (list: var[]..[], index: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "e09564f389a24d18965d0509c3d4a696",
+      "Inputs": [
+        {
+          "Id": "427cfa13b6914c468d39e63209f57890",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0c510a55b7dd42909fee5f6cb33f36bc",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 3.0,
+      "Id": "4338850f825f46cdb19a1c1e8bbe75c2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "718c531b2c1b4a0ea30530c53e00796f",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a number."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2aad48aceda848cebebad54e713ed860",
+      "End": "f76ee2423ca844b69f4703e4599b644b",
+      "Id": "bbf52093b5bd4c07a60839b9ab5588e5"
+    },
+    {
+      "Start": "73fe2ddc318a40c3ad536b690d14e842",
+      "End": "6463499e82cd4bffaa79591d734a3f24",
+      "Id": "fb44708739ee40289981afe5be78899f"
+    },
+    {
+      "Start": "73fe2ddc318a40c3ad536b690d14e842",
+      "End": "ec1bd0543d98408fa0addb5138a267d5",
+      "Id": "d7098d81f739421eb7f60d49628b69a3"
+    },
+    {
+      "Start": "01db2db15b3e434085dc3accdb7762d6",
+      "End": "33b1363ee268463c890794c5226d93a1",
+      "Id": "96a2b531cbf443d3bfd6a326651da505"
+    },
+    {
+      "Start": "c387f4129d604569b7ec508edb4cd56a",
+      "End": "ba54238f8b7a491f8b5b023fdc76302f",
+      "Id": "80526eae8880481fa94b46ae61480bce"
+    },
+    {
+      "Start": "88cd89b323f84f5d92b6da3cc23e6dc3",
+      "End": "53279c45e1bb4f8288ebc41dfaddeea4",
+      "Id": "76395b7d697d4511a88afa587c51d27b"
+    },
+    {
+      "Start": "88cd89b323f84f5d92b6da3cc23e6dc3",
+      "End": "41c3ed555e324ad686c1b6e66637cc93",
+      "Id": "7f1747abaa974aa5a739650d8d888d3d"
+    },
+    {
+      "Start": "493ad1a619e54b63aacd6bf56a515d3f",
+      "End": "427cfa13b6914c468d39e63209f57890",
+      "Id": "37ae85db451e44f48b4c865ab80c5311"
+    },
+    {
+      "Start": "a2f8b79cfddd412b8bbe19b19923c1fd",
+      "End": "61249752bce84f3fa706e90c33866f18",
+      "Id": "b5dabdf9450146d1a94f600a5b8bff7b"
+    },
+    {
+      "Start": "718c531b2c1b4a0ea30530c53e00796f",
+      "End": "7f506a4bb76f4b6badf0581696e131f1",
+      "Id": "c9ef30790ca24a9e9d6a95dd8c87fdb4"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "List.GroupByFunction",
+        "Id": "f8ea2e55915244b48a7af52305cfbc3b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 765.760802437871,
+        "Y": 482.0244580086
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "6cf0d88103594c7eb42d1841b89c8c70",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 43.3261235637248,
+        "Y": 313.88427632775
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "245f0cdfef8b4725b4cb6ccd5f9e006d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1027.5634207853902,
+        "Y": 478.91340697661423
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "c26591742d3c45dea41d15d40618618d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 470.458747059622,
+        "Y": 90.1114646476299
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GetItemAtIndex",
+        "Id": "5c48ee6328054446b5f11729f8fde98c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 595.360802437871,
+        "Y": 616.741205949503
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Chop",
+        "Id": "6586c8e964bb4cbb931cb8e7fe4e19b9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 266.809799008416,
+        "Y": 393.463065217183
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "25ca8f5065904f779aad204c4a931e77",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 452.117085430976,
+        "Y": 482.0244580086
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GroupByFunction",
+        "Id": "6d0fc4a55e74404aa66c286ff0d94b06",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 763.302464066516,
+        "Y": 90.1114646476299
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.GetItemAtIndex",
+        "Id": "69261ce78f7745ca8d0057754ad55920",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 592.902464066516,
+        "Y": 192.792619871593
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "e09564f389a24d18965d0509c3d4a696",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1044.3050824140364,
+        "Y": 87.000413615644135
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "4338850f825f46cdb19a1c1e8bbe75c2",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 96.1261235637248,
+        "Y": 434.4
+      }
+    ],
+    "Annotations": [],
+    "X": 457.30486650442589,
+    "Y": 175.26929179510012,
+    "Zoom": 0.642869557405945
+  }
+}

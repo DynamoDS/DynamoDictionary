@@ -1,0 +1,182 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "MoveDirectory",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+      "Name": "Directory Path",
+      "Type": "string",
+      "Value": "C:\\Users\\Username\\Folder1",
+      "Description": "Allows you to select a directory on the system to get its path"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Users\\Username\\Folder1",
+      "InputValue": "C:\\Users\\Username\\Folder1",
+      "NodeType": "ExtensionNode",
+      "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8325aa37576d41c3928e83720cefbc0e",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.MoveDirectory@string,string,bool",
+      "Id": "1f84359d6e6c43359418e9cefb259d29",
+      "Inputs": [
+        {
+          "Id": "fe1331c6577b42eaa371234af0e30399",
+          "Name": "path",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "af06991e10754a8b86d0434984f19754",
+          "Name": "newPath",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "537ee56155ae42b18b6a237da71e137a",
+          "Name": "overwriteFiles",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "36499a40a78441dea1f66f08b671cf13",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Moves a directory to a new location.\n\nFileSystem.MoveDirectory (path: string, newPath: string, overwriteFiles: bool = false): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"C:\\\\Users\\\\Username\\\\Folder2\";",
+      "Id": "4d234a0271e148efa0cb86bbbfec9999",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7ac3fa94cc1f46f7b8c5fa74cc1375c2",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "8325aa37576d41c3928e83720cefbc0e",
+      "End": "fe1331c6577b42eaa371234af0e30399",
+      "Id": "2bb7e918681c446f87c573d98a556f2f"
+    },
+    {
+      "Start": "7ac3fa94cc1f46f7b8c5fa74cc1375c2",
+      "End": "af06991e10754a8b86d0434984f19754",
+      "Id": "3f744e8697024765a9f964f099aca7ab"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 482.347859637957,
+        "Y": 173.188245632958
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.MoveDirectory",
+        "Id": "1f84359d6e6c43359418e9cefb259d29",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 698.3423790433103,
+        "Y": 173.188245632958
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "4d234a0271e148efa0cb86bbbfec9999",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 374.5264837484861,
+        "Y": 263.09375975626676
+      }
+    ],
+    "Annotations": [],
+    "X": -241.884975274664,
+    "Y": -86.3936723369211,
+    "Zoom": 1.51051845643135
+  }
+}

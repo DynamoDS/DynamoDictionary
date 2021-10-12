@@ -1,0 +1,25 @@
+<Workspace Version="1.3.0.875" X="-795.159067979821" Y="73.5709171197049" zoom="1.14435986229648" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="8b730d2c-f935-4775-a760-d5806726955f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="709.819851259158" y="278.439909441036" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="a=&quot;Room Tag&quot;;&#xA;b=&quot;Room Tag With Area&quot;;&#xA;c=&quot;Boxed&quot;;&#xA;{a,b,c};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="f7204c03-7410-4b7b-8a39-3ec726656126" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.Family" x="1212.75922297349" y="292.421525300833" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.Family">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d71d21b5-e339-475d-8744-366c8b746dd7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.ByName" x="975.065637734062" y="292.421525300833" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.ByName@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="8b730d2c-f935-4775-a760-d5806726955f" start_index="3" end="d71d21b5-e339-475d-8744-366c8b746dd7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="d71d21b5-e339-475d-8744-366c8b746dd7" start_index="0" end="f7204c03-7410-4b7b-8a39-3ec726656126" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

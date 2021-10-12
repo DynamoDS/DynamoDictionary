@@ -1,0 +1,252 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "AddItemToEnd",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..5..1;",
+      "Id": "494f3cf5280d4f13a9f2269b2190b316",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "9bc44e4d0dd74883824432c38a075330",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "600e36b9623642888370141001f8dcbc",
+      "Inputs": [
+        {
+          "Id": "b284add9201e493d95faf70942c6f806",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "85861496eb8e4d75bc755aed54a7fe68",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.AddItemToEnd@var[]..[],var[]..[]",
+      "Id": "1628fd939cc94e31b6cf187718390dd5",
+      "Inputs": [
+        {
+          "Id": "d0c6b3f626d940ed970855e1d917e19b",
+          "Name": "item",
+          "Description": "Item to be added.Item could be an object or a list.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6d34e6ae84c843b3af70f22c574b3b6e",
+          "Name": "list",
+          "Description": "List to add on to.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "95b14983ca2a454988fa1a21e9005a63",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adds an item to the end of a list.\n\nList.AddItemToEnd (item: var[]..[], list: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "016b9a0e5a9645dab9065efaeb951f97",
+      "Inputs": [
+        {
+          "Id": "e74bbe4d124e4f939f3ace9f14aac234",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "3ed10d690bb341579edca8d7dc381636",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "20;",
+      "Id": "79163ff7a99d4ab3888b8e959ef70971",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6fba3c6258c94beba0a878d9f7642888",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "9bc44e4d0dd74883824432c38a075330",
+      "End": "b284add9201e493d95faf70942c6f806",
+      "Id": "8fae201f4f37417abaeb2dd34afec72d"
+    },
+    {
+      "Start": "85861496eb8e4d75bc755aed54a7fe68",
+      "End": "6d34e6ae84c843b3af70f22c574b3b6e",
+      "Id": "7950a1b4206c4ef49de19b34c6c54276"
+    },
+    {
+      "Start": "95b14983ca2a454988fa1a21e9005a63",
+      "End": "e74bbe4d124e4f939f3ace9f14aac234",
+      "Id": "9a9ad60053d34e1e948bab0f73734d8e"
+    },
+    {
+      "Start": "6fba3c6258c94beba0a878d9f7642888",
+      "End": "d0c6b3f626d940ed970855e1d917e19b",
+      "Id": "5977cf9d471c4924a58811b039eee7d1"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "494f3cf5280d4f13a9f2269b2190b316",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 42.4849842682976,
+        "Y": 405.482254135261
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "600e36b9623642888370141001f8dcbc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 177.567563467237,
+        "Y": 400.959772611672
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.AddItemToEnd",
+        "Id": "1628fd939cc94e31b6cf187718390dd5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 382.348521875021,
+        "Y": 319.702526498917
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "016b9a0e5a9645dab9065efaeb951f97",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 622.62723525772878,
+        "Y": 317.15654433331611
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "79163ff7a99d4ab3888b8e959ef70971",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 78.4849842682976,
+        "Y": 322.841745941817
+      }
+    ],
+    "Annotations": [],
+    "X": 193.581680941273,
+    "Y": -323.63785261887,
+    "Zoom": 1.17832718568627
+  }
+}

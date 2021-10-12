@@ -1,22 +1,23 @@
 # DynamoDictionary
 
-Dynamo Dictionary development repo
-
 Live version here: http://dictionary.dynamobim.com
 
 ## Installation
-- In root directory, type ```npm install``` into the command line.
 
-## Run in Development Mode
-- In root directory, type ```npm run start``` into the command line.
+- Node.js version 12 is required. [Download the installer here](https://nodejs.org) (or use [nvm](https://github.com/nvm-sh/nvm).)
+- Run `npm install` from the command line in the project root directory.
+- Note that the `project-lock.json` file has URLs that point to an Autodesk internal NPM mirror.  If you do not have access to that mirror, you will need to delete the `package-lock.json` before `npm install` will succeed.
 
-#### Toggle AVP / Example images.
-- In `src/config/index.js`,  change `IMAGE_FALSE_AVP_TRUE` to `true` for AVP sample (experimental) and `false` for Dynamo example images (default).
+## Run the Development Server
+- Run `npm start` from the command line in the project root directory.
+- A browser window with the development site at http://localhost:3000 should open automatically. It may take a few seconds for the site to appear the first time.
 
-## Deploy to Autodesk
+## Build the Static Deployment 
 
-- confirm that `homepage` in `package.json` is set to `http://dictionary.dynamobim.com/`. The developer may change this address depending on the staging environment.
+- Run `npm run build` from the command line in the project root directory.
+- To test serving the static files locally, run `npx serve -s build`. 
+- Open the local static site at http://localhost:5000.
 
-- In root directory: ```npm run build```
+## Deploying
 
-- Copy files from `build` folder and place into the root directory of the [Autodesk Dynamo Dictionary repo](https://github.com/DynamoDS/DynamoDictionary), in the appropriate `branch`.
+- Refer to internal documentation.

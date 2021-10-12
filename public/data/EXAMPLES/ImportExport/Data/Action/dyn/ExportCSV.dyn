@@ -1,0 +1,173 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ExportCSV",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "f8ca663d08c8493d87abe52a460250be",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\sample.csv",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Temp\\sample.csv",
+      "InputValue": "C:\\Temp\\sample.csv",
+      "NodeType": "ExtensionNode",
+      "Id": "f8ca663d08c8493d87abe52a460250be",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2a9da44ed749498683d6dbe48a4a32d8",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ExportCSV@string,var[][]",
+      "Id": "6007f92df8d14e0392099035baab75a7",
+      "Inputs": [
+        {
+          "Id": "842f7325d9704a45a377b175d14a8eb2",
+          "Name": "filePath",
+          "Description": "Path to write to\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "965e225d9c5e457ead8812a0b6eb3487",
+          "Name": "data",
+          "Description": "List of lists to write into CSV\n\nvar[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "80f745f18d8f4a8fa5c1db05e3e3e392",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Write a list of lists into a file using a comma-separated values format. Outer list represents rows, inner lists represent columns.\n\nData.ExportCSV (filePath: string, data: var[][]): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[[\"value1\",5],[\"value2\",10],[\"value3\",12]];",
+      "Id": "e43d0ea9fd414c59a5c3d9a88508b1f2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3be8ba75c29d46f182cadee610fcfc85",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "2a9da44ed749498683d6dbe48a4a32d8",
+      "End": "842f7325d9704a45a377b175d14a8eb2",
+      "Id": "24f303360b9b44af98fffbc876fd9801"
+    },
+    {
+      "Start": "3be8ba75c29d46f182cadee610fcfc85",
+      "End": "965e225d9c5e457ead8812a0b6eb3487",
+      "Id": "823e8f949d234fb1bfed6effad81a932"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "f8ca663d08c8493d87abe52a460250be",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 597.755437540243,
+        "Y": 203.120423713767
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Data.ExportCSV",
+        "Id": "6007f92df8d14e0392099035baab75a7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 815.543738813008,
+        "Y": 203.238813207322
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "e43d0ea9fd414c59a5c3d9a88508b1f2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 367.278637795748,
+        "Y": 283.480514776717
+      }
+    ],
+    "Annotations": [],
+    "X": -280.302024638943,
+    "Y": -61.4110654772,
+    "Zoom": 1.545620359375
+  }
+}

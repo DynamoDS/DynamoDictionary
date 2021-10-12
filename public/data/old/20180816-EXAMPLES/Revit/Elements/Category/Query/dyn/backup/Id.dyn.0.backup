@@ -1,0 +1,30 @@
+<Workspace Version="1.2.1.3083" X="7" Y="-32" zoom="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b03f4f2c-ac54-45f6-a18e-c29ee4828f9f" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Category.Id" x="640.5" y="494" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.Category.Id">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="306da2cc-65f6-443d-80fb-3ea53e9e5014" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="72" y="466" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="sc = &quot;Structural Columns&quot;;&#xA;sf = &quot;Structural Foundations&quot;;&#xA;fl = &quot;Floors&quot;;&#xA;wa = &quot;Walls&quot;;&#xA;rf = &quot;Roofs&quot;;&#xA;{sc, sf, fl, wa, rf};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="83268772-a39d-45f1-9eeb-abb1ffbc0dab" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Category.ByName" x="404.5" y="494" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Category.ByName@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="306da2cc-65f6-443d-80fb-3ea53e9e5014" start_index="5" end="83268772-a39d-45f1-9eeb-abb1ffbc0dab" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="83268772-a39d-45f1-9eeb-abb1ffbc0dab" start_index="0" end="b03f4f2c-ac54-45f6-a18e-c29ee4828f9f" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="fbaa394c-7960-4feb-9cac-68873497dba3" text="This Dynamo example file has been created with the basic sample project in the Revit installation directory, typically found in: &#xD;&#xA;&#xD;&#xA;C:\Program Files\Autodesk\Revit 2017\Samples" x="17.5" y="112" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a887f384-6399-4c78-9d2c-bca2ad041c73" annotationText="Revit sample file: rac_basic_sample_project.rvt" left="7.5" top="44" width="316" height="170" fontSize="24" InitialTop="112" InitialHeight="140" TextblockHeight="58" backgrouund="#FF48B9FF">
+      <Models ModelGuid="fbaa394c-7960-4feb-9cac-68873497dba3" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

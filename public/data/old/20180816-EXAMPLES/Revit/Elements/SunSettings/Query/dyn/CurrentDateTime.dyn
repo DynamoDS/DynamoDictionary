@@ -1,0 +1,21 @@
+<Workspace Version="1.2.1.3083" X="-170.217869207741" Y="-492.377213299218" zoom="1.77404361201839" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <DSRevitNodesUI.SunSettings guid="2897e4b5-69a0-4f1a-8379-4df0ad73dcd7" type="DSRevitNodesUI.SunSettings" nickname="SunSettings.Current" x="336.754894389568" y="447.552251771242" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="286d0c58-84d8-4800-911d-c30285520762" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="SunSettings.CurrentDateTime" x="539.510800141986" y="447.552251771242" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.SunSettings.CurrentDateTime">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="2897e4b5-69a0-4f1a-8379-4df0ad73dcd7" start_index="0" end="286d0c58-84d8-4800-911d-c30285520762" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

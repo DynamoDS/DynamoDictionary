@@ -1,0 +1,166 @@
+{
+  "Uuid": "803fb2f9-4884-42de-915d-c7831d5e05fe",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "AddCurtainGrid",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "8e132478-4506-47b0-ae6a-9a52730998ce-0005621b"
+      ],
+      "Id": "0ab8ec65985447e6a9ae1daa03aaa6bf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f243ded09532459f985403b33ac00982",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.CurtainSystem.AddCurtainGrid@Autodesk.DesignScript.Geometry.Surface",
+      "Id": "34fd72e0a2994ff58823b8eb50148e60",
+      "Inputs": [
+        {
+          "Id": "3f957d7dee7742e1bcde6e1fbb054dcb",
+          "Name": "curtainSystem",
+          "Description": "Revit.Elements.CurtainSystem",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5bcbd59a2b0e4e0389d880902d2a8abd",
+          "Name": "face",
+          "Description": "Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f885566e045d414e87f0dfa0315b2f34",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Add Curtain Grid\n\nCurtainSystem.AddCurtainGrid (face: Surface): void"
+    },
+    {
+      "ConcreteType": "Dynamo.Nodes.DSFaceSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "8e132478-4506-47b0-ae6a-9a52730998ce-00056170:2:SURFACE"
+      ],
+      "Id": "60ef3dceb7a448e58c8a74abb21bec85",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d0e1669ac8164ee188d53af8381cbe7a",
+          "Name": "Surface",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f243ded09532459f985403b33ac00982",
+      "End": "3f957d7dee7742e1bcde6e1fbb054dcb",
+      "Id": "a7ee6a90a2bd492a99fc8457d8d7aee0"
+    },
+    {
+      "Start": "d0e1669ac8164ee188d53af8381cbe7a",
+      "End": "5bcbd59a2b0e4e0389d880902d2a8abd",
+      "Id": "9d7e22c7a62649bb800dcd5349636a28"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5357",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "0ab8ec65985447e6a9ae1daa03aaa6bf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 390.0,
+        "Y": 205.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CurtainSystem.AddCurtainGrid",
+        "Id": "34fd72e0a2994ff58823b8eb50148e60",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 736.0,
+        "Y": 214.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Face",
+        "Id": "60ef3dceb7a448e58c8a74abb21bec85",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 335.0,
+        "Y": 330.0
+      }
+    ],
+    "Annotations": [],
+    "X": -19.0,
+    "Y": -50.0,
+    "Zoom": 1.0
+  }
+}

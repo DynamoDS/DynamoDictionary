@@ -1,0 +1,20 @@
+<Workspace Version="1.3.0.875" X="-2697.87766264507" Y="-765.387970335088" zoom="2.12842063749436" ScaleFactor="100" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="f6be346f-c016-4ebd-8de4-6d04d7566930" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CurtainSystemType.ByName" x="1594.04239999211" y="506.390759688922" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.CurtainSystemType.ByName@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="212210ca-2f1c-4dfd-bfb9-6efb1c5c144e" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1397.37799851097" y="506.390759688922" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Curtain System&quot;;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="212210ca-2f1c-4dfd-bfb9-6efb1c5c144e" start_index="0" end="f6be346f-c016-4ebd-8de4-6d04d7566930" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-40.3624000549316" eyeY="25.2514743804932" eyeZ="25.3343944549561" lookX="30.2799873352051" lookY="-7.63586044311523" lookZ="-19.4473400115967" upX="-0.00587410619482398" upY="0.999975621700287" upZ="0.00377264874987304" />
+  </Cameras>
+</Workspace>

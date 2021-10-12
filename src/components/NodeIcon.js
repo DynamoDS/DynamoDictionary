@@ -10,6 +10,7 @@ function NodeIcon(props) {
     <Link to={`/${lineageToRoute(props.node)}`}>
       {" "}<img
         className="im"
+        alt=""
         onError={function() {
           element.onerror = null;
           element.src = "images/src/icon_offset.png";

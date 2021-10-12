@@ -1,0 +1,18 @@
+<Workspace Version="1.1.0.2093" X="-234.681585167646" Y="-524.554791575484" zoom="1.68567506496238" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <UnitsUI.LengthFromString guid="61110ab3-c5ca-4d97-aa61-e78a265f6950" type="UnitsUI.LengthFromString" nickname="Number From Feet and Inches" x="426.592425714306" y="376.729458642804" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.Double value="0.63500000000254" />
+    </UnitsUI.LengthFromString>
+    <CoreNodeModels.Watch guid="609521da-ce43-4d0d-8c70-add90656c76a" type="CoreNodeModels.Watch" nickname="Watch" x="662.060905887006" y="376.729458642804" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="61110ab3-c5ca-4d97-aa61-e78a265f6950" start_index="0" end="609521da-ce43-4d0d-8c70-add90656c76a" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-8.34366893768311" eyeY="6.98868608474731" eyeZ="8.88468647003174" lookX="12.9839553833008" lookY="-5.89671277999878" lookZ="-15.9828119277954" upX="0.0395914241671562" upY="0.998026669025421" upZ="-0.0487357005476952" />
+  </Cameras>
+</Workspace>

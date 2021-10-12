@@ -1,0 +1,295 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "WriteToFile",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "d370dd5ab45e4e03894211ac2cba6452",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\sample.png",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Temp\\sample.png",
+      "InputValue": "C:\\Temp\\sample.png",
+      "NodeType": "ExtensionNode",
+      "Id": "d370dd5ab45e4e03894211ac2cba6452",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a93e8e5107994bb2ac4dd8f121258b59",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.FromPixels@DSCore.Color[][]",
+      "Id": "90689f40ea1d45f4a818903e37bae9d6",
+      "Inputs": [
+        {
+          "Id": "5b5d19bb5a48482a88e4968ba14a4458",
+          "Name": "colors",
+          "Description": "2d rectangular list of colors representing the pixels.\n\nColor[][]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "668d0224c2404a0385c36c075b827fb0",
+          "Name": "image",
+          "Description": "Image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Constructs an image from a 2d list of pixels.\n\nImage.FromPixels (colors: Color[][]): var"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Color.ByARGB@int,int,int,int",
+      "Id": "1079a72dce5b443e8f0afbe493956fc6",
+      "Inputs": [
+        {
+          "Id": "bf265aefae2d40798bffdee914cfc2aa",
+          "Name": "a",
+          "Description": "The alpha value.\n\nint\nDefault value : 255",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a71ede8f61fa45a3a1b32b7de76f76cc",
+          "Name": "r",
+          "Description": "The red value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "cf4fce7d4c514537827960d9391a9e63",
+          "Name": "g",
+          "Description": "The green value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5b22f91673f74951b238a26729e977ae",
+          "Name": "b",
+          "Description": "The blue value.\n\nint\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7560a4bce62a47199f111bc1dd703fa6",
+          "Name": "color",
+          "Description": "Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "CrossProduct",
+      "Description": "Construct a color by alpha, red, green, and blue components.\n\nColor.ByARGB (a: int = 255, r: int = 0, g: int = 0, b: int = 0): Color"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..255..1;",
+      "Id": "c63073b62d9b430abcde7cc7ddaf5442",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "935447d2392d41f2afc6e9b7c08bc160",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.WriteToFile@string,var",
+      "Id": "34f9117bf45e49d08cee16061aa7f1f8",
+      "Inputs": [
+        {
+          "Id": "d9c7bfdf9d1247599bdfc6a79141552d",
+          "Name": "path",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7189b45a6bf44f6d9ff681306ecb9522",
+          "Name": "image",
+          "Description": "The image to write\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "265d74cf445a4a1fa5292e714f8e534b",
+          "Name": "ok",
+          "Description": "It is successful or not.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Write the image to a path, given the specified file name.\n\nImage.WriteToFile (path: string, image: var): void"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "a93e8e5107994bb2ac4dd8f121258b59",
+      "End": "d9c7bfdf9d1247599bdfc6a79141552d",
+      "Id": "9960a0b8780147b1a95b58f3f5c2696d"
+    },
+    {
+      "Start": "668d0224c2404a0385c36c075b827fb0",
+      "End": "7189b45a6bf44f6d9ff681306ecb9522",
+      "Id": "e6371903b1c64c0bb8bb0606548608a3"
+    },
+    {
+      "Start": "7560a4bce62a47199f111bc1dd703fa6",
+      "End": "5b5d19bb5a48482a88e4968ba14a4458",
+      "Id": "56c5ce5544e64c6290fa81007ed6e879"
+    },
+    {
+      "Start": "935447d2392d41f2afc6e9b7c08bc160",
+      "End": "a71ede8f61fa45a3a1b32b7de76f76cc",
+      "Id": "5d7bc5231e9247ceb13d92f7d02482b0"
+    },
+    {
+      "Start": "935447d2392d41f2afc6e9b7c08bc160",
+      "End": "cf4fce7d4c514537827960d9391a9e63",
+      "Id": "afdbb1bc0b4f4ac79d37fbbab5219a0d"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "d370dd5ab45e4e03894211ac2cba6452",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 516.74914651579206,
+        "Y": 330.965870179738
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.FromPixels",
+        "Id": "90689f40ea1d45f4a818903e37bae9d6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 516.74914651579206,
+        "Y": 440.965870179738
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color.ByARGB",
+        "Id": "1079a72dce5b443e8f0afbe493956fc6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 259.74914651579206,
+        "Y": 440.965870179738
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "c63073b62d9b430abcde7cc7ddaf5442",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 47.749146515792063,
+        "Y": 484.17920351307134
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.WriteToFile",
+        "Id": "34f9117bf45e49d08cee16061aa7f1f8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 817.47423689828724,
+        "Y": 372.965870179738
+      }
+    ],
+    "Annotations": [],
+    "X": 200.59214833113015,
+    "Y": 25.024073997942708,
+    "Zoom": 0.78436932804482706
+  }
+}

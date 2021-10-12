@@ -1,0 +1,297 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Join",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "b62ffd655a064878af5a133f03dc71be",
+      "Inputs": [
+        {
+          "Id": "eb5a9bb001384c89bf6b0f884a44d038",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fb2dbe7e5bf24099be9dacf25d28f79c",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..5..2;",
+      "Id": "1684bc5dde894f879e43ddcbef7d62a9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "184e3d682f6b4c9a9aebfea2aab8f029",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSVarArgFunction, DynamoCore",
+      "FunctionSignature": "DSCore.List.Join@var[]..[]",
+      "FunctionType": "VariableArgument",
+      "NodeType": "FunctionNode",
+      "Id": "679a29aa586d4466b92f4fc79fb4ea86",
+      "Inputs": [
+        {
+          "Id": "f0ab1d02781d47d5801111cf5043aff6",
+          "Name": "list0",
+          "Description": "Lists to join into one.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "32790fbfc3364291aa1c0797c2912351",
+          "Name": "list1",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "559a69ed200d411c982d3480202ce1f4",
+          "Name": "list",
+          "Description": "Joined list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Concatenates all given lists into a single list.\n\nList.Join (lists: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "6c50c4ca055640e8853605014b260661",
+      "Inputs": [
+        {
+          "Id": "bcfe470073be48e39e1196876d316f05",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e905b3f2670f46329186b3a3acce553e",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..4..2;",
+      "Id": "b927c25542fb4ea2a627d89059474b1e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6aba87cc96b44c0e9af6976453b93ad1",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "b6dbc51944534826af39a9c700b8842f",
+      "Inputs": [
+        {
+          "Id": "aafe4e9187ab49a0b5c198c5b1cdb7c3",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b589c13664bf4bb0bb69dcdadbf71b51",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "fb2dbe7e5bf24099be9dacf25d28f79c",
+      "End": "f0ab1d02781d47d5801111cf5043aff6",
+      "Id": "a8cadf4abfb94ed0a7e036f117c5bae0"
+    },
+    {
+      "Start": "184e3d682f6b4c9a9aebfea2aab8f029",
+      "End": "eb5a9bb001384c89bf6b0f884a44d038",
+      "Id": "a91b952ad7d5429f88ab8c41cf8662cc"
+    },
+    {
+      "Start": "559a69ed200d411c982d3480202ce1f4",
+      "End": "aafe4e9187ab49a0b5c198c5b1cdb7c3",
+      "Id": "26b1caab13bb4c5b9d2b4af194d03811"
+    },
+    {
+      "Start": "e905b3f2670f46329186b3a3acce553e",
+      "End": "32790fbfc3364291aa1c0797c2912351",
+      "Id": "ba504baa2b9e422c94a9120796760d06"
+    },
+    {
+      "Start": "6aba87cc96b44c0e9af6976453b93ad1",
+      "End": "bcfe470073be48e39e1196876d316f05",
+      "Id": "ae2ed8027b4b4cba9b7c59cce1323bf3"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -13.988694190979004,
+      "EyeY": 18.264490127563477,
+      "EyeZ": 21.429862976074219,
+      "LookX": 16.723785400390625,
+      "LookY": -5.2774238586425781,
+      "LookZ": -19.588394165039063,
+      "UpX": -0.009065740741789341,
+      "UpY": 0.99990254640579224,
+      "UpZ": 0.010618607513606548
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "b62ffd655a064878af5a133f03dc71be",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -143.07357860229502,
+        "Y": -2.4584935843068081
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1684bc5dde894f879e43ddcbef7d62a9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -339.073578602295,
+        "Y": 1.7548397490265302
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Join",
+        "Id": "679a29aa586d4466b92f4fc79fb4ea86",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 42.926421397704985,
+        "Y": 81.541506415693192
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "6c50c4ca055640e8853605014b260661",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -143.07357860229502,
+        "Y": 191.54150641569319
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b927c25542fb4ea2a627d89059474b1e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -339.073578602295,
+        "Y": 195.7548397490265
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "b6dbc51944534826af39a9c700b8842f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 307.926421397705,
+        "Y": 81.541506415693192
+      }
+    ],
+    "Annotations": [],
+    "X": 515.918961668081,
+    "Y": 82.4223960571441,
+    "Zoom": 1.15803003089915
+  }
+}

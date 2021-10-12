@@ -1,0 +1,304 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Combinations",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "e0f21786634e473b88495c72254bb3c8",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..5..1;",
+      "Id": "494f3cf5280d4f13a9f2269b2190b316",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7f9445b5ff8d4c64a896beff32b8271e",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "600e36b9623642888370141001f8dcbc",
+      "Inputs": [
+        {
+          "Id": "0518786e8aa345be8cea4b017feb9547",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "8ce484e5fef74ad6b116bfca1de11852",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "016b9a0e5a9645dab9065efaeb951f97",
+      "Inputs": [
+        {
+          "Id": "0736b3ba2fc64c8aa61d5e6215c6c591",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "74e555a37abe4223b9761aeb6c47fcb3",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "3;",
+      "Id": "79163ff7a99d4ab3888b8e959ef70971",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "56e61d7baaa3463797c059043d778d2c",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Combinations@var[]..[],int,bool",
+      "Id": "ba3d1577b2ec4cfca2a556079b333f9c",
+      "Inputs": [
+        {
+          "Id": "20cab2f8c22c41908399b20e804ba37a",
+          "Name": "list",
+          "Description": "List to generate combinations of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5cf5617c1d27453d945de55ff8b3b697",
+          "Name": "length",
+          "Description": "Length of each combination.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "76f7c48cf3ed4cc68f75c6633b42e82d",
+          "Name": "replace",
+          "Description": "Whether or not items are removed once selected for combination, defaults to false.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d41db1c78c464778a9d93b622ff09cf6",
+          "Name": "comb",
+          "Description": "Combinations of the list of the given length.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Produces all combinations of the given length of a given list.\n\nList.Combinations (list: var[]..[], length: int, replace: bool = false): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "e0f21786634e473b88495c72254bb3c8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6531f2332eb645cab35bf618ee88deb8",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "7f9445b5ff8d4c64a896beff32b8271e",
+      "End": "0518786e8aa345be8cea4b017feb9547",
+      "Id": "7a86c6f804864517b7dd7896b2c285a8"
+    },
+    {
+      "Start": "8ce484e5fef74ad6b116bfca1de11852",
+      "End": "20cab2f8c22c41908399b20e804ba37a",
+      "Id": "8143423b9bc24b869b6fc53c6675cff7"
+    },
+    {
+      "Start": "56e61d7baaa3463797c059043d778d2c",
+      "End": "5cf5617c1d27453d945de55ff8b3b697",
+      "Id": "319d0c87a5f64d3fbc36570ed34d1db0"
+    },
+    {
+      "Start": "d41db1c78c464778a9d93b622ff09cf6",
+      "End": "0736b3ba2fc64c8aa61d5e6215c6c591",
+      "Id": "84bee464a9c54c4bb07f86fe88958b40"
+    },
+    {
+      "Start": "6531f2332eb645cab35bf618ee88deb8",
+      "End": "76f7c48cf3ed4cc68f75c6633b42e82d",
+      "Id": "64a3ffe194d146bcb1979640b8e5617e"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "494f3cf5280d4f13a9f2269b2190b316",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -75.9045156296965,
+        "Y": 246.20514560718624
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "600e36b9623642888370141001f8dcbc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 120.0954843703035,
+        "Y": 241.99181227385293
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "016b9a0e5a9645dab9065efaeb951f97",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 653.09548437030344,
+        "Y": 410.99181227385293
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "79163ff7a99d4ab3888b8e959ef70971",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 120.0954843703035,
+        "Y": 482.20514560718624
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Combinations",
+        "Id": "ba3d1577b2ec4cfca2a556079b333f9c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 355.0954843703035,
+        "Y": 410.99181227385293
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "e0f21786634e473b88495c72254bb3c8",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 120.0954843703035,
+        "Y": 590.99181227385293
+      }
+    ],
+    "Annotations": [],
+    "X": 193.581680941273,
+    "Y": -323.63785261887,
+    "Zoom": 1.17832718568627
+  }
+}

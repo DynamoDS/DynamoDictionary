@@ -1,0 +1,233 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Rank",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "[1..4];\n[[1..3]];",
+      "Id": "5bcb08f24ba54a8e8ca283225603b384",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7a683af8651f4362b6ee21d0fd2844cc",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "07566b949e7644028acf3904ed58737a",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "9f5dd095d3d847f5aab9880fd2a44770",
+      "Inputs": [
+        {
+          "Id": "28993fd3eba34226a27706dffa924ac0",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e31504f22eb9492cbfa49a296e614069",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "88688cb7d73f45979b03cd2231ecfe7f",
+          "Name": "list",
+          "Description": "A list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list out of the given inputs"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "List.Rank@var[]..[]",
+      "Id": "008d0571853f4262abebf195cc28862a",
+      "Inputs": [
+        {
+          "Id": "17c474be6d1042ed864dc5df651d188f",
+          "Name": "list",
+          "Description": "list of values\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4ddc8a2e8c1f4b9e8a3db89d7d96ae20",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the deepest depth of the list\n\nList.Rank (list: var[]..[]): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "List.Rank@var[]..[]",
+      "Id": "d17d7416a408463a9bbd2069cb23aa34",
+      "Inputs": [
+        {
+          "Id": "6deae70e751241cf96a2e3d93e3696d4",
+          "Name": "list",
+          "Description": "list of values\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 4,
+          "UseLevels": true,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4deda170f91943fcaf3c626aa16a964e",
+          "Name": "int",
+          "Description": "int",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the deepest depth of the list\n\nList.Rank (list: var[]..[]): int"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "7a683af8651f4362b6ee21d0fd2844cc",
+      "End": "28993fd3eba34226a27706dffa924ac0",
+      "Id": "44fb33c8c4454d45abb883ee321ebbe4"
+    },
+    {
+      "Start": "07566b949e7644028acf3904ed58737a",
+      "End": "e31504f22eb9492cbfa49a296e614069",
+      "Id": "2c073375d7be4b8e972d726cc2c75911"
+    },
+    {
+      "Start": "88688cb7d73f45979b03cd2231ecfe7f",
+      "End": "17c474be6d1042ed864dc5df651d188f",
+      "Id": "21b02347317043bfb4aace6140ae92a6"
+    },
+    {
+      "Start": "88688cb7d73f45979b03cd2231ecfe7f",
+      "End": "6deae70e751241cf96a2e3d93e3696d4",
+      "Id": "78f843dc02fb4a4bb6299971fd87652a"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "5bcb08f24ba54a8e8ca283225603b384",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 284.0,
+        "Y": 252.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "9f5dd095d3d847f5aab9880fd2a44770",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 436.0,
+        "Y": 252.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Rank",
+        "Id": "008d0571853f4262abebf195cc28862a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 648.0,
+        "Y": 187.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Rank",
+        "Id": "d17d7416a408463a9bbd2069cb23aa34",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 646.0,
+        "Y": 315.0
+      }
+    ],
+    "Annotations": [],
+    "X": -273.0,
+    "Y": -53.0,
+    "Zoom": 1.0
+  }
+}

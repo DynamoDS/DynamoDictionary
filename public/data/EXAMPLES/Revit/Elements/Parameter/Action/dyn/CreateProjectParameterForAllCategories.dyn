@@ -1,0 +1,266 @@
+{
+  "Uuid": "803fb2f9-4884-42de-915d-c7831d5e05fe",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "CreateProjectParameterForAllCategories",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "DSRevitNodesUI.BuiltInParameterGroup, DSRevitNodesUI",
+      "SelectedIndex": 26,
+      "NodeType": "ExtensionNode",
+      "Id": "bea89879012348b783f8083df92ee449",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f73ba14e886246c285ec657691eb240d",
+          "Name": "BuiltIn Parameter Group",
+          "Description": "The selected BuiltIn Parameter Group",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a built-in parameter group."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"NewParameter\";",
+      "Id": "f817ae43a95b4cd1a7f0a3a77a870e69",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "17345cec3dd54cfd89ff186f9e1c40dc",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ParameterType, DSRevitNodesUI",
+      "SelectedIndex": 124,
+      "NodeType": "ExtensionNode",
+      "Id": "a704084a29a3418bab8c348c4c3a6af6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c180ca97bb054ac08cb8c9075961f627",
+          "Name": "Parameter Type",
+          "Description": "The selected Parameter Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a parameter type."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "true;",
+      "Id": "6dacbe10675a4d95b89625bf56590662",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d7b85b4c60644d7a89cb639763cdbbc5",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Parameter.CreateProjectParameterForAllCategories@string,string,string,string,bool",
+      "Id": "6509730499d54c588400e5c69c9eaf1b",
+      "Inputs": [
+        {
+          "Id": "d517836677ad4fd7bf9ff4ef4d994ed9",
+          "Name": "parameterName",
+          "Description": "Name\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2ca7ece29cbf4d3d817e9d441686c600",
+          "Name": "groupName",
+          "Description": "Group of the parameter for shared parameters\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8f99dbe3d4a54b32829562a414cdcd86",
+          "Name": "type",
+          "Description": "Parameter Type\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a37ec659059d42babc38aa63e8129f5b",
+          "Name": "group",
+          "Description": "Parameter Group\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "df8622bbaa494896b3cbecce19d81423",
+          "Name": "instance",
+          "Description": "Is instance parameter, otherwise it's a type parameter\n\nbool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bfb491d76e50486eabc50aa0b63a0f24",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a new Project Parameter in this current Revit document for all applicable categories\n\nParameter.CreateProjectParameterForAllCategories (parameterName: string, groupName: string, type: string, group: string, instance: bool): void"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f73ba14e886246c285ec657691eb240d",
+      "End": "2ca7ece29cbf4d3d817e9d441686c600",
+      "Id": "acfed6f2b697463ba46eb447627d61cf"
+    },
+    {
+      "Start": "f73ba14e886246c285ec657691eb240d",
+      "End": "a37ec659059d42babc38aa63e8129f5b",
+      "Id": "dd213a20933f4dad8165cf24337e282c"
+    },
+    {
+      "Start": "17345cec3dd54cfd89ff186f9e1c40dc",
+      "End": "d517836677ad4fd7bf9ff4ef4d994ed9",
+      "Id": "d1a749c28d4647f4830dddc7da2769bd"
+    },
+    {
+      "Start": "c180ca97bb054ac08cb8c9075961f627",
+      "End": "8f99dbe3d4a54b32829562a414cdcd86",
+      "Id": "feec0f1631f94352bf7cc5bed936cd21"
+    },
+    {
+      "Start": "d7b85b4c60644d7a89cb639763cdbbc5",
+      "End": "df8622bbaa494896b3cbecce19d81423",
+      "Id": "19e9badc118249579084ec6d9e90413e"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5357",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Select BuiltIn Parameter Group",
+        "Id": "bea89879012348b783f8083df92ee449",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 573.5,
+        "Y": 472.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f817ae43a95b4cd1a7f0a3a77a870e69",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 675.0,
+        "Y": 384.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Select Parameter Type",
+        "Id": "a704084a29a3418bab8c348c4c3a6af6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 632.5,
+        "Y": 585.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "6dacbe10675a4d95b89625bf56590662",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 757.0,
+        "Y": 671.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Parameter.CreateProjectParameterForAllCategories",
+        "Id": "6509730499d54c588400e5c69c9eaf1b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 956.5,
+        "Y": 452.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}

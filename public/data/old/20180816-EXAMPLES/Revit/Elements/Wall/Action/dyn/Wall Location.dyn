@@ -1,0 +1,20 @@
+<Workspace Version="1.3.0.875" X="-2138.40942122462" Y="-2822.35223703774" zoom="2.3048065854023" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <DSRevitNodesUI.WallLocation guid="2fba1134-a57b-4a81-ad29-db8dedf306c6" type="DSRevitNodesUI.WallLocation" nickname="Wall Location" x="1064.84285309665" y="1361.52877642655" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="0:CoreCenterline" />
+    <CoreNodeModels.Watch guid="427f0cbd-5464-42fb-870a-a986283db888" type="CoreNodeModels.Watch" nickname="Watch" x="1304.1846754863" y="1361.52877642655" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="2fba1134-a57b-4a81-ad29-db8dedf306c6" start_index="0" end="427f0cbd-5464-42fb-870a-a986283db888" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-40.3624007913443" eyeY="25.2514737758484" eyeZ="25.3343941538393" lookX="30.2799867974682" lookY="-7.63586054272933" lookZ="-19.4473400255838" upX="-0.0058741061025982" upY="0.999975644234583" upZ="0.0037726488242123" />
+  </Cameras>
+</Workspace>

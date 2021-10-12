@@ -1,0 +1,173 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ReadText",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "5411bf49384e484a85833c8724e456d5",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\Sample.txt",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Temp\\Sample.txt",
+      "InputValue": "C:\\Temp\\Sample.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "5411bf49384e484a85833c8724e456d5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "cf7baec484224156b481fc0b1f564ee6",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.ReadText@var",
+      "Id": "e034e4c9894f4fb499350ba4a48a0223",
+      "Inputs": [
+        {
+          "Id": "3335865d105c4bdaa37fb74261fc2aea",
+          "Name": "file",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "78b900e459e14e2684db4a4dca54b661",
+          "Name": "str",
+          "Description": "Contents of the text file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Reads a text file and returns the contents as a string.\n\nFileSystem.ReadText (file: var): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "57e9632a1b7a47e6b309720ad752bb06",
+      "Inputs": [
+        {
+          "Id": "e7ed4a4b9090439fbdde82c39912dcb6",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0c1e66ceef9f4f9c91e121ec3d14c3fe",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "cf7baec484224156b481fc0b1f564ee6",
+      "End": "3335865d105c4bdaa37fb74261fc2aea",
+      "Id": "3607b9ccb5f34caf9ef8a5ac932b9c15"
+    },
+    {
+      "Start": "78b900e459e14e2684db4a4dca54b661",
+      "End": "e7ed4a4b9090439fbdde82c39912dcb6",
+      "Id": "91e3ca4ee89547bfa745aabf409b1aef"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "5411bf49384e484a85833c8724e456d5",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 641.274736504078,
+        "Y": 291.239317895282
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.ReadText",
+        "Id": "e034e4c9894f4fb499350ba4a48a0223",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 849.600587842903,
+        "Y": 291.239317895282
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "57e9632a1b7a47e6b309720ad752bb06",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1041.0105212707408,
+        "Y": 291.83978470389275
+      }
+    ],
+    "Annotations": [],
+    "X": -918.668716309552,
+    "Y": -266.021509463754,
+    "Zoom": 1.66537098414077
+  }
+}

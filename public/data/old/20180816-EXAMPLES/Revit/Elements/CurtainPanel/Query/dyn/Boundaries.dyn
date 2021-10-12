@@ -1,0 +1,24 @@
+<Workspace Version="1.3.0.875" X="-99.0214999999998" Y="-339.694" zoom="1.1575" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="67b18007-50df-45b0-b673-eb89d27106f9" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CurtainPanel.Boundaries" x="567.5" y="453" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.CurtainPanel.Boundaries">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <DSRevitNodesUI.Categories guid="db1114e6-bd9e-4ead-a256-7be8417cb912" type="DSRevitNodesUI.Categories" nickname="Categories" x="117.5" y="453" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="128:CurtainWallPanels" />
+    <DSRevitNodesUI.ElementsOfCategory guid="c19ac296-85d1-4d45-bf5c-b5a6c288fc70" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="342" y="453" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </DSRevitNodesUI.ElementsOfCategory>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="db1114e6-bd9e-4ead-a256-7be8417cb912" start_index="0" end="c19ac296-85d1-4d45-bf5c-b5a6c288fc70" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c19ac296-85d1-4d45-bf5c-b5a6c288fc70" start_index="0" end="67b18007-50df-45b0-b673-eb89d27106f9" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-19724.0075070597" eyeY="5520.01255777778" eyeZ="-8853.56622000874" lookX="23314.3701290478" lookY="-5206.42623573741" lookZ="891.314977447883" upX="0.00348810428678792" upY="0.999993870169782" upZ="0.000133348272191276" />
+  </Cameras>
+</Workspace>

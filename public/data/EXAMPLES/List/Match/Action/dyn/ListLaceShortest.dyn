@@ -1,0 +1,271 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "LaceShortest",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..5..2;",
+      "Id": "134843bb307c4550b50bc79ef571fda6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1d6922f50e4a43bb9ec932dfe45c8840",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "8b21469ae7bf422a89c5e4455198a69a",
+      "Inputs": [
+        {
+          "Id": "930defc9785c4d4d850df959789040c8",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b7c9cca630504903b3f436157eb42b7c",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "+@var[]..[],var[]..[]",
+      "Id": "a0e85791fd8d4f56b13051f557dabbad",
+      "Inputs": [
+        {
+          "Id": "c52c6dba63ea45ce8aa0cac1e7c4a07a",
+          "Name": "x",
+          "Description": "x value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "02747d8d9b4745b0975b6119f7ed24e3",
+          "Name": "y",
+          "Description": "y value.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c9589d1a44fa48339451fde6a93cc5c6",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Adds x to y.\n\n+ (x: var[]..[], y: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..5..1;",
+      "Id": "90184e0b923947f5822b3118e799a845",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "56f9ae3bf72d4f7e9bf60ae70d59baad",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.HigherOrder.LaceShortest, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "5befe5893e534d77ab4474bad387363a",
+      "Inputs": [
+        {
+          "Id": "111bb348c1ef44f884c9147a8ef2fce3",
+          "Name": "comb",
+          "Description": "Combinator",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "129236e90c7240c494b21440cb258455",
+          "Name": "list1",
+          "Description": "List #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "315246d9aba345b4bab249c0c9fee28a",
+          "Name": "list2",
+          "Description": "List #2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dbf4ed3bc99043b3acd67d8dde967e03",
+          "Name": "combined",
+          "Description": "Combined lists",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Applies a combinator to each pair resulting from a shortest lacing of the input lists. All lists are truncated to the length of the shortest input."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1d6922f50e4a43bb9ec932dfe45c8840",
+      "End": "315246d9aba345b4bab249c0c9fee28a",
+      "Id": "83db292513074a458de6d3272a32dccb"
+    },
+    {
+      "Start": "c9589d1a44fa48339451fde6a93cc5c6",
+      "End": "111bb348c1ef44f884c9147a8ef2fce3",
+      "Id": "7463340526e84cfdafb4aabaf163e70e"
+    },
+    {
+      "Start": "56f9ae3bf72d4f7e9bf60ae70d59baad",
+      "End": "129236e90c7240c494b21440cb258455",
+      "Id": "50fe78672dd849588a97c5ab2bbd97da"
+    },
+    {
+      "Start": "dbf4ed3bc99043b3acd67d8dde967e03",
+      "End": "930defc9785c4d4d850df959789040c8",
+      "Id": "26e561b2298d42d4a46761cda6844fb6"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "134843bb307c4550b50bc79ef571fda6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 150.25526243688597,
+        "Y": 296.47432168148868
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "8b21469ae7bf422a89c5e4455198a69a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 682.25526243688591,
+        "Y": 150.26098834815537
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "+",
+        "Id": "a0e85791fd8d4f56b13051f557dabbad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 150.25526243688597,
+        "Y": 53.260988348155365
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "90184e0b923947f5822b3118e799a845",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 150.25526243688597,
+        "Y": 187.47432168148868
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.LaceShortest",
+        "Id": "5befe5893e534d77ab4474bad387363a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 419.25526243688597,
+        "Y": 150.26098834815537
+      }
+    ],
+    "Annotations": [],
+    "X": 254.411957460711,
+    "Y": 30.5729508091701,
+    "Zoom": 1.14435986229647
+  }
+}

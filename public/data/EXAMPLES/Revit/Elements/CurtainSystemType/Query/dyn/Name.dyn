@@ -1,24 +1,121 @@
-<Workspace Version="1.3.0.875" X="-2398.16856289925" Y="-617.073145648847" zoom="1.80447859346395" ScaleFactor="100" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
-  <NamespaceResolutionMap>
-    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
-  </NamespaceResolutionMap>
-  <Elements>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="f6be346f-c016-4ebd-8de4-6d04d7566930" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CurtainSystemType.ByName" x="1594.04239999211" y="506.390759688922" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.CurtainSystemType.ByName@string">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="212210ca-2f1c-4dfd-bfb9-6efb1c5c144e" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1397.37799851097" y="506.390759688922" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Curtain System&quot;;" ShouldFocus="false" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="bd408780-8aef-48f4-914a-c8d41964e434" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CurtainSystemType.Name" x="1905.55197995346" y="506.390759688922" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.CurtainSystemType.Name">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-  </Elements>
-  <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="f6be346f-c016-4ebd-8de4-6d04d7566930" start_index="0" end="bd408780-8aef-48f4-914a-c8d41964e434" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="212210ca-2f1c-4dfd-bfb9-6efb1c5c144e" start_index="0" end="f6be346f-c016-4ebd-8de4-6d04d7566930" end_index="0" portType="0" />
-  </Connectors>
-  <Notes />
-  <Annotations />
-  <Presets />
-  <Cameras>
-    <Camera Name="Background Preview" eyeX="-40.3624000549316" eyeY="25.2514743804932" eyeZ="25.3343944549561" lookX="30.2799873352051" lookY="-7.63586044311523" lookZ="-19.4473400115967" upX="-0.00587410619482398" upY="0.999975621700287" upZ="0.00377264874987304" />
-  </Cameras>
-</Workspace>
+{
+  "Uuid": "803fb2f9-4884-42de-915d-c7831d5e05fe",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Name",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Nodes.DSModelElementSelection, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "InstanceId": [
+        "8e132478-4506-47b0-ae6a-9a52730998ce-0005621b"
+      ],
+      "Id": "0ab8ec65985447e6a9ae1daa03aaa6bf",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f243ded09532459f985403b33ac00982",
+          "Name": "Element",
+          "Description": "The selected elements.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.CurtainSystemType.Name",
+      "Id": "00946ea7e3f94fb4bcad075e73eeeb3f",
+      "Inputs": [
+        {
+          "Id": "6c698f59f6df4e638957ff4163a098a1",
+          "Name": "curtainSystemType",
+          "Description": "Revit.Elements.CurtainSystemType",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "74fad125405845cd85a191e3208859d0",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The name of the CurtainSystemType\n\nCurtainSystemType.Name: string"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f243ded09532459f985403b33ac00982",
+      "End": "6c698f59f6df4e638957ff4163a098a1",
+      "Id": "5c7b0f20aafc4bd58614fac626f0c228"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5357",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Select Model Element",
+        "Id": "0ab8ec65985447e6a9ae1daa03aaa6bf",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 390.0,
+        "Y": 205.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CurtainSystemType.Name",
+        "Id": "00946ea7e3f94fb4bcad075e73eeeb3f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 614.0,
+        "Y": 210.0
+      }
+    ],
+    "Annotations": [],
+    "X": -19.0,
+    "Y": -50.0,
+    "Zoom": 1.0
+  }
+}

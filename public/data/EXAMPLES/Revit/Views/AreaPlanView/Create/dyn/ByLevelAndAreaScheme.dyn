@@ -1,0 +1,253 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ByLevelAndAreaScheme",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.AreaPlanView.ByLevelAndAreaScheme@Revit.Elements.Level,Revit.Elements.Element",
+      "Id": "859cffed76a6432e966039bba3c85648",
+      "Inputs": [
+        {
+          "Id": "dd4a585c04ee4c7b990c3fb963191336",
+          "Name": "level",
+          "Description": "The Level on which the AreaPlanView is based.\n\nLevel",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b6696a636d0245cb8edea340d8578c13",
+          "Name": "areaScheme",
+          "Description": "Area Scheme to be applied to plan view.\n\nElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d74146cf9fb74dd5b7180470e271037e",
+          "Name": "AreaPlanView",
+          "Description": "An Area Plan View if successful.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create an Area Plan View at the given Level.\n\nAreaPlanView.ByLevelAndAreaScheme (level: Level, areaScheme: Element): AreaPlanView"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Levels, DSRevitNodesUI",
+      "SelectedIndex": 0,
+      "NodeType": "ExtensionNode",
+      "Id": "be58cb8c49034901bf17088098b16a44",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6d45b371dd9745f184870215643f8c26",
+          "Name": "Levels",
+          "Description": "The selected Levels",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a level in the active document"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementTypes, DSRevitNodesUI",
+      "SelectedIndex": 18,
+      "NodeType": "ExtensionNode",
+      "Id": "d1d3ce2e6fff4c7f99fdab00c1fb3053",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "d1f4544c73934cc88d6510c114b39056",
+          "Name": "Types",
+          "Description": "The selected Types",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All element subtypes."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.ElementsOfType, DSRevitNodesUI",
+      "NodeType": "ExtensionNode",
+      "Id": "21eb90f1d19f4e219049e0b8dd49b903",
+      "Inputs": [
+        {
+          "Id": "fbd3d124f09847bb93f7907ec27c45d5",
+          "Name": "element type",
+          "Description": "An element type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b637b9fc3c5043a3acbecbb3b8e02932",
+          "Name": "elements",
+          "Description": "All elements in the active document of a given type.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All elements in the active document of a given type."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FirstItem@var[]..[]",
+      "Id": "a9ac9bedb4ae450894baea3383037396",
+      "Inputs": [
+        {
+          "Id": "25069aaff2b64b4ab9fee8ec23b81ebf",
+          "Name": "list",
+          "Description": "List to get the first item from.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "b936558d8b244ff78727cd1d29c30220",
+          "Name": "item",
+          "Description": "First item in the list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the first item in a list.\n\nList.FirstItem (list: var[]..[]): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "6d45b371dd9745f184870215643f8c26",
+      "End": "dd4a585c04ee4c7b990c3fb963191336",
+      "Id": "adefbe83d0524ee7b52b4638a6864577"
+    },
+    {
+      "Start": "d1f4544c73934cc88d6510c114b39056",
+      "End": "fbd3d124f09847bb93f7907ec27c45d5",
+      "Id": "52cd7cf1ca864e298b9c62f4008be062"
+    },
+    {
+      "Start": "b637b9fc3c5043a3acbecbb3b8e02932",
+      "End": "25069aaff2b64b4ab9fee8ec23b81ebf",
+      "Id": "0f49cb9c6675403689c66eab452c4f1c"
+    },
+    {
+      "Start": "b936558d8b244ff78727cd1d29c30220",
+      "End": "b6696a636d0245cb8edea340d8578c13",
+      "Id": "d35287f6e5f74c5a9280ff9b6e89327e"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.2.6826",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "AreaPlanView.ByLevelAndAreaScheme",
+        "Id": "859cffed76a6432e966039bba3c85648",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1480.9631108586843,
+        "Y": 258.34116360368955
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Levels",
+        "Id": "be58cb8c49034901bf17088098b16a44",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1274.8049865807525,
+        "Y": 220.59390141195547
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Element Types",
+        "Id": "d1d3ce2e6fff4c7f99fdab00c1fb3053",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 890.07327578038644,
+        "Y": 338.19114131697307
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "All Elements of Type",
+        "Id": "21eb90f1d19f4e219049e0b8dd49b903",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1054.8545934250715,
+        "Y": 338.19114131697307
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.FirstItem",
+        "Id": "a9ac9bedb4ae450894baea3383037396",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1274.8049865807527,
+        "Y": 338.19114131697307
+      }
+    ],
+    "Annotations": [],
+    "X": -1001.1501272724201,
+    "Y": 5.1135137389222223,
+    "Zoom": 1.3775833525586674
+  }
+}

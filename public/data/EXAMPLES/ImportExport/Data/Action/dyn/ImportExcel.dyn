@@ -1,0 +1,279 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ImportExcel",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "90af1fefb9124d81a5705fa7b8cfb7ca",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\sampleExcel.xlsx",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ImportExcel@var,string,bool,bool",
+      "Id": "3023c51e695b41a09034d7e98f7256ff",
+      "Inputs": [
+        {
+          "Id": "0b190e2bb90b47d5a1468cd799373ef4",
+          "Name": "file",
+          "Description": "File representing the Microsoft Excel spreadsheet.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0323feef6f9d490db7ee6b7351d2baa0",
+          "Name": "sheetName",
+          "Description": "Name of the worksheet containing the data.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "95df836f68c149d2a408cd1da8584e3d",
+          "Name": "readAsStrings",
+          "Description": "Toggle to switch between reading Excel file as strings.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "001275f569304c03be450d5ddaf7ce73",
+          "Name": "showExcel",
+          "Description": "Toggle to switch between showing and hiding the main Excel window.\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "50780b44b2194fd1b3a9a6afd316cde2",
+          "Name": "data",
+          "Description": "Rows of data from the Excel worksheet.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Read data from a Microsoft Excel spreadsheet. Data is read by row and returned in a series of lists by row. Rows and columns are zero-indexed; for example, the value in cell A1 will appear in the data list at [0,0]. This node requires Microsoft Excel to be installed.\n\nData.ImportExcel (file: var, sheetName: string, readAsStrings: bool = false, showExcel: bool = true): var[][]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "03cbcc48e7514ac58234b33f0aef7a16",
+      "Inputs": [
+        {
+          "Id": "9a76b93db4564e3fa232ec9b546da854",
+          "Name": "path",
+          "Description": "Path to the file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cbf01efb3cb34e68a4c3a396af5a2e48",
+          "Name": "file",
+          "Description": "File object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a file object from a path."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Temp\\sampleExcel.xlsx",
+      "InputValue": "C:\\Temp\\sampleExcel.xlsx",
+      "NodeType": "ExtensionNode",
+      "Id": "90af1fefb9124d81a5705fa7b8cfb7ca",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7a4e2500d16c46bdafeefa586c1f1f4e",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"samplesheet\";",
+      "Id": "f3696de1e02b4fd7bef0244f8e2ec950",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e2b1c7a26e85406a869b9e2a97138515",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "1b992ecd2f174d4f9ea2b77e2e24aab0",
+      "Inputs": [
+        {
+          "Id": "a2740c8c51ec4a418e58051da21556e5",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "88a07cbdcd944180a2e17b6b4cacb98a",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "50780b44b2194fd1b3a9a6afd316cde2",
+      "End": "a2740c8c51ec4a418e58051da21556e5",
+      "Id": "938653277fa44426a4fcff0d7b58c712"
+    },
+    {
+      "Start": "cbf01efb3cb34e68a4c3a396af5a2e48",
+      "End": "0b190e2bb90b47d5a1468cd799373ef4",
+      "Id": "830169e6d681454daf1c2607a479062f"
+    },
+    {
+      "Start": "7a4e2500d16c46bdafeefa586c1f1f4e",
+      "End": "9a76b93db4564e3fa232ec9b546da854",
+      "Id": "186f56e8088d4495ad33003f2ce52794"
+    },
+    {
+      "Start": "e2b1c7a26e85406a869b9e2a97138515",
+      "End": "0323feef6f9d490db7ee6b7351d2baa0",
+      "Id": "eb603d2c16a6448bab8736d3f43c71c4"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -8.3436689376831055,
+      "EyeY": 6.9886860847473145,
+      "EyeZ": 8.8846864700317383,
+      "LookX": 12.983955383300781,
+      "LookY": -5.8967127799987793,
+      "LookZ": -15.98281192779541,
+      "UpX": 0.039591424167156219,
+      "UpY": 0.99802666902542114,
+      "UpZ": -0.04873570054769516
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Data.ImportExcel",
+        "Id": "3023c51e695b41a09034d7e98f7256ff",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 583.66536699196752,
+        "Y": 381.12628862174506
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File.FromPath",
+        "Id": "03cbcc48e7514ac58234b33f0aef7a16",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 338.66536699196752,
+        "Y": 342.12628862174506
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "90af1fefb9124d81a5705fa7b8cfb7ca",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 70.665366991967517,
+        "Y": 342.12628862174506
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "f3696de1e02b4fd7bef0244f8e2ec950",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 338.66536699196752,
+        "Y": 450.33962195507837
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "1b992ecd2f174d4f9ea2b77e2e24aab0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 913.66536699196752,
+        "Y": 381.12628862174506
+      }
+    ],
+    "Annotations": [],
+    "X": 17.64543545078601,
+    "Y": -119.934584169694,
+    "Zoom": 1.26386342571936
+  }
+}

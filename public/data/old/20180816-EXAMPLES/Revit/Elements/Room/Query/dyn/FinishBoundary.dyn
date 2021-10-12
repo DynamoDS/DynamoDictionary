@@ -1,0 +1,25 @@
+<Workspace Version="1.2.1.3083" X="-203.803143745814" Y="-187.965941811264" zoom="1.27077228280694" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <DSRevitNodesUI.Categories guid="77ac8301-69fe-47d8-b8b4-e6beae30f60f" type="DSRevitNodesUI.Categories" nickname="Categories" x="213.318558123158" y="404.66435989212" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="403:Rooms" />
+    <DSRevitNodesUI.ElementsOfCategory guid="e8c9b30a-6487-4820-8610-0936fdab691b" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="412.260121646379" y="404.66435989212" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </DSRevitNodesUI.ElementsOfCategory>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e0eec6b8-5569-4d96-a3b1-c1dfddb34f53" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Room.FinishBoundary" x="627.543219501128" y="404.66435989212" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.Room.FinishBoundary">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="77ac8301-69fe-47d8-b8b4-e6beae30f60f" start_index="0" end="e8c9b30a-6487-4820-8610-0936fdab691b" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="e8c9b30a-6487-4820-8610-0936fdab691b" start_index="0" end="e0eec6b8-5569-4d96-a3b1-c1dfddb34f53" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-9316.28842144853" eyeY="16376.4697033633" eyeZ="-18722.5968338555" lookX="14357.5761251736" lookY="-17835.988140192" lookZ="9753.50434718197" upX="0.455349322034366" upY="0.834847831426173" upZ="0.309331566957318" />
+  </Cameras>
+</Workspace>

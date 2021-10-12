@@ -1,0 +1,182 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ImportCSV",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "f8ca663d08c8493d87abe52a460250be",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\sample.csv",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Temp\\sample.csv",
+      "InputValue": "C:\\Temp\\sample.csv",
+      "NodeType": "ExtensionNode",
+      "Id": "f8ca663d08c8493d87abe52a460250be",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3a013d562b5a40da8a7e8f63c38a9fcf",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "351ffd03cdb54de793be412f5c73d22c",
+      "Inputs": [
+        {
+          "Id": "228106196d3342f4ace0399ec1ae3060",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "17dc1008eaf0400bb3a206eaf6c12996",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSOffice.Data.ImportCSV@string,bool",
+      "Id": "ea95e137a6904a4d892dec6d2eba2911",
+      "Inputs": [
+        {
+          "Id": "868fd2ab85ee44828a11223355a15457",
+          "Name": "filePath",
+          "Description": "The CSV file to be converted into a list.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7291ecf3b04345ed99077089bef202ed",
+          "Name": "transpose",
+          "Description": "Whether the resulting list should be transposed.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "42e42755cad347c7b9976567f7d6b9c7",
+          "Name": "list",
+          "Description": "The list containing the items in the CSV file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Imports data from a CSV (comma separated values) file, put the items into a list and transpose it if needed.\n\nData.ImportCSV (filePath: string, transpose: bool = false): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "3a013d562b5a40da8a7e8f63c38a9fcf",
+      "End": "868fd2ab85ee44828a11223355a15457",
+      "Id": "e21072d1ffdf42ecb8737ec72a2e47ab"
+    },
+    {
+      "Start": "42e42755cad347c7b9976567f7d6b9c7",
+      "End": "228106196d3342f4ace0399ec1ae3060",
+      "Id": "359fd00d63d0494bbadaccae0de03d2a"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "f8ca663d08c8493d87abe52a460250be",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 383.788414868656,
+        "Y": 218.001180078351
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "351ffd03cdb54de793be412f5c73d22c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 916.788414868656,
+        "Y": 218.001180078351
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Data.ImportCSV",
+        "Id": "ea95e137a6904a4d892dec6d2eba2911",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 619.788414868656,
+        "Y": 218.001180078351
+      }
+    ],
+    "Annotations": [],
+    "X": -326.302024638943,
+    "Y": -147.4110654772,
+    "Zoom": 1.545620359375
+  }
+}

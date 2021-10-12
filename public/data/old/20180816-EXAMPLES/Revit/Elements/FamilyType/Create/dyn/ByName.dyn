@@ -1,0 +1,25 @@
+<Workspace Version="1.2.1.3083" X="-964.944832082477" Y="-85.113041024127" zoom="1.60010300881001" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="8b730d2c-f935-4775-a760-d5806726955f" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="694.675367877257" y="280.677580475354" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Room Tag&quot;;&#xA;&quot;Room Tag With Area&quot;;" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="88f09d52-f53a-4ef3-a995-722fdf142aa9" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.ByName" x="960.443188647394" y="280.677580475354" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.ByName@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <CoreNodeModels.Watch guid="84c41586-2214-4c96-bbc6-120c67bbe3b0" type="CoreNodeModels.Watch" nickname="Watch" x="1235.01100941753" y="280.677580475354" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="8b730d2c-f935-4775-a760-d5806726955f" start_index="0" end="88f09d52-f53a-4ef3-a995-722fdf142aa9" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="88f09d52-f53a-4ef3-a995-722fdf142aa9" start_index="0" end="84c41586-2214-4c96-bbc6-120c67bbe3b0" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

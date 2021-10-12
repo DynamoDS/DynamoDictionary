@@ -1,0 +1,25 @@
+<Workspace Version="1.3.0.875" X="-804.071245002878" Y="-2124.79682795732" zoom="1.07386484997055" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Vector" resolvedName="Autodesk.DesignScript.Geometry.Vector" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="0f9c830a-8353-4a4e-ab8a-a669377a864b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="CurveElement.Curve" x="1276.49734783524" y="2038.69876223377" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.CurveElement.Curve">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <DSRevitNodesUI.ElementTypes guid="84db9845-2c28-4f3f-b905-3ca77782ea6d" type="DSRevitNodesUI.ElementTypes" nickname="Element Types" x="797.393214940955" y="2038.69876223377" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="64:CurveElement" />
+    <DSRevitNodesUI.ElementsOfType guid="c784459b-15bf-4a3b-9b2b-c045981c89d5" type="DSRevitNodesUI.ElementsOfType" nickname="All Elements of Type" x="1006.58791188726" y="2038.69876223377" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+    </DSRevitNodesUI.ElementsOfType>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="84db9845-2c28-4f3f-b905-3ca77782ea6d" start_index="0" end="c784459b-15bf-4a3b-9b2b-c045981c89d5" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="c784459b-15bf-4a3b-9b2b-c045981c89d5" start_index="0" end="0f9c830a-8353-4a4e-ab8a-a669377a864b" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

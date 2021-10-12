@@ -1,9 +1,7 @@
-import React, {
-    Component,
-    PropTypes
-} from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import RichTextEditor from 'react-rte';
+import PropTypes from "prop-types";
 
 export default class TextEditor extends Component {
     static propTypes={

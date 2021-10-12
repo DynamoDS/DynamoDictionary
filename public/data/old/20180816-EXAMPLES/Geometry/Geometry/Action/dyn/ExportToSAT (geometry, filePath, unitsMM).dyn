@@ -1,0 +1,30 @@
+<Workspace Version="1.1.0.2093" X="608.172057098441" Y="-4189.22257881689" zoom="1.49764941127832" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9222260d-0749-4abb-b34a-20af71030c41" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.ExtrudeAsSolid" x="-155.902618350164" y="2817.235439445" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double">
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="30a8c0ff-c030-4a5b-9119-3a44ccc5f608" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Circle.ByCenterPointRadius" x="-375.597933231544" y="2817.235439445" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double">
+      <PortInfo index="0" default="True" />
+      <PortInfo index="1" default="True" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <GeometryUI.ExportWithUnits guid="75c8ab4f-3252-44e5-8ef5-457e9522a3de" type="GeometryUI.ExportWithUnits" nickname="ExportToSAT" x="45.7047347611147" y="2817.235439445" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" exportedUnit="Millimeters">
+      <PortInfo index="1" default="True" />
+    </GeometryUI.ExportWithUnits>
+    <CoreNodeModels.Input.Filename guid="ebf0e330-24af-42ad-9f64-c0c0c4fc6c9d" type="CoreNodeModels.Input.Filename" nickname="File Path" x="-224.702618350164" y="2952.99323188512" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <System.String>..\..\..\..\_REFERENCE\exportsample.sat</System.String>
+      <HintPath>C:\Users\Ronnie Parsons\Desktop\Dynamo Example Files\_REFERENCE\exportsample.sat</HintPath>
+    </CoreNodeModels.Input.Filename>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="9222260d-0749-4abb-b34a-20af71030c41" start_index="0" end="75c8ab4f-3252-44e5-8ef5-457e9522a3de" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="30a8c0ff-c030-4a5b-9119-3a44ccc5f608" start_index="0" end="9222260d-0749-4abb-b34a-20af71030c41" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ebf0e330-24af-42ad-9f64-c0c0c4fc6c9d" start_index="0" end="75c8ab4f-3252-44e5-8ef5-457e9522a3de" end_index="1" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="2.81225340612862" eyeY="2.85348755541781" eyeZ="1.51975617998695" lookX="-3.95735701204197" lookY="-2.84298552018672" lookZ="-1.55002417389229" upX="-0.339745341232987" upY="0.93105578060209" upZ="-0.133072016398394" />
+  </Cameras>
+</Workspace>

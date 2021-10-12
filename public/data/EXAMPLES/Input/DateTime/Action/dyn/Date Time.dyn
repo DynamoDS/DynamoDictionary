@@ -1,0 +1,208 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Date Time",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "bc22ee1442c24426871e3ba069ea4bc1",
+      "Name": "Date Time",
+      "Type": "date",
+      "Value": "2015-03-14T21:26:00Z",
+      "Description": "Create a DateTime object from a formatted date and time string. Date and time must be of the format \"April 12, 1977 12:00 PM\""
+    },
+    {
+      "Id": "f26ae5e00a4b429aaf7b403610262baa",
+      "Name": "Date Time",
+      "Type": "date",
+      "Value": "1955-11-05T00:00:00Z",
+      "Description": "Create a DateTime object from a formatted date and time string. Date and time must be of the format \"April 12, 1977 12:00 PM\""
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "f830133c02084d7d9811b2fadff91282",
+      "Inputs": [
+        {
+          "Id": "fde98ff42863467c8a6468647ae33b05",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "135bbe75a3d948f0b60988c64a546899",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DateTime, CoreNodeModels",
+      "NodeType": "DateTimeInputNode",
+      "InputValue": "2015-03-14T21:26:00Z",
+      "Id": "bc22ee1442c24426871e3ba069ea4bc1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "20fc74cb27d14e6983136c9b57e6db76",
+          "Name": "",
+          "Description": "DateTime",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Create a DateTime object from a formatted date and time string. Date and time must be of the format \"April 12, 1977 12:00 PM\""
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "92b24910fd2e45479758b9ea1b6e60d6",
+      "Inputs": [
+        {
+          "Id": "487118dbf84e484e84bda88487416422",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "12c1469e00a943edba37047fd7c7627d",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DateTime, CoreNodeModels",
+      "NodeType": "DateTimeInputNode",
+      "InputValue": "1955-11-05T00:00:00Z",
+      "Id": "f26ae5e00a4b429aaf7b403610262baa",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "601e685ad2dd4ecebeec96fd7318d341",
+          "Name": "",
+          "Description": "DateTime",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Create a DateTime object from a formatted date and time string. Date and time must be of the format \"April 12, 1977 12:00 PM\""
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "20fc74cb27d14e6983136c9b57e6db76",
+      "End": "fde98ff42863467c8a6468647ae33b05",
+      "Id": "0887787595ab428f9378f51f157cef8b"
+    },
+    {
+      "Start": "601e685ad2dd4ecebeec96fd7318d341",
+      "End": "487118dbf84e484e84bda88487416422",
+      "Id": "274d8e1fab464a2b8b80511303ad5a26"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "f830133c02084d7d9811b2fadff91282",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 637.2,
+        "Y": 102.281334036998
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Date Time",
+        "Id": "bc22ee1442c24426871e3ba069ea4bc1",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 308.959135131414,
+        "Y": 102.281334036998
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "92b24910fd2e45479758b9ea1b6e60d6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 637.09426341673,
+        "Y": 211.573730250284
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Date Time",
+        "Id": "f26ae5e00a4b429aaf7b403610262baa",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 308.17597449557786,
+        "Y": 211.573730250284
+      }
+    ],
+    "Annotations": [],
+    "X": -241.082863754646,
+    "Y": -78.3974253571061,
+    "Zoom": 1.47618023926361
+  }
+}

@@ -1,0 +1,47 @@
+version: 0.1.1
+env:
+  - JENKINS_NODE_WIN: "DynamoDockerWin"
+  - SLACK_QUANTUM_BUILD_CHANNEL : "#dynamo-jenkinsbuild"
+  - SLACK_QUANTUM_BUILD_CREDENTIAL_ID : "slack-notify-token"
+  - MAIL_QUANTUM_BUILD_RECIPIENT : "dynamo.dev@autodesk.com"
+  - DOCKER_IMAGE_VERSION : "1.0.7"
+  - BUCKETNAME : "dictionary.dynamobim.com"
+  - DISTRIBUTIONID : "E29G935QNLRDFJ"
+  - DOCKER_WORKSPACE : "C:\\Workspace"
+  - COMMON_RESOURCES_DIR : "cicdresources"
+  - DOCKER_CONTAINER : "build-dictionary"
+  - URL_REPO_TOOLS : "https://github.com/DynamoDS/DynamoDictionary.git"
+  - BRANCH_TOOLS : "cicdresources"
+  - HARMONY_REPO : "DynamoDS/DynamoDictionary"
+
+timeout: 420
+check_changelog_updated_on_pr: false
+pipeline_os: "Windows"
+force_slack_notification : true
+
+schedule:
+  cron_schedule: "once_a_month"
+
+build:
+  -
+    scripts:
+      - "pwsh.exe -ExecutionPolicy ByPass -File .\\cicd\\DownloadCICDResources.ps1"
+      - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\SetupHost.ps1"
+      - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\StartContainer.ps1"
+      - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\DockerBuild.ps1"
+
+soc2:
+  run_on_any_branch : true
+  harmony:
+    hidden_email_list: dynamo_ws_access
+    repository: env.HARMONY_REPO
+    third_party_lib_paths:
+      - "node_modules"
+
+deployment:
+  -
+      type: customized
+      scripts:
+          - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\DockerVaultLogin.ps1"
+          - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\DockerDeploy.ps1"
+          - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\PostDeploy.ps1"

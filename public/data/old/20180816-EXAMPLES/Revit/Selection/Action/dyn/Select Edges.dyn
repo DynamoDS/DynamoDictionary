@@ -1,0 +1,32 @@
+<Workspace Version="1.2.1.3083" X="-106.36160426307" Y="-107.861295395542" zoom="1.55469255719439" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <CoreNodeModels.Watch guid="75e03f13-1650-4b62-baef-f895ed73c0ee" type="CoreNodeModels.Watch" nickname="Watch" x="542.647989444332" y="296.927503573691" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false">
+      <PortInfo index="0" default="False" />
+    </CoreNodeModels.Watch>
+    <Dynamo.Nodes.SelectEdges guid="892735d4-b7ec-48af-acdb-d41424f7813d" type="Dynamo.Nodes.SelectEdges" nickname="Select Edges" x="270.896874535793" y="297.44207476418" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
+      <instance id="ef57b02a-5e81-49e7-93bb-ae5f002d921c-00030826:188:LINEAR" />
+      <instance id="ef57b02a-5e81-49e7-93bb-ae5f002d921c-00030826:192:LINEAR" />
+      <instance id="a6aa132d-ccd7-408f-b2f9-ed67350c8c3a-0003b64a:325:LINEAR" />
+      <instance id="c95e858d-9206-4eac-9a88-fccee0e2b73b-00081702:187:LINEAR" />
+      <instance id="c95e858d-9206-4eac-9a88-fccee0e2b73b-00081702:191:LINEAR" />
+    </Dynamo.Nodes.SelectEdges>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="892735d4-b7ec-48af-acdb-d41424f7813d" start_index="0" end="75e03f13-1650-4b62-baef-f895ed73c0ee" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="fbaa394c-7960-4feb-9cac-68873497dba3" text="The Revit sample file can be found in Revit's installation directory, typically located in: &#xD;&#xA;&#xD;&#xA;C:\Program Files\Autodesk\Revit 2017\Samples" x="84.9088259540671" y="131.343505208871" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a887f384-6399-4c78-9d2c-bca2ad041c73" annotationText="Open with Revit file: rac_basic_sample_project.rvt" left="74.9088259540671" top="78.143505208871" width="289.6" height="140.8" fontSize="18" InitialTop="131.343505208871" InitialHeight="140" TextblockHeight="43.2" backgrouund="#FF48B9FF">
+      <Models ModelGuid="fbaa394c-7960-4feb-9cac-68873497dba3" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

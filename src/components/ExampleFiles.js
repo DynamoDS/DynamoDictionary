@@ -103,6 +103,12 @@ class ExampleFiles extends React.Component {
   }
 
   _exAdd(node) {
+    if (!node.dynFile) {
+      node.dynFile = [];
+    }
+    if (!node.imageFile) {
+      node.imageFile = [];
+    }
 
     const first_file_dyn = typeof (node.dynFile[0]) === 'object' ? node.dynFile[0].original : node.dynFile[0] || node.Name;
 

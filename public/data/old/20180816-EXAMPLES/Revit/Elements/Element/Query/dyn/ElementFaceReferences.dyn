@@ -1,0 +1,27 @@
+<Workspace Version="1.2.1.3083" X="-106.36160426307" Y="-107.861295395542" zoom="1.55469255719439" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Color" resolvedName="DSCore.Color" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <DSRevitNodesUI.FamilyTypes guid="0b4544e9-1b98-47e8-b8e6-12cb765b29af" type="DSRevitNodesUI.FamilyTypes" nickname="Family Types" x="177.908692136596" y="296.927503573691" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="36:M_Pile-Steel Pipe:600mm Diameter" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="d585e4c3-1cbd-48fa-8cb5-6c248b9ecff4" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Element.ElementFaceReferences" x="515.231756077156" y="296.927503573691" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.Element.ElementFaceReferences">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="0b4544e9-1b98-47e8-b8e6-12cb765b29af" start_index="0" end="d585e4c3-1cbd-48fa-8cb5-6c248b9ecff4" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="fbaa394c-7960-4feb-9cac-68873497dba3" text="The Revit sample file can be found in Revit's installation directory, typically located in: &#xD;&#xA;&#xD;&#xA;C:\Program Files\Autodesk\Revit 2017\Samples" x="84.9088259540671" y="131.343505208871" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a887f384-6399-4c78-9d2c-bca2ad041c73" annotationText="Open with Revit file: rac_basic_sample_project.rvt" left="74.9088259540671" top="78.143505208871" width="289.6" height="140.8" fontSize="18" InitialTop="131.343505208871" InitialHeight="140" TextblockHeight="43.2" backgrouund="#FF48B9FF">
+      <Models ModelGuid="fbaa394c-7960-4feb-9cac-68873497dba3" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

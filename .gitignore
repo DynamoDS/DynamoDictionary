@@ -5,6 +5,7 @@
 
 # dependencies
 node_modules
+public/bower_components
 
 # testing
 coverage
@@ -18,6 +19,6 @@ build
 .DS_Store
 .env
 npm-debug.log
-
+.npmrc
 node_modules
 configuration/*.json

@@ -1,0 +1,504 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Watch 3D",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Color": {
+        "Key": "DSCore.Color",
+        "Value": "DSCoreNodes.dll"
+      },
+      "Display": {
+        "Key": "Display.Display",
+        "Value": "Display.dll"
+      },
+      "GeometryColor": {
+        "Key": "Modifiers.GeometryColor",
+        "Value": "GeometryColor.dll"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "f51da48c37d648178ae3ef267bd7ddb7",
+      "Name": "Number Slider",
+      "Type": "number",
+      "Value": "2.7",
+      "MaximumValue": 6.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.1,
+      "NumberType": "Double",
+      "Description": "A slider that produces numeric values."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.BoundingBox.ToPolySurface",
+      "Id": "c22bb8b60a35488bb22678919818af34",
+      "Inputs": [
+        {
+          "Id": "e317a79118154328a75f44c27170415c",
+          "Name": "boundingBox",
+          "Description": "Autodesk.DesignScript.Geometry.BoundingBox",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ee23eac7c595482795c011e31fdbb777",
+          "Name": "PolySurface",
+          "Description": "A PolySurface representation of the BoundingBox",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the BoundingBox as a collection of Surfaces\n\nBoundingBox.ToPolySurface ( ): PolySurface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Polygon.RegularPolygon@Autodesk.DesignScript.Geometry.Circle,int",
+      "Id": "c51f35dd09db412d95692b810296a56f",
+      "Inputs": [
+        {
+          "Id": "2df641d1800f4d55bb7e18f73d690c02",
+          "Name": "circle",
+          "Description": "Circle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "086f038ded6f48f6b42fece56d5512cd",
+          "Name": "numberSides",
+          "Description": "int\nDefault value : 5",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d5503ca9c0e54c819f410594c29475eb",
+          "Name": "Polygon",
+          "Description": "Polygon",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Construct an inscribed Polygon Curve within a circle.\n\nPolygon.RegularPolygon (circle: Circle, numberSides: int = 5): Polygon"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "607bee3c79184ec481ec249b01b4e978",
+      "Inputs": [
+        {
+          "Id": "82d061872dd845628f63929318e0b908",
+          "Name": "centerPoint",
+          "Description": "Point\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "0e1f76bfbb7441aea223d63184dfaea4",
+          "Name": "radius",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c061126a7d09428eaf7e074029f4f32f",
+          "Name": "Circle",
+          "Description": "Circle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a Circle with input center Point and radius in the world XY plane, with world Z as normal.\n\nCircle.ByCenterPointRadius (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1): Circle"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 6.0,
+      "MinimumValue": 0.1,
+      "StepValue": 0.1,
+      "InputValue": 2.7,
+      "Id": "f51da48c37d648178ae3ef267bd7ddb7",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b23e4bc8d39e41b9aba026bddc002d97",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@double",
+      "Id": "0d36c216490c4dcd9c0db79a113e2b48",
+      "Inputs": [
+        {
+          "Id": "ef8b1f60a39a4b5c895c819f2a1155fa",
+          "Name": "curve",
+          "Description": "Autodesk.DesignScript.Geometry.Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "71d4cbd654224ddb8620df345b9eb9e5",
+          "Name": "distance",
+          "Description": "Distance to extrude\n\ndouble\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "4f448e352a724b15adfebf113bcdf78d",
+          "Name": "Solid",
+          "Description": "The extruded Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Extrudes a Curve in the Normal direction by the specified distance. Curve must be closed.\n\nCurve.ExtrudeAsSolid (distance: double = 1): Solid"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.BoundingBox",
+      "Id": "474c9b5e391947f7b7e3c389d4ec334a",
+      "Inputs": [
+        {
+          "Id": "88cbd5406c18447f8315f2c20f4c673e",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "20bc37ea81df479faf084ab332a3fa82",
+          "Name": "BoundingBox",
+          "Description": "BoundingBox",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the BoundingBox containing the given piece of Geometry\n\nGeometry.BoundingBox: BoundingBox"
+    },
+    {
+      "ConcreteType": "Watch3DNodeModels.Watch3D, Watch3DNodeModels",
+      "WatchWidth": 455.0,
+      "WatchHeight": 372.0,
+      "WasExecuted": true,
+      "Camera": {
+        "Name": "7d89dbdd-5f53-47f1-8b2e-9117cc778522 Preview",
+        "EyeX": -2.688687801361084,
+        "EyeY": 5.0282559394836426,
+        "EyeZ": 5.6739811897277832,
+        "LookX": 3.4103682041168213,
+        "LookY": -4.9599642753601074,
+        "LookZ": -8.14465045928955,
+        "UpX": 0.11256646364927292,
+        "UpY": 0.95658683776855469,
+        "UpZ": -0.2688315212726593
+      },
+      "NodeType": "ExtensionNode",
+      "Id": "7d89dbdd5f5347f18b2e9117cc778522",
+      "Inputs": [
+        {
+          "Id": "e65e3aa06cbc4e109368191f83b75ea8",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f73b5f8299cf4bf6ac23361b39532768",
+          "Name": "",
+          "Description": "Incoming geometry objects.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Shows a dynamic preview of geometry."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "color = Color.ByARGB(100,141,198,217);\nGeometryColor.ByGeometryColor(geometry, color);",
+      "Id": "b4c3377e38ad411d8276788af994ca87",
+      "Inputs": [
+        {
+          "Id": "7faa7e1f865e44acb4c0746e25ff9864",
+          "Name": "geometry",
+          "Description": "geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "15c07653655f4b50959e0f6a776e03ef",
+          "Name": "",
+          "Description": "color",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e401a76183d1491c99b1623a0588240c",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "3;",
+      "Id": "2b79351df21943f78ae08292bf7718f0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e41072ac15ef4f86b1b96598225d4367",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ee23eac7c595482795c011e31fdbb777",
+      "End": "7faa7e1f865e44acb4c0746e25ff9864",
+      "Id": "5a7c37a1b79e457caff1bdbcb0a0fcb6"
+    },
+    {
+      "Start": "d5503ca9c0e54c819f410594c29475eb",
+      "End": "ef8b1f60a39a4b5c895c819f2a1155fa",
+      "Id": "84b910404ece4ee7ae0ef6fef926ac33"
+    },
+    {
+      "Start": "c061126a7d09428eaf7e074029f4f32f",
+      "End": "2df641d1800f4d55bb7e18f73d690c02",
+      "Id": "cccb132b9a5f49f7ad1bcb26b2ccdb57"
+    },
+    {
+      "Start": "b23e4bc8d39e41b9aba026bddc002d97",
+      "End": "0e1f76bfbb7441aea223d63184dfaea4",
+      "Id": "02f14736f31c4218995e83f9f6043d3d"
+    },
+    {
+      "Start": "4f448e352a724b15adfebf113bcdf78d",
+      "End": "88cbd5406c18447f8315f2c20f4c673e",
+      "Id": "35da3aefaedd4201ab9b29b701e50814"
+    },
+    {
+      "Start": "4f448e352a724b15adfebf113bcdf78d",
+      "End": "e65e3aa06cbc4e109368191f83b75ea8",
+      "Id": "fdee799c7c6a4faf92f9cebd3d8417f7"
+    },
+    {
+      "Start": "20bc37ea81df479faf084ab332a3fa82",
+      "End": "e317a79118154328a75f44c27170415c",
+      "Id": "475e4b3ae14e49778d52e9706e1b048b"
+    },
+    {
+      "Start": "e41072ac15ef4f86b1b96598225d4367",
+      "End": "71d4cbd654224ddb8620df345b9eb9e5",
+      "Id": "deed24fda52647f8b771d63d4fcfeb69"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -3.1200459003448486,
+      "EyeY": 6.1997570991516113,
+      "EyeZ": 9.6380119323730469,
+      "LookX": 11.262274742126465,
+      "LookY": -7.7865185737609863,
+      "LookZ": -12.556696891784668,
+      "UpX": 0.14337758719921112,
+      "UpY": 0.97667223215103149,
+      "UpZ": -0.15985657274723053
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": false,
+        "Name": "BoundingBox.ToPolySurface",
+        "Id": "c22bb8b60a35488bb22678919818af34",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1278.8399156330092,
+        "Y": 407.58592595480837
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Polygon.RegularPolygon",
+        "Id": "c51f35dd09db412d95692b810296a56f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 482.10286121291483,
+        "Y": 526.014409563863
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "Circle.ByCenterPointRadius",
+        "Id": "607bee3c79184ec481ec249b01b4e978",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 220.85962975354687,
+        "Y": 526.014409563863
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "f51da48c37d648178ae3ef267bd7ddb7",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -51.97192066150609,
+        "Y": 661.33142498968482
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Curve.ExtrudeAsSolid",
+        "Id": "0d36c216490c4dcd9c0db79a113e2b48",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 762.468953808701,
+        "Y": 524.63733417306
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Geometry.BoundingBox",
+        "Id": "474c9b5e391947f7b7e3c389d4ec334a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 992.30349017022922,
+        "Y": 407.58592595480837
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch 3D",
+        "Id": "7d89dbdd5f5347f18b2e9117cc778522",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 980.24915974188,
+        "Y": 627.095921839266
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "b4c3377e38ad411d8276788af994ca87",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1395.6296132919408,
+        "Y": 524.63733417306025
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "2b79351df21943f78ae08292bf7718f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 645.13033373428448,
+        "Y": 638.32213201950458
+      }
+    ],
+    "Annotations": [],
+    "X": 158.82223538189191,
+    "Y": -41.0156254824426,
+    "Zoom": 0.72617665429117062
+  }
+}

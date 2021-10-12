@@ -1,0 +1,217 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ReadFromFile",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "d370dd5ab45e4e03894211ac2cba6452",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\dynamo_logo_dark-trim.jpg",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.FileObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "11a9b0a9b3e34eb392a10141a0a3b4f1",
+      "Inputs": [
+        {
+          "Id": "be2b989f676f43549a5ecb6d3ff40395",
+          "Name": "path",
+          "Description": "Path to the file.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1f6b567530f840758571594f8cd56dc0",
+          "Name": "file",
+          "Description": "File object",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a file object from a path."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Temp\\dynamo_logo_dark-trim.jpg",
+      "InputValue": "C:\\Temp\\dynamo_logo_dark-trim.jpg",
+      "NodeType": "ExtensionNode",
+      "Id": "d370dd5ab45e4e03894211ac2cba6452",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "a5366a176cd54e97aa50db1e4302ac06",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.Image.ReadFromFile@var",
+      "Id": "74bcc1782ad446afb293df419e258248",
+      "Inputs": [
+        {
+          "Id": "5abd4133f4884a6ea3c4e6e397796723",
+          "Name": "file",
+          "Description": "File object to load image from.\n\nvar",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7182f61ca41a43909245a7de01440fc0",
+          "Name": "image",
+          "Description": "Image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Loads the file as a bitmap.\n\nImage.ReadFromFile (file: var): var"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.WatchImageCore, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "d2508698c8464505932bf3d5e396f9f9",
+      "Inputs": [
+        {
+          "Id": "2a5cd08c31a0457d9dd675fcc93f10e7",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "141378ffb12e45298beb52ccc5c6cbd5",
+          "Name": "image",
+          "Description": "image",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Previews an image"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "1f6b567530f840758571594f8cd56dc0",
+      "End": "5abd4133f4884a6ea3c4e6e397796723",
+      "Id": "1f7097b6b42e4f05959a44750e2bcda2"
+    },
+    {
+      "Start": "a5366a176cd54e97aa50db1e4302ac06",
+      "End": "be2b989f676f43549a5ecb6d3ff40395",
+      "Id": "503de4febdee43b7a76a8577ae9fd37c"
+    },
+    {
+      "Start": "7182f61ca41a43909245a7de01440fc0",
+      "End": "2a5cd08c31a0457d9dd675fcc93f10e7",
+      "Id": "6537690014d74df2a36ac016ec36af8b"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File.FromPath",
+        "Id": "11a9b0a9b3e34eb392a10141a0a3b4f1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 351.2296559531,
+        "Y": 337.7934951575445
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "d370dd5ab45e4e03894211ac2cba6452",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 49.229655953100007,
+        "Y": 337.7934951575445
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Image.ReadFromFile",
+        "Id": "74bcc1782ad446afb293df419e258248",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 560.58266654594422,
+        "Y": 337.7934951575445
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch Image",
+        "Id": "d2508698c8464505932bf3d5e396f9f9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 835.22965595310006,
+        "Y": 337.7934951575445
+      }
+    ],
+    "Annotations": [],
+    "X": -220.823006927275,
+    "Y": -423.781325291132,
+    "Zoom": 1.545620359375
+  }
+}

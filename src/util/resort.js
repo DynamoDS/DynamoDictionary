@@ -1,4 +1,4 @@
-import _ from 'underscore';
+import _ from 'lodash';
 let resort = {};
 
 resort.removeDuplicates = function (data) {
@@ -47,10 +47,6 @@ resort.objectify = function (ad, q) {
         var ml = [];
         ad.forEach(function (d, i) {
             var c = d.Categories;
-            var parent = "Home";
-            if (q - 1 >= 0) {
-                parent = c[Math.max(0, q - 1)]
-            }
             var lineage = [];
             for (var t = 0; t < q; t++) {
                 lineage.push(c[t]);
@@ -149,4 +145,5 @@ function recursiveParents(e, it, i) {
         }
     })
 }
-module.exports = resort;
+
+export default resort;

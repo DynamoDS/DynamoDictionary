@@ -1,0 +1,18 @@
+<Workspace Version="1.3.0.875" X="-2148.75575397637" Y="-3672.22785215337" zoom="2.15318861155188" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="89055c2e-c0d2-4383-85ad-815e6da9d9f7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="ModelTextType.ByName" x="1319.62136419143" y="1823.75694614357" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.ModelTextType.ByName@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="50dee04a-7678-4503-bfdc-1a68cd2771e7" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1133.25186850288" y="1823.75694614357" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Model Text 1&quot;;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="50dee04a-7678-4503-bfdc-1a68cd2771e7" start_index="0" end="89055c2e-c0d2-4383-85ad-815e6da9d9f7" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

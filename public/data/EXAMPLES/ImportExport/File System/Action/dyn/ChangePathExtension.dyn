@@ -1,0 +1,217 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ChangePathExtension",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "5411bf49384e484a85833c8724e456d5",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\sample.txt",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "C:\\Temp\\sample.txt",
+      "InputValue": "C:\\Temp\\sample.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "5411bf49384e484a85833c8724e456d5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3dc18894aa834295a3d45ac2c3283207",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"exp\";",
+      "Id": "5f64ba7eefcd4b3aa5f33d50e21d706e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "61c98c8754e2487d8c0fe60dc1053418",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.ChangePathExtension@string,string",
+      "Id": "d1deb3fc053e4e3a93b26d28e51bab93",
+      "Inputs": [
+        {
+          "Id": "b84e20e486a442c7b609144b638e3755",
+          "Name": "path",
+          "Description": "Path to change extension of.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4697b4d90c3f4d238f29e7d69ca6a604",
+          "Name": "newExtension",
+          "Description": "New extension.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "1f65139eb01d46dcac82bfaa7d3415f7",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Changes the extension of a file path.\n\nFileSystem.ChangePathExtension (path: string, newExtension: string): string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "7b6ede55e721421c9f91ce7c8618a5dd",
+      "Inputs": [
+        {
+          "Id": "437e5cd1299a47f3b00961302c3feb37",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0aabae07364f4df1b4df73437a0e5423",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "3dc18894aa834295a3d45ac2c3283207",
+      "End": "b84e20e486a442c7b609144b638e3755",
+      "Id": "a115a29f4ae34bdea5ed7b7493ea6b9c"
+    },
+    {
+      "Start": "61c98c8754e2487d8c0fe60dc1053418",
+      "End": "4697b4d90c3f4d238f29e7d69ca6a604",
+      "Id": "ec339bb5898943af99e31cf015b59b4a"
+    },
+    {
+      "Start": "1f65139eb01d46dcac82bfaa7d3415f7",
+      "End": "437e5cd1299a47f3b00961302c3feb37",
+      "Id": "1271edfc64854bf1b6f01b2419c31913"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "5411bf49384e484a85833c8724e456d5",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 606.49421123889874,
+        "Y": 278.98540060163384
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "5f64ba7eefcd4b3aa5f33d50e21d706e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 606.49421123889874,
+        "Y": 389.19873393496715
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.ChangePathExtension",
+        "Id": "d1deb3fc053e4e3a93b26d28e51bab93",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 870.49421123889874,
+        "Y": 318.38493379302304
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "7b6ede55e721421c9f91ce7c8618a5dd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1208.4942112388987,
+        "Y": 318.98540060163384
+      }
+    ],
+    "Annotations": [],
+    "X": -839.668716309552,
+    "Y": -210.021509463754,
+    "Zoom": 1.66537098414077
+  }
+}

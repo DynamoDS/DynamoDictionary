@@ -1,38 +1,437 @@
-<Workspace Version="1.1.0.2093" X="-1113.36368945304" Y="-4129.01093589611" zoom="1.43869752881472" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
-  <NamespaceResolutionMap>
-    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
-    <ClassMap partialName="Math" resolvedName="DSCore.Math" assemblyName="DSCoreNodes.dll" />
-  </NamespaceResolutionMap>
-  <Elements>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="819027a9-253a-4339-8911-4d3c95a99767" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="815.39843776929" y="2907.83797863916" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="pt1 = Point.ByCoordinates(0,0);&#xA;pt2 = Point.ByCoordinates(8,0);&#xA;pt3 = Point.ByCoordinates(12,12);&#xA;pt4 = Point.ByCoordinates(6,6,4);&#xA;pt5 = Point.ByCoordinates(0,16,-2);&#xA;pts = {pt1,pt2,pt3,pt4, pt5};" ShouldFocus="false" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="8d35a8d7-dd54-49db-8315-54c699c74eab" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="NurbsCurve.ByControlPoints" x="1167.55329869336" y="3010.1532500342" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.NurbsCurve.ByControlPoints@Autodesk.DesignScript.Geometry.Point[],int,bool">
-      <PortInfo index="1" default="True" />
-      <PortInfo index="2" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <CoreNodeModels.Input.BoolSelector guid="811d35e8-2a20-4dcf-a1aa-8382db1c54b4" type="CoreNodeModels.Input.BoolSelector" nickname="Boolean" x="1005.79843776929" y="3085.04962758475" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.Boolean>True</System.Boolean>
-    </CoreNodeModels.Input.BoolSelector>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="634b54dd-8801-4b4e-872a-11924c3187e0" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Surface.ByPatch" x="1382.05535454633" y="3010.1532500342" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="0346fa6a-eddd-4a58-9031-300cc3a0ec2d" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Delaunay.ByParametersOnSurface" x="1606.28877381679" y="2956.70969797289" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="Tessellation.dll" function="Tessellation.Delaunay.ByParametersOnSurface@Autodesk.DesignScript.Geometry.UV[],Autodesk.DesignScript.Geometry.Surface" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="e40f5030-3257-43a6-ae60-ca338d57c17c" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="UV.ByCoordinates" x="1444.47574825902" y="2871.63274639097" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.UV.ByCoordinates@double,double">
-      <PortInfo index="0" default="True" />
-      <PortInfo index="1" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="74155e4e-75f1-43e7-8784-0c57e5daf952" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1176" y="2874" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="Math.RandomList(400);&#xA;Math.RandomList(400);" ShouldFocus="false" />
-  </Elements>
-  <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="819027a9-253a-4339-8911-4d3c95a99767" start_index="5" end="8d35a8d7-dd54-49db-8315-54c699c74eab" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="8d35a8d7-dd54-49db-8315-54c699c74eab" start_index="0" end="634b54dd-8801-4b4e-872a-11924c3187e0" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="811d35e8-2a20-4dcf-a1aa-8382db1c54b4" start_index="0" end="8d35a8d7-dd54-49db-8315-54c699c74eab" end_index="2" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="634b54dd-8801-4b4e-872a-11924c3187e0" start_index="0" end="0346fa6a-eddd-4a58-9031-300cc3a0ec2d" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="e40f5030-3257-43a6-ae60-ca338d57c17c" start_index="0" end="0346fa6a-eddd-4a58-9031-300cc3a0ec2d" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="74155e4e-75f1-43e7-8784-0c57e5daf952" start_index="0" end="e40f5030-3257-43a6-ae60-ca338d57c17c" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="74155e4e-75f1-43e7-8784-0c57e5daf952" start_index="1" end="e40f5030-3257-43a6-ae60-ca338d57c17c" end_index="1" portType="0" />
-  </Connectors>
-  <Notes />
-  <Annotations />
-  <Presets />
-  <Cameras>
-    <Camera Name="Background Preview" eyeX="8.42980231504555" eyeY="12.7050859667272" eyeZ="5.86538584523015" lookX="-6.48962764269281" lookY="-11.3187749566799" lookZ="-11.512237455097" upX="-0.232053338630587" upY="0.881303420789478" upZ="-0.411649677962895" />
-  </Cameras>
-</Workspace>
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ByParametersOnSurface",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Math": {
+        "Key": "DSCore.Math",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "811d35e82a204dcfa1aa8382db1c54b4",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "pt1 = Point.ByCoordinates(0,0);\npt2 = Point.ByCoordinates(8,0);\npt3 = Point.ByCoordinates(12,12);\npt4 = Point.ByCoordinates(6,6,4);\npt5 = Point.ByCoordinates(0,16,-2);\npts = [pt1,pt2,pt3,pt4, pt5];",
+      "Id": "819027a9253a433989114d3c95a99767",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3cbacc7d346b4b67bef6cef2ac2939a8",
+          "Name": "",
+          "Description": "pt1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "36b7b02f2b1f4499a02440908e742c5f",
+          "Name": "",
+          "Description": "pt2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "70a38ff0e62240e7bb112f32e3c79af0",
+          "Name": "",
+          "Description": "pt3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4e46ba888c434af58f6302b4821087e9",
+          "Name": "",
+          "Description": "pt4",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "251c7da28f8a4eb79c4744e71eb66d60",
+          "Name": "",
+          "Description": "pt5",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "16648edffb6e498fb9873fbe7e89c54f",
+          "Name": "",
+          "Description": "pts",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.NurbsCurve.ByControlPoints@Autodesk.DesignScript.Geometry.Point[],int,bool",
+      "Id": "8d35a8d7dd5449db831554c699c74eab",
+      "Inputs": [
+        {
+          "Id": "5aba5013dcf74d97b5cb3ae758d2de2a",
+          "Name": "points",
+          "Description": "Point[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "27f8aede8ff44d13bb8657fb22d25a7e",
+          "Name": "degree",
+          "Description": "int\nDefault value : 3",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "412c8c0bb1c04f6a86e4c7c87cf22101",
+          "Name": "closeCurve",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "5861004eceaa47b6941e888abb2ed17d",
+          "Name": "NurbsCurve",
+          "Description": "NurbsCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a BSplineCurve by using explicit control points. NOTE 1: BSplineCurves with deg=1 have G1 discontinuities, which cause problems for extrusion, sweep, and other operations. They should be avoided. Use a PolyCurve instead. NOTE 2: If the curve is periodic (closed), then the first and last points MUST be the same.\n\nNurbsCurve.ByControlPoints (points: Point[], degree: int = 3, closeCurve: bool = false): NurbsCurve"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "811d35e82a204dcfa1aa8382db1c54b4",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "ead2c7cb4c6140a5bd33b160818d5f74",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Surface.ByPatch@Autodesk.DesignScript.Geometry.Curve",
+      "Id": "634b54dd88014b4e872a11924c3187e0",
+      "Inputs": [
+        {
+          "Id": "41967ac185bc4fecb65a6f9243fca04c",
+          "Name": "closedCurve",
+          "Description": "Curve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "537f1737d6fc4db9ac8e8f074c10c2d1",
+          "Name": "Surface",
+          "Description": "Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Surface by filling in the interior of a closed boundary defined by input Curves.\n\nSurface.ByPatch (closedCurve: Curve): Surface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Tessellation.Delaunay.ByParametersOnSurface@Autodesk.DesignScript.Geometry.UV[],Autodesk.DesignScript.Geometry.Surface",
+      "Id": "0346fa6aeddd4a589031300cc3a0ec2d",
+      "Inputs": [
+        {
+          "Id": "b5b4d25077ba438388628931912ecf8f",
+          "Name": "uvs",
+          "Description": "Set of UV parameters.\n\nUV[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "52c305c850f94e159427d34d567a6c88",
+          "Name": "face",
+          "Description": "Surface to triangulate.\n\nSurface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "dc5c69ea07b4483ab7670a44f7d97623",
+          "Name": "Curve[]",
+          "Description": "Curve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Creates a Delaunay triangulation of a surface with a given set of UV parameters.\n\nDelaunay.ByParametersOnSurface (uvs: UV[], face: Surface): Curve[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.UV.ByCoordinates@double,double",
+      "Id": "e40f5030325743a6ae60ca338d57c17c",
+      "Inputs": [
+        {
+          "Id": "f5c08dcb1af84c5d8479db741690a2d7",
+          "Name": "u",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "89ebc4757bb840b7bfe398b9e6a41469",
+          "Name": "v",
+          "Description": "double\nDefault value : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9d8826e5c36c4a27aad7dde7b1224ee2",
+          "Name": "UV",
+          "Description": "UV",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a UV from two doubles.\n\nUV.ByCoordinates (u: double = 0, v: double = 0): UV"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Math.RandomList(400);\nMath.RandomList(400);",
+      "Id": "74155e4e75f143e787840c57e5daf952",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8c93152483aa48d78d6c60c2a1cc95e9",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6504c640ce224b3ca4dcd41b14b6d70f",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "16648edffb6e498fb9873fbe7e89c54f",
+      "End": "5aba5013dcf74d97b5cb3ae758d2de2a",
+      "Id": "0cf44768d08b4e5f9fe716bea753bc36"
+    },
+    {
+      "Start": "5861004eceaa47b6941e888abb2ed17d",
+      "End": "41967ac185bc4fecb65a6f9243fca04c",
+      "Id": "3c055f61b6d94a53bc9fa6d1275d1eab"
+    },
+    {
+      "Start": "ead2c7cb4c6140a5bd33b160818d5f74",
+      "End": "412c8c0bb1c04f6a86e4c7c87cf22101",
+      "Id": "b8b3a73afc814acb9fe9e7f0414f62f5"
+    },
+    {
+      "Start": "537f1737d6fc4db9ac8e8f074c10c2d1",
+      "End": "52c305c850f94e159427d34d567a6c88",
+      "Id": "09353017b34a42a785355a66fb61ae87"
+    },
+    {
+      "Start": "9d8826e5c36c4a27aad7dde7b1224ee2",
+      "End": "b5b4d25077ba438388628931912ecf8f",
+      "Id": "f5c1100d3b104a9b9f14c9f0021dc3c9"
+    },
+    {
+      "Start": "8c93152483aa48d78d6c60c2a1cc95e9",
+      "End": "f5c08dcb1af84c5d8479db741690a2d7",
+      "Id": "54afc22e956a4b84a0336d9c6fa2fa0a"
+    },
+    {
+      "Start": "6504c640ce224b3ca4dcd41b14b6d70f",
+      "End": "89ebc4757bb840b7bfe398b9e6a41469",
+      "Id": "6f075db31c614e9c8843fd5ffa0165db"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 8.4298019409179687,
+      "EyeY": 12.705085754394531,
+      "EyeZ": 5.8653860092163086,
+      "LookX": -6.4896278381347656,
+      "LookY": -11.318775177001953,
+      "LookZ": -11.512237548828125,
+      "UpX": -0.23205333948135376,
+      "UpY": 0.88130342960357666,
+      "UpZ": -0.4116496741771698
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "819027a9253a433989114d3c95a99767",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 652.84360579303984,
+        "Y": 2894.7396648792514
+      },
+      {
+        "ShowGeometry": false,
+        "Name": "NurbsCurve.ByControlPoints",
+        "Id": "8d35a8d7dd5449db831554c699c74eab",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1071.8436057930398,
+        "Y": 3006.3929982125851
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "811d35e82a204dcfa1aa8382db1c54b4",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 652.84360579303984,
+        "Y": 3086.3929982125851
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Surface.ByPatch",
+        "Id": "634b54dd88014b4e872a11924c3187e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1429.8436057930398,
+        "Y": 3006.3929982125851
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Delaunay.ByParametersOnSurface",
+        "Id": "0346fa6aeddd4a589031300cc3a0ec2d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1768.8436057930398,
+        "Y": 2926.3929982125851
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "UV.ByCoordinates",
+        "Id": "e40f5030325743a6ae60ca338d57c17c",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1429.8436057930398,
+        "Y": 2872.3929982125851
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "74155e4e75f143e787840c57e5daf952",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1071.8436057930398,
+        "Y": 2880.8196648792518
+      }
+    ],
+    "Annotations": [],
+    "X": -1113.36368945304,
+    "Y": -4129.01093589611,
+    "Zoom": 1.43869752881472
+  }
+}

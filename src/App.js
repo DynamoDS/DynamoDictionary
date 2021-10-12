@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { hashHistory } from "react-router";
+import PropTypes from "prop-types";
 
 import "./css/font.css";
 import "./css/style.css";
@@ -10,13 +11,18 @@ import Branch from "./components/Branch";
 import SearchBar from "./components/SearchBar";
 import PullModal from "./components/PullModal";
 
-import Drawer from "material-ui/Drawer";
+import Drawer from "@material-ui/core/Drawer";
+import { withStyles } from "@material-ui/core/styles";
 
-import baseTheme from "material-ui/styles/baseThemes/lightBaseTheme";
-import getMuiTheme from "material-ui/styles/getMuiTheme";
+import { createTheme } from "@material-ui/core/styles";
 
-import injectTapEventPlugin from "react-tap-event-plugin";
-injectTapEventPlugin();
+const StyledDrawer = withStyles({
+  paper: {
+    backgroundColor: "rgb(34,34,34)",
+    marginTop: "60px",
+    width: "inherit"
+  }
+})(Drawer);
 
 class App extends Component {
   constructor() {
@@ -35,7 +41,7 @@ class App extends Component {
     this._routePush = this._routePush.bind(this);
   }
   getChildContext() {
-    return { muiTheme: getMuiTheme(baseTheme) };
+    return { muiTheme: createTheme() };
   }
 
   _retrieve(url) {
@@ -166,15 +172,16 @@ class App extends Component {
     }
   }
 
-  componentWillUnmount() {
-    window.removeEventListener("resize");
+  resizeAction = () => {
+    const _this = this;
+    _this.forceUpdate();
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resizeAction);
+  }
   componentDidMount() {
-    const _this = this;
-    window.addEventListener("resize", () => {
-      _this.forceUpdate();
-    });
+    window.addEventListener("resize", this.resizeAction);
     this.props.actions.loadHierarchy();
   }
 
@@ -198,15 +205,11 @@ class App extends Component {
           <div id="wrapper" style={{ marginTop: "60px" }}>
             {isLarge
               ? <div>
-                  <Drawer
+                  <StyledDrawer
                     id="sidebar-wrapper"
-                    docked={true}
-                    width={window.innerWidth * ratio}
                     open={this.props.sidebarOpen}
-                    containerStyle={{
-                      backgroundColor: "rgb(34,34,34)",
-                      marginTop: "60px"
-                    }}
+                    variant="persistent"
+                    style={{width: window.innerWidth * ratio}}
                   >
                     <div
                       className="col-md-12 col-sm-12 col-xs-12 clearfix"
@@ -241,7 +244,7 @@ class App extends Component {
                       <br />
                       <br />
                     </div>
-                  </Drawer>
+                  </StyledDrawer>
                   {!this.props.sidebarOpen
                     ? <div
                         className="col-md-12 col-sm-12 col-xs-12"
@@ -328,6 +331,6 @@ class App extends Component {
   }
 }
 App.childContextTypes = {
-  muiTheme: React.PropTypes.object.isRequired
+  muiTheme: PropTypes.object.isRequired
 };
 export default App;

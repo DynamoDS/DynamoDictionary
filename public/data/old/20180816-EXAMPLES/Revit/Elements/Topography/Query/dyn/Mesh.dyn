@@ -1,0 +1,25 @@
+<Workspace Version="1.3.0.875" X="-1299.36710151536" Y="-2903.39241957559" zoom="1.37012320340077" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+    <ClassMap partialName="Math" resolvedName="DSCore.Math" assemblyName="DSCoreNodes.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="4d616ba1-e018-418d-871d-7f9a8b62ccf2" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Topography.Mesh" x="1474.55723501126" y="2229.91667383983" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Topography.Mesh">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <DSRevitNodesUI.ElementsOfType guid="7821a569-f5c4-42df-bdf9-c292994923f7" type="DSRevitNodesUI.ElementsOfType" nickname="All Elements of Type" x="1250.4798244813" y="2229.91667383983" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+    </DSRevitNodesUI.ElementsOfType>
+    <DSRevitNodesUI.ElementTypes guid="a047199f-14d5-489a-8634-ef3696ef65f0" type="DSRevitNodesUI.ElementTypes" nickname="Element Types" x="1027.65007190154" y="2229.91667383983" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="315:TopographySurface" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="7821a569-f5c4-42df-bdf9-c292994923f7" start_index="0" end="4d616ba1-e018-418d-871d-7f9a8b62ccf2" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="a047199f-14d5-489a-8634-ef3696ef65f0" start_index="0" end="7821a569-f5c4-42df-bdf9-c292994923f7" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="37290.814253178" eyeY="70237.1600986708" eyeZ="81308.9093937326" lookX="-53603.4285011324" lookY="-63208.6893571243" lookZ="-44643.8435500996" upX="-0.38187592034586" upY="0.867765420350579" upZ="-0.318046980388429" />
+  </Cameras>
+</Workspace>

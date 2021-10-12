@@ -1,0 +1,447 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "BySweep",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point.Origin": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Vector.ZAxis": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.PolySurface.BySweep@Autodesk.DesignScript.Geometry.Curve,Autodesk.DesignScript.Geometry.Curve[]",
+      "Id": "fae14d168af44e04930096591fad0a7b",
+      "Inputs": [
+        {
+          "Id": "ccd1b6d6edc04e1b83b1968c38e77f72",
+          "Name": "rail",
+          "Description": "Curve to sweep along\n\nCurve",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c2590032c152456f899acb51051a6029",
+          "Name": "crossSection",
+          "Description": "Sweep profile\n\nCurve[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "18db3d2d962444aea4ad1e0364fe3e2b",
+          "Name": "PolySurface",
+          "Description": "PolySurface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Make Polysurface by sweeping curves along rail.\n\nPolySurface.BySweep (rail: Curve, crossSection: Curve[]): PolySurface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Arc.ByCenterPointRadiusAngle@Autodesk.DesignScript.Geometry.Point,double,double,double,Autodesk.DesignScript.Geometry.Vector",
+      "Id": "a8a36bd99f134d63af7623f412d17ea9",
+      "Inputs": [
+        {
+          "Id": "ccc259ddbba843ae9c3abbfb9e10ec9f",
+          "Name": "center",
+          "Description": "The center of the arc\n\nPoint\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0) (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fe0a7e26569a4a43a8f7a9f18b615c43",
+          "Name": "radius",
+          "Description": "Radius of the arc\n\ndouble\nDefault value : 1 (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "354819d30aac40fc90b1c2ee387f7b7f",
+          "Name": "startAngle",
+          "Description": "Start angle in degrees\n\ndouble\nDefault value : 0 (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f7400e28016d4b4fa539ec2901758486",
+          "Name": "endAngle",
+          "Description": "End angle in degrees\n\ndouble\nDefault value : 90 (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8fb88f975cb446eea1b00bba783e730a",
+          "Name": "normal",
+          "Description": "A vector defining the normal of the arc\n\nVector\nDefault value : Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1) (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "375dae2cc3374276821d0efa48996e16",
+          "Name": "Arc",
+          "Description": "An Arc",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create an arc by providing it's center point, radius, angle sweep, and normal vector\n\nArc.ByCenterPointRadiusAngle (center: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1, startAngle: double = 0, endAngle: double = 90, normal: Vector = Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 0, 1)): Arc"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.Origin",
+      "Id": "57c9dc3b2e5c49d6bd1007e34aa23d14",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6513bcb894f54366a6b73b8eb012a1e8",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Origin point (0,0,0)\n\nPoint.Origin ( ): Point"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Vector.ZAxis",
+      "Id": "e8899bccef5947459cf40e7e009d0bd5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "610bf90181f84cc881ea351f3e349e00",
+          "Name": "Vector",
+          "Description": "Vector",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the canonical Z axis Vector (0,0,1)\n\nVector.ZAxis ( ): Vector"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Arc.ByCenterPointStartPointEndPoint@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point",
+      "Id": "721cf2e3fd564351b81b65549bc1024a",
+      "Inputs": [
+        {
+          "Id": "c52a4b19166c478397f2d3aeb0536fb6",
+          "Name": "centerPoint",
+          "Description": "The center of the arc\n\nPoint\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0) (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4f3457e2f9d640ee8e1b3c788a1f769e",
+          "Name": "startPoint",
+          "Description": "The start point on the arc\n\nPoint\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 0, 0) (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "09d563790e514905b317ad8bfb8b68b0",
+          "Name": "endPoint",
+          "Description": "The end point of the arc\n\nPoint\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 1, 0) (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "08a134b1438f4b7ea8e78232c792e2b7",
+          "Name": "Arc",
+          "Description": "An Arc",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create an arc by providing it's center point, start point, and end point\n\nArc.ByCenterPointStartPointEndPoint (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), startPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(1, 0, 0), endPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 1, 0)): Arc"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "4;\n0;\n120;",
+      "Id": "bff252011e4b46e292270d302f753491",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "35850eef4b974a1788b29e00b33e4878",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "b4d53f5535094f91affacfa0bb2415f5",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "1c6f6ede33354843ad3c84fc5a461665",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Point.ByCoordinates(5,0,4);\nPoint.ByCoordinates(4,0,0);\nPoint.ByCoordinates(4,0,8);",
+      "Id": "97c3e476b7eb4f9489fe43f7f793c0b2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "34be49e010d74b4c82512840861c6bfb",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "90ad0a130c0542219c3c3c206a3a992b",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c99d59cdfdb4e41b763f25933916426",
+          "Name": "",
+          "Description": "Value of expression at line 3",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "375dae2cc3374276821d0efa48996e16",
+      "End": "ccd1b6d6edc04e1b83b1968c38e77f72",
+      "Id": "a76d60c1d1d34e19b4132ff82835dba1"
+    },
+    {
+      "Start": "6513bcb894f54366a6b73b8eb012a1e8",
+      "End": "ccc259ddbba843ae9c3abbfb9e10ec9f",
+      "Id": "39ef67616e794acd8b6bcc9f8d782fdf"
+    },
+    {
+      "Start": "610bf90181f84cc881ea351f3e349e00",
+      "End": "8fb88f975cb446eea1b00bba783e730a",
+      "Id": "4f9660d5863e4874a43d5e80e69e0018"
+    },
+    {
+      "Start": "08a134b1438f4b7ea8e78232c792e2b7",
+      "End": "c2590032c152456f899acb51051a6029",
+      "Id": "73a82ca687c14daa8776030349dc123e"
+    },
+    {
+      "Start": "35850eef4b974a1788b29e00b33e4878",
+      "End": "fe0a7e26569a4a43a8f7a9f18b615c43",
+      "Id": "36e1ca5b51a04f50a002c8c965952aab"
+    },
+    {
+      "Start": "b4d53f5535094f91affacfa0bb2415f5",
+      "End": "354819d30aac40fc90b1c2ee387f7b7f",
+      "Id": "129e9d8ea9044e2da7d3598a72925247"
+    },
+    {
+      "Start": "1c6f6ede33354843ad3c84fc5a461665",
+      "End": "f7400e28016d4b4fa539ec2901758486",
+      "Id": "9655138dce3644c3a4bc72cb8a717e5e"
+    },
+    {
+      "Start": "34be49e010d74b4c82512840861c6bfb",
+      "End": "c52a4b19166c478397f2d3aeb0536fb6",
+      "Id": "8eb7ddb3d86749a88445c0d9f5a449be"
+    },
+    {
+      "Start": "90ad0a130c0542219c3c3c206a3a992b",
+      "End": "4f3457e2f9d640ee8e1b3c788a1f769e",
+      "Id": "5d699eb4ba7b48278c78e52e895cc4c5"
+    },
+    {
+      "Start": "2c99d59cdfdb4e41b763f25933916426",
+      "End": "09d563790e514905b317ad8bfb8b68b0",
+      "Id": "c75467e7ea7e47e6a5321dc6161cc0dd"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 14.984740461188306,
+      "EyeY": 8.4004940698511,
+      "EyeZ": 9.2361416244842367,
+      "LookX": -18.408581615292075,
+      "LookY": -9.30266795487254,
+      "LookZ": -3.1431211251224727,
+      "UpX": -0.2401397748449472,
+      "UpY": 0.969871996582439,
+      "UpZ": -0.041001989812337464
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "PolySurface.BySweep",
+        "Id": "fae14d168af44e04930096591fad0a7b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2493.536385768095,
+        "Y": 3542.8914057459051
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Arc.ByCenterPointRadiusAngle",
+        "Id": "a8a36bd99f134d63af7623f412d17ea9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2147.6950233061348,
+        "Y": 3449.8914057459051
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.Origin",
+        "Id": "57c9dc3b2e5c49d6bd1007e34aa23d14",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1794.6950233061348,
+        "Y": 3364.8914057459051
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Vector.ZAxis",
+        "Id": "e8899bccef5947459cf40e7e009d0bd5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1794.6950233061348,
+        "Y": 3609.8914057459051
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Arc.ByCenterPointStartPointEndPoint",
+        "Id": "721cf2e3fd564351b81b65549bc1024a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 2147.6950233061348,
+        "Y": 3661.8914057459051
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "bff252011e4b46e292270d302f753491",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1794.6950233061348,
+        "Y": 3473.531405745905
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "97c3e476b7eb4f9489fe43f7f793c0b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1794.6950233061348,
+        "Y": 3718.531405745905
+      }
+    ],
+    "Annotations": [],
+    "X": -2146.74145594901,
+    "Y": -4010.34687556459,
+    "Zoom": 1.18854839051218
+  }
+}

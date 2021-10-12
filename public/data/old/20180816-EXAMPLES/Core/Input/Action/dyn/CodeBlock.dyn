@@ -1,0 +1,27 @@
+<Workspace Version="1.0.1.1167" X="-662.322932918602" Y="-382.430373009128" zoom="1.30054220413566" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="ddbaa63d-5852-4db3-8222-3e64c2c78419" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="592.075640288551" y="364.726622281272" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="10.5;&#xA;&quot;eureka!&quot;;&#xA;true;" ShouldFocus="false" />
+    <CoreNodeModels.Watch guid="c0e250ef-f329-46d3-a1e2-6bd70a680e2f" type="CoreNodeModels.Watch" nickname="Number" x="795.855957898654" y="360.738073321749" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="8ed5f972-62de-4e1b-bf48-18663d4b71f8" type="CoreNodeModels.Watch" nickname="String" x="795.855957898654" y="462.188868914812" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="5a8d262a-44f2-4834-bf23-c402a6270582" type="CoreNodeModels.Watch" nickname="Range" x="1209.6501684455" y="335.886872964957" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="2ee736ed-a6ce-48ee-b3a1-022a4c559c24" type="CoreNodeModels.Watch" nickname="Sequence" x="1339.24470397087" y="387.537076402368" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="3a9de72e-d995-4f35-95ae-b374f0e44690" type="CoreNodeModels.Watch" nickname="Range (Interpolated Step)" x="1476.50961194405" y="453.616989799789" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <CoreNodeModels.Watch guid="026447a8-1c61-429e-bb0c-8359cd0e6be7" type="CoreNodeModels.Watch" nickname="Boolean" x="795.855957898654" y="561.667278660849" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" />
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="39df4cd1-4c7a-4e64-b8b0-c124e8e8e992" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1020.34700886029" y="364.356394491731" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="0..6..2;&#xA;0..#8..2;&#xA;0..10..#5;" ShouldFocus="false" />
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="ddbaa63d-5852-4db3-8222-3e64c2c78419" start_index="0" end="c0e250ef-f329-46d3-a1e2-6bd70a680e2f" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ddbaa63d-5852-4db3-8222-3e64c2c78419" start_index="1" end="8ed5f972-62de-4e1b-bf48-18663d4b71f8" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="ddbaa63d-5852-4db3-8222-3e64c2c78419" start_index="2" end="026447a8-1c61-429e-bb0c-8359cd0e6be7" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="39df4cd1-4c7a-4e64-b8b0-c124e8e8e992" start_index="0" end="5a8d262a-44f2-4834-bf23-c402a6270582" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="39df4cd1-4c7a-4e64-b8b0-c124e8e8e992" start_index="1" end="2ee736ed-a6ce-48ee-b3a1-022a4c559c24" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="39df4cd1-4c7a-4e64-b8b0-c124e8e8e992" start_index="2" end="3a9de72e-d995-4f35-95ae-b374f0e44690" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-28.0979859921617" eyeY="16.2059232351772" eyeZ="27.1676889536635" lookX="31.4532115114178" lookY="-7.98346039083593" lookZ="-30.1737501066501" upX="-0.0251845863952324" upY="0.999390827019097" upZ="0.0241601216509554" />
+  </Cameras>
+</Workspace>

@@ -1,0 +1,13 @@
+<Workspace Version="1.3.0.875" X="-683.676144245214" Y="-498.015525037846" zoom="1.96524455617686" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSRevitNodesUI.RevitRevisions guid="aff42bb4-f891-4de0-a14d-c7676abba020" type="DSRevitNodesUI.RevitRevisions" nickname="Select Revision" x="446.6" y="432.8" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="true" index="0:Seq. 1 - Revision 1" />
+  </Elements>
+  <Connectors />
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

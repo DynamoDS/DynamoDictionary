@@ -1,0 +1,180 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DeleteDirectory",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "887c98abe1da437ebb278edb7bc9bf33",
+      "Name": "Boolean",
+      "Type": "boolean",
+      "Value": "true",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+      "Name": "Directory Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\NewFolder2",
+      "Description": "Allows you to select a directory on the system to get its path"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "887c98abe1da437ebb278edb7bc9bf33",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b43ebab0badb4609b6fa5e78e05ce01d",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Selection between a true and false."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Temp\\NewFolder2",
+      "InputValue": "C:\\Temp\\NewFolder2",
+      "NodeType": "ExtensionNode",
+      "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "819e8718430346278c130cf585e553c4",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.DeleteDirectory@string,bool",
+      "Id": "28eedbdf8acb45c8bf52591fee7e991e",
+      "Inputs": [
+        {
+          "Id": "e431341fb2a1489b9d6eda08be395577",
+          "Name": "path",
+          "Description": "Path to a directory on disk.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8b7d6a6c0d93462396884aabdf3b8859",
+          "Name": "recursive",
+          "Description": "Whether or not to delete all contents of the directory, defaults to false.\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af4f390d7c6f437dbc34db22fa2fcaf3",
+          "Name": "void",
+          "Description": "void",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Deletes a directory.\n\nFileSystem.DeleteDirectory (path: string, recursive: bool = false): void"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "b43ebab0badb4609b6fa5e78e05ce01d",
+      "End": "8b7d6a6c0d93462396884aabdf3b8859",
+      "Id": "fd8c151038734f72803f946227225656"
+    },
+    {
+      "Start": "819e8718430346278c130cf585e553c4",
+      "End": "e431341fb2a1489b9d6eda08be395577",
+      "Id": "7b4e9867e13d4f2abb180aa2ab9618ef"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Boolean",
+        "Id": "887c98abe1da437ebb278edb7bc9bf33",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 528.219282510255,
+        "Y": 263.746312162342
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 521.219282510255,
+        "Y": 179.14646478723577
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.DeleteDirectory",
+        "Id": "28eedbdf8acb45c8bf52591fee7e991e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 758.172725532023,
+        "Y": 175.836343034859
+      }
+    ],
+    "Annotations": [],
+    "X": -313.884975274664,
+    "Y": -96.3936723369211,
+    "Zoom": 1.51051845643135
+  }
+}

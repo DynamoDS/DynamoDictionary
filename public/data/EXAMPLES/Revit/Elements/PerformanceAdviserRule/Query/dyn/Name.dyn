@@ -1,18 +1,300 @@
-<Workspace Version="1.3.0.875" X="51.8744514508875" Y="-1371.45798740843" zoom="1.62766375666706" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
-  <NamespaceResolutionMap />
-  <Elements>
-    <DSRevitNodesUI.PerformanceAdviserRules guid="a878b803-8b93-45cd-8925-7ff2b3705017" type="DSRevitNodesUI.PerformanceAdviserRules" nickname="Performance Adviser Rules" x="75.8343522461655" y="1059.2" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="3:Interior categories are enabled in 3D view" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="df7a5a29-2ea6-4eae-9907-97324c6a75e7" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="PerformanceAdviserRule.Name" x="541.8455483224" y="1059.2" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.PerformanceAdviserRule.Name">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-  </Elements>
-  <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="a878b803-8b93-45cd-8925-7ff2b3705017" start_index="0" end="df7a5a29-2ea6-4eae-9907-97324c6a75e7" end_index="0" portType="0" />
-  </Connectors>
-  <Notes />
-  <Annotations />
-  <Presets />
-  <Cameras>
-    <Camera Name="Background Preview" eyeX="-17" eyeY="24" eyeZ="50" lookX="12" lookY="-13" lookZ="-58" upX="0" upY="1" upZ="0" />
-  </Cameras>
-</Workspace>
+{
+  "Uuid": "803fb2f9-4884-42de-915d-c7831d5e05fe",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Name",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.PerformanceAdviserRule.ById@string",
+      "Id": "7203d4a78a7d46c28755f9f1d9b26329",
+      "Inputs": [
+        {
+          "Id": "b506df5d04cb4235a42e3d340275b29f",
+          "Name": "guid",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ad1b83dc41104d59bb33f37ca7b34f73",
+          "Name": "PerformanceAdviserRule",
+          "Description": "PerformanceAdviserRule",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create Performance Adviser Rule by Id\n\nPerformanceAdviserRule.ById (guid: string): PerformanceAdviserRule"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "b341a0f3-a468-4fad-8b26-39237d8486e7",
+      "Id": "56509bd3c848455da81269d02334e1ee",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "86f8bc9cb8114a0d92bdfde5405e6a7d",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.PerformanceAdviserRule.Description",
+      "Id": "24bb265452c44af3b4549fbef3a66235",
+      "Inputs": [
+        {
+          "Id": "e75bbed7fe044e1093b436513eb7683e",
+          "Name": "performanceAdviserRule",
+          "Description": "Revit.Elements.PerformanceAdviserRule",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0ba5c4f11ee442b28e6f72e833869f19",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The description of the rule.\n\nPerformanceAdviserRule.Description: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.PerformanceAdviserRule.Enabled",
+      "Id": "73678fe1879e4121a60249bc28ae60ea",
+      "Inputs": [
+        {
+          "Id": "cc4e9650e84a416d8d8fec3e89736162",
+          "Name": "performanceAdviserRule",
+          "Description": "Revit.Elements.PerformanceAdviserRule",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "24f2cd0fd4714b9bba238e1fee04a7f1",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "A boolean indicating if the rule is activated.\n\nPerformanceAdviserRule.Enabled: bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.PerformanceAdviserRule.Name",
+      "Id": "3cc9c80917404f10aa2be9c5c3339235",
+      "Inputs": [
+        {
+          "Id": "5f6f42cdb48b46e0a79ae3ac52d2c6db",
+          "Name": "performanceAdviserRule",
+          "Description": "Revit.Elements.PerformanceAdviserRule",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f5ee13ecd8bc4920b41d5956ddb41b67",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The name of the rule.\n\nPerformanceAdviserRule.Name: string"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.PerformanceAdviserRule.RuleId",
+      "Id": "9370d2be0d4243e4bb42fbe767d4f6ad",
+      "Inputs": [
+        {
+          "Id": "4713e55fd4fb458bb8ca3af35b46bdf0",
+          "Name": "performanceAdviserRule",
+          "Description": "Revit.Elements.PerformanceAdviserRule",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "abd6f6f768494d94b152a94401c4d3e8",
+          "Name": "var",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The id of the rule.\n\nPerformanceAdviserRule.RuleId: var"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "ad1b83dc41104d59bb33f37ca7b34f73",
+      "End": "e75bbed7fe044e1093b436513eb7683e",
+      "Id": "3d21c32b75c34e00b16283b3c6b12019"
+    },
+    {
+      "Start": "ad1b83dc41104d59bb33f37ca7b34f73",
+      "End": "cc4e9650e84a416d8d8fec3e89736162",
+      "Id": "f73217e011ec4c93bcafc18e74dc26b8"
+    },
+    {
+      "Start": "ad1b83dc41104d59bb33f37ca7b34f73",
+      "End": "5f6f42cdb48b46e0a79ae3ac52d2c6db",
+      "Id": "0c7539d7476f49e2becc50764ee7f5e1"
+    },
+    {
+      "Start": "ad1b83dc41104d59bb33f37ca7b34f73",
+      "End": "4713e55fd4fb458bb8ca3af35b46bdf0",
+      "Id": "c2ca33166ca64428aeb2428478b312bf"
+    },
+    {
+      "Start": "86f8bc9cb8114a0d92bdfde5405e6a7d",
+      "End": "b506df5d04cb4235a42e3d340275b29f",
+      "Id": "f727e7d9e3ea4367a23dbf4e5db2e3ae"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5357",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "PerformanceAdviserRule.ById",
+        "Id": "7203d4a78a7d46c28755f9f1d9b26329",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 782.5,
+        "Y": 230.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "56509bd3c848455da81269d02334e1ee",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 529.0,
+        "Y": 230.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PerformanceAdviserRule.Description",
+        "Id": "24bb265452c44af3b4549fbef3a66235",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1188.5,
+        "Y": 31.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PerformanceAdviserRule.Enabled",
+        "Id": "73678fe1879e4121a60249bc28ae60ea",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1188.5,
+        "Y": 164.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PerformanceAdviserRule.Name",
+        "Id": "3cc9c80917404f10aa2be9c5c3339235",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1188.5,
+        "Y": 294.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "PerformanceAdviserRule.RuleId",
+        "Id": "9370d2be0d4243e4bb42fbe767d4f6ad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1188.5,
+        "Y": 426.0
+      }
+    ],
+    "Annotations": [],
+    "X": 0.0,
+    "Y": 0.0,
+    "Zoom": 1.0
+  }
+}

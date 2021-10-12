@@ -1,0 +1,173 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "FileHasExtension",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "5411bf49384e484a85833c8724e456d5",
+      "Name": "File Path",
+      "Type": "string",
+      "Value": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Username\\Folder1\\sample.txt",
+      "Description": "Allows you to select a file on the system to get its filename"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Filename, CoreNodeModels",
+      "HintPath": "\\\\prlx2\\Proj2\\Username\\Folder1\\sample.txt",
+      "InputValue": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\Username\\Folder1\\sample.txt",
+      "NodeType": "ExtensionNode",
+      "Id": "5411bf49384e484a85833c8724e456d5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "40620db2a4464cde81fc4f855fe28cc4",
+          "Name": "",
+          "Description": "Filename",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a file on the system to get its filename"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "698f03e5ac0b458090380682ee376227",
+      "Inputs": [
+        {
+          "Id": "de12c336b0e34c21913e4e3da2d12a15",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "0fb14396322e4dae9ffae069076b5536",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.FileHasExtension@string",
+      "Id": "c7245c7eae274f34b7b1c4e4fd5d14e5",
+      "Inputs": [
+        {
+          "Id": "7fb0d45113834b56bb28c6f077e332bf",
+          "Name": "path",
+          "Description": "Path to check for an extension.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "469495f67de34c50b3ca2b646d0b7c13",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Determines whether or not a file path contains an extension.\n\nFileSystem.FileHasExtension (path: string): bool"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "40620db2a4464cde81fc4f855fe28cc4",
+      "End": "7fb0d45113834b56bb28c6f077e332bf",
+      "Id": "26f4da67478f4eacbbbf86f9a3a2ea2f"
+    },
+    {
+      "Start": "469495f67de34c50b3ca2b646d0b7c13",
+      "End": "de12c336b0e34c21913e4e3da2d12a15",
+      "Id": "739d31ddbba24fcfb8b1fcea9a0603cd"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "File Path",
+        "Id": "5411bf49384e484a85833c8724e456d5",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 509.172038609706,
+        "Y": 269.929676552371
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "698f03e5ac0b458090380682ee376227",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1008.58531360576,
+        "Y": 269.929676552371
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.FileHasExtension",
+        "Id": "c7245c7eae274f34b7b1c4e4fd5d14e5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 780.43801534710224,
+        "Y": 269.929676552371
+      }
+    ],
+    "Annotations": [],
+    "X": -758.65158696046581,
+    "Y": -226.90208886435335,
+    "Zoom": 1.4097287639800065
+  }
+}

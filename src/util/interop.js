@@ -1,8 +1,6 @@
 import resort from './resort'
 
-let interop = {};
-
-interop.createObject = function(dynLib){
+export const createObject = function(dynLib){
 
         //there may be duplicates coming from the xml, this removes them
         dynLib = resort.removeDuplicates(dynLib);
@@ -15,28 +13,31 @@ interop.createObject = function(dynLib){
         return dynMaster;
 }
 
-interop.xmlToJson = function(data) {
+export const xmlToJson = function(data) {
 
     let dataArr=[];
     [].map.call(data.querySelectorAll("Category"), function(category) {
         // let name = category.getAttribute("Name")
+        
         for (var i = 0; i < category.childNodes.length - 1; i += 2) {
+            
+            
             var cn = category.childNodes[i + 1];
             var nd = {};
-            nd["FullCategoryName"] = cn.querySelector("FullCategoryName").textContent;
-            nd["Categories"] = nd["FullCategoryName"].split(".")
-            nd["TopCategory"] = nd["Categories"][0];
+            nd["FullCategoryName"] = cn.querySelector("FullCategoryName").textContent.trim();
+            nd["Categories"] = nd["FullCategoryName"].trim().split(".");
+            nd["TopCategory"] = nd["Categories"][0].trim();
             nd["activated"] = true;
-            nd["Name"] = cn.querySelector("Name").textContent
-            nd["RouteName"]=nameConvert(cn.querySelector("Name").textContent);
-            nd["CategorySearch"] = [nd["FullCategoryName"], nd["Name"]].join('.')
-            nd["Group"] = cn.querySelector("Group").textContent;
-            nd["Description"] = cn.querySelector("Description").textContent;
+            nd["Name"] = cn.querySelector("Name").textContent.trim();
+            nd["RouteName"]=nameConvert(cn.querySelector("Name").textContent.trim());
+            nd["CategorySearch"] = [nd["FullCategoryName"].trim(), nd["Name"].trim()].join('.');
+            nd["Group"] = cn.querySelector("Group").textContent.trim();
+            nd["Description"] = cn.querySelector("Description").textContent.trim();
             nd["Inputs"] = getParam(cn,"Inputs", "InputParameter");
             nd["Outputs"] = getParam(cn,"Outputs", "OutputParameter");
             nd["SmallIcon"] = cn.querySelector("SmallIcon").textContent.trim();
             nd["LargeIcon"] = cn.querySelector("LargeIcon").textContent.trim();
-            nd["SearchTags"] = cn.querySelector("SearchTags").textContent.trim();
+            nd["SearchTags"] = ""; //cn.querySelector("SearchTags").textContent.trim();
             dataArr.push(nd)
         }
     });
@@ -76,4 +77,7 @@ function getParam(cn,val1, val2) {
     }
 }
 
-module.exports = interop;
+export default {
+    createObject: createObject,
+    xmlToJson: xmlToJson
+}

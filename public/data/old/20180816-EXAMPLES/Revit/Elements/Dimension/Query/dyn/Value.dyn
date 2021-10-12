@@ -1,0 +1,22 @@
+<Workspace Version="1.3.0.875" X="-869.331059598479" Y="-1837.67994481934" zoom="1.39388371330767" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap />
+  <Elements>
+    <DSRevitNodesUI.Categories guid="de688baf-7fe7-4f2b-89ab-8464ce72d2ec" type="DSRevitNodesUI.Categories" nickname="Categories" x="798.636813494754" y="1509.05796825516" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="141:Dimensions" />
+    <DSRevitNodesUI.ElementsOfCategory guid="b6bdfa91-96d9-47b0-8eac-26a225a345e0" type="DSRevitNodesUI.ElementsOfCategory" nickname="All Elements of Category" x="1015.64923965064" y="1509.05796825516" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="true">
+      <PortInfo index="0" default="False" />
+    </DSRevitNodesUI.ElementsOfCategory>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="5cc28830-2cb2-4186-a030-c3498a3e3928" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Dimension.Value" x="1240.66166580652" y="1509.05796825516" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.Dimension.Value">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="de688baf-7fe7-4f2b-89ab-8464ce72d2ec" start_index="0" end="b6bdfa91-96d9-47b0-8eac-26a225a345e0" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="b6bdfa91-96d9-47b0-8eac-26a225a345e0" start_index="0" end="5cc28830-2cb2-4186-a030-c3498a3e3928" end_index="0" portType="0" />
+  </Connectors>
+  <Notes />
+  <Annotations />
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

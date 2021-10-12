@@ -1,0 +1,371 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Flatten",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1..5..1;",
+      "Id": "1b03a94552cb4f3d85cf6f6f33f16fbe",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "e8eb68c12be44703a78c3ec533e7ac55",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.Explode",
+      "Id": "39302d779519402fbf75aaa428a454c8",
+      "Inputs": [
+        {
+          "Id": "6c1230acd53840a1821e7a4211be97d2",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ba5fea1393de4d0da2efa8e4a8b2402b",
+          "Name": "Geometry[]",
+          "Description": "Geometry[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Separates compound or non-separated elements into their component parts.\n\nGeometry.Explode ( ): Geometry[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Flatten@var[]..[],int",
+      "Id": "58d20b6cb53c4b77858d0c19f25dd4ad",
+      "Inputs": [
+        {
+          "Id": "dffb7baaff95401c97257c3769f779c8",
+          "Name": "list",
+          "Description": "List to flatten.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "563dcacd7a104724be086fe7ed4cc384",
+          "Name": "amt",
+          "Description": "Layers of nesting to remove.\n\nint\nDefault value : -1 (disabled)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "19abd2935e5647e994fa5b7e57d7f287",
+          "Name": "var[]..[]",
+          "Description": "var[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Flattens a nested list of lists by a certain amount.\n\nList.Flatten (list: var[]..[], amt: int = -1): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1;",
+      "Id": "6fc9fc1f57e946bbb103bd06638508c1",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "46b42d6ad525456d9a634968c8ec1958",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Cuboid.ByLengths@double,double,double",
+      "Id": "7ab9d156e6f749cab22fc984442374a2",
+      "Inputs": [
+        {
+          "Id": "0c0d63c4a1854222856cd85d8fac14ce",
+          "Name": "width",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ae495e384a2b427e9a9fd4cde7ad2b3b",
+          "Name": "length",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "87dd2db300834ea99d222f2805985515",
+          "Name": "height",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "51c94c0fa07f4fc793e27094875e7f7e",
+          "Name": "Cuboid",
+          "Description": "Cuboid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Cuboid centered at WCS origin, with width, length, and height.\n\nCuboid.ByLengths (width: double = 1, length: double = 1, height: double = 1): Cuboid"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "61e2565908544962bbfcb097e32fed95",
+      "Inputs": [
+        {
+          "Id": "7a19a7f4b1e84c50b6c295699c168f7e",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "731b195964a842b98e06aa12a35dbafb",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Topology.Edges",
+      "Id": "7b66be76f8aa4566bc64007f153e98d5",
+      "Inputs": [
+        {
+          "Id": "c7867d8df81a44c2adb7d65d2d7912f1",
+          "Name": "topology",
+          "Description": "Autodesk.DesignScript.Geometry.Topology",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "eb99c1d7a86d4d5fb49c959fa1935419",
+          "Name": "Edge[]",
+          "Description": "Edge[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "The Edges of the Topology\n\nTopology.Edges: Edge[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "e8eb68c12be44703a78c3ec533e7ac55",
+      "End": "87dd2db300834ea99d222f2805985515",
+      "Id": "dfb82d104b9b45d3adcf1dc2e87f2203"
+    },
+    {
+      "Start": "e8eb68c12be44703a78c3ec533e7ac55",
+      "End": "ae495e384a2b427e9a9fd4cde7ad2b3b",
+      "Id": "3c4c8892105f409c8dd62a9ff5d969ed"
+    },
+    {
+      "Start": "e8eb68c12be44703a78c3ec533e7ac55",
+      "End": "0c0d63c4a1854222856cd85d8fac14ce",
+      "Id": "e350904895f242adb0163c9afe437e0e"
+    },
+    {
+      "Start": "ba5fea1393de4d0da2efa8e4a8b2402b",
+      "End": "c7867d8df81a44c2adb7d65d2d7912f1",
+      "Id": "dfb75c9956404768b7f8ac7eda90b771"
+    },
+    {
+      "Start": "19abd2935e5647e994fa5b7e57d7f287",
+      "End": "7a19a7f4b1e84c50b6c295699c168f7e",
+      "Id": "8e0be48142af42bcab5ce16acd5050ed"
+    },
+    {
+      "Start": "46b42d6ad525456d9a634968c8ec1958",
+      "End": "563dcacd7a104724be086fe7ed4cc384",
+      "Id": "21db7f908eef4d098212825e16269093"
+    },
+    {
+      "Start": "51c94c0fa07f4fc793e27094875e7f7e",
+      "End": "6c1230acd53840a1821e7a4211be97d2",
+      "Id": "218f3002711d4f3ca8b528489d913579"
+    },
+    {
+      "Start": "eb99c1d7a86d4d5fb49c959fa1935419",
+      "End": "dffb7baaff95401c97257c3769f779c8",
+      "Id": "f34b400dc0034c6b8de68398523f1b6a"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -15.792811393737793,
+      "EyeY": 13.126605033874512,
+      "EyeZ": 21.273807525634766,
+      "LookX": 16.723785400390625,
+      "LookY": -5.2774238586425781,
+      "LookZ": -19.588394165039063,
+      "UpX": -0.009065740741789341,
+      "UpY": 0.99990254640579224,
+      "UpZ": 0.010618607513606548
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "1b03a94552cb4f3d85cf6f6f33f16fbe",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -785.82800012988,
+        "Y": 13.160898979406802
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Geometry.Explode",
+        "Id": "39302d779519402fbf75aaa428a454c8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -289.82800012988,
+        "Y": -17.052434353926543
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.Flatten",
+        "Id": "58d20b6cb53c4b77858d0c19f25dd4ad",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 338.17199987012,
+        "Y": 21.947565646073457
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "6fc9fc1f57e946bbb103bd06638508c1",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 56.171999870119976,
+        "Y": 91.1608989794068
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Cuboid.ByLengths",
+        "Id": "7ab9d156e6f749cab22fc984442374a2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -589.82800012988,
+        "Y": -17.052434353926536
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "61e2565908544962bbfcb097e32fed95",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 624.17199987012,
+        "Y": 21.947565646073457
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Topology.Edges",
+        "Id": "7b66be76f8aa4566bc64007f153e98d5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 3.1451036680389279,
+        "Y": -17.052434353926543
+      }
+    ],
+    "Annotations": [],
+    "X": 715.834551638087,
+    "Y": 133.3090431465495,
+    "Zoom": 1.00646868784672
+  }
+}

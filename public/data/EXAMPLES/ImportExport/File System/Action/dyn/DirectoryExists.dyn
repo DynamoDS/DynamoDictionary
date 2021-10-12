@@ -1,0 +1,173 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "DirectoryExists",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+      "Name": "Directory Path",
+      "Type": "string",
+      "Value": "C:\\Users\\Username\\Folder2",
+      "Description": "Allows you to select a directory on the system to get its path"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Users\\Username\\Folder2",
+      "InputValue": "C:\\Users\\Username\\Folder2",
+      "NodeType": "ExtensionNode",
+      "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "864c59fb8b5b44e79a185a2474b3bbb1",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.DirectoryExists@string",
+      "Id": "67c83ddba7f4466280f0675c9fcbb3bd",
+      "Inputs": [
+        {
+          "Id": "3ab7ded623624a0b9ef4548c55146c1b",
+          "Name": "path",
+          "Description": "Path to a directory on disk.\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e9e492fd593d41eabde789eded95bd06",
+          "Name": "bool",
+          "Description": "bool",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Determines if a directory exists at the given path.\n\nFileSystem.DirectoryExists (path: string): bool"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "9c34e3258b414508b6966f7f5f2e19e9",
+      "Inputs": [
+        {
+          "Id": "357ca0a823724c809910d1bc87f1bd7b",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ac574a092370464eaf8066fd08a8aee0",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "864c59fb8b5b44e79a185a2474b3bbb1",
+      "End": "3ab7ded623624a0b9ef4548c55146c1b",
+      "Id": "3577434831ab4b569ddaeca8ce1c4b77"
+    },
+    {
+      "Start": "e9e492fd593d41eabde789eded95bd06",
+      "End": "357ca0a823724c809910d1bc87f1bd7b",
+      "Id": "2a2cc9ba21fe4682bbf14d06589c8d66"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "2e31b430b2bd492b95b2313a888b6dbb",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 488.306078792235,
+        "Y": 174.51229433390827
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.DirectoryExists",
+        "Id": "67c83ddba7f4466280f0675c9fcbb3bd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 696.356305991884,
+        "Y": 174.51229433390827
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "9c34e3258b414508b6966f7f5f2e19e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 887.03648046789749,
+        "Y": 174.51229433390827
+      }
+    ],
+    "Annotations": [],
+    "X": -621.88497527466393,
+    "Y": -104.3936723369211,
+    "Zoom": 1.51051845643135
+  }
+}

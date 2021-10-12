@@ -1,0 +1,213 @@
+{
+  "Uuid": "a21e51d8-030f-458e-929b-75dd5e805c32",
+  "IsCustomNode": true,
+  "Category": "Core",
+  "Description": "test",
+  "Name": "Input",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "(x/y)*100;",
+      "Id": "041c73a120aa4c0f89d7a229072550e0",
+      "Inputs": [
+        {
+          "Id": "fab8c8ac9e2e405b8fda07e76ac1320b",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4e04adbc0c2a480f95605ac4f8358693",
+          "Name": "y",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "839d5d06a0724384b657180df4f04c11",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "x",
+        "TypeName": "double",
+        "TypeRank": 0,
+        "DefaultValue": "2",
+        "Description": "First number"
+      },
+      "Id": "469bc8963e0d4dca85203986de63fbc5",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "aa18f5c84d744490bfebf2c3cfcc42a5",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Symbol, DynamoCore",
+      "NodeType": "InputNode",
+      "Parameter": {
+        "Name": "y",
+        "TypeName": "double",
+        "TypeRank": 0,
+        "DefaultValue": "10",
+        "Description": "Second number"
+      },
+      "Id": "0eb7c65ec31647988db998321f545dba",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "4e7f4487f2824b49936585954cab5733",
+          "Name": "",
+          "Description": "Symbol",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A function parameter, use with custom nodes.\r\n\r\nYou can specify the type and default value for parameter. E.g.,\r\n\r\ninput : var[]..[]\r\nvalue : bool = false"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CustomNodes.Output, DynamoCore",
+      "NodeType": "OutputNode",
+      "ElementResolver": null,
+      "Symbol": "//Resulting Percentage of two Numbers\r\nPercentage",
+      "Id": "d46417464e154321bcfcb53b702251e6",
+      "Inputs": [
+        {
+          "Id": "8142bf666212438ea27d2563dc29b26d",
+          "Name": "",
+          "Description": "",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [],
+      "Replication": "Disabled",
+      "Description": "A function output, use with custom nodes"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "839d5d06a0724384b657180df4f04c11",
+      "End": "8142bf666212438ea27d2563dc29b26d",
+      "Id": "4849b2d6ddac43678ab12fcfd6529dd2"
+    },
+    {
+      "Start": "aa18f5c84d744490bfebf2c3cfcc42a5",
+      "End": "fab8c8ac9e2e405b8fda07e76ac1320b",
+      "Id": "0ff164bba4144db891681e303da63c0b"
+    },
+    {
+      "Start": "4e7f4487f2824b49936585954cab5733",
+      "End": "4e04adbc0c2a480f95605ac4f8358693",
+      "Id": "1397a1ce6c364cb694123bea38133672"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": false,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "041c73a120aa4c0f89d7a229072550e0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 803.0,
+        "Y": 401.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "469bc8963e0d4dca85203986de63fbc5",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 600.0,
+        "Y": 371.2
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Input",
+        "Id": "0eb7c65ec31647988db998321f545dba",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 592.0,
+        "Y": 443.2
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Output",
+        "Id": "d46417464e154321bcfcb53b702251e6",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 993.364816948551,
+        "Y": 397.129633897101
+      }
+    ],
+    "Annotations": [],
+    "X": -686.2072183,
+    "Y": -271.7912019625,
+    "Zoom": 1.545620359375
+  }
+}

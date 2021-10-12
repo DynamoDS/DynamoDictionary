@@ -1,79 +1,503 @@
-<Workspace Version="1.3.0.875" X="-355.883004903379" Y="13.1307445151013" zoom="0.921091684435557" ScaleFactor="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
-  <NamespaceResolutionMap>
-    <ClassMap partialName="Vector" resolvedName="Autodesk.DesignScript.Geometry.Vector" assemblyName="ProtoGeometry.dll" />
-    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
-  </NamespaceResolutionMap>
-  <Elements>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="3147adca-d375-4a0a-bbef-df014828e202" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="FamilyType.ByGeometry" x="1664.32407340937" y="299.363404231479" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.FamilyType.ByGeometry@Autodesk.DesignScript.Geometry.Solid,string,Revit.Elements.Category,string,Revit.Elements.Material,string">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-      <PortInfo index="3" default="False" />
-      <PortInfo index="4" default="False" />
-      <PortInfo index="5" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="9f86d772-9857-4d5a-8c15-0f24416e8917" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Solid.Difference" x="1424.58286479751" y="147.089154650774" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Solid.Difference@Autodesk.DesignScript.Geometry.Solid">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="2b8455fa-51a2-4ae0-932f-c0f590bad054" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.ExtrudeAsSolid" x="1182.94098497026" y="94.7314560497641" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@Autodesk.DesignScript.Geometry.Vector,double">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="True" />
-      <PortInfo index="2" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="7025440b-3be5-42cb-80b8-edb48b5cf180" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.ExtrudeAsSolid" x="1183.01805533708" y="235.162572556686" isVisible="false" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.ExtrudeAsSolid@Autodesk.DesignScript.Geometry.Vector,double">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="True" />
-      <PortInfo index="2" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="4bdc8e60-9c4f-4031-bce4-ab76837f42b9" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1509.38286479751" y="263.234268107456" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Frame&quot;;" ShouldFocus="false" />
-    <DSRevitNodesUI.Categories guid="ee829d1e-9dfa-4bdb-85f1-c476c9be2c9b" type="DSRevitNodesUI.Categories" nickname="Categories" x="1438.98286479751" y="353.779381564137" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false" index="588:Windows" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="83941bdb-3f83-4d83-8673-64745fef9d45" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Material.ByName" x="1402.13537947919" y="542.933624559957" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Material.ByName@string">
-      <PortInfo index="0" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="9cb517ac-ea8c-4545-b681-31b4fb9ac37b" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="1265.54304692891" y="543.803102405642" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="&quot;Copper&quot;;" ShouldFocus="false" />
-    <CoreNodeModels.Input.Filename guid="927f5953-fd4d-4513-a29f-cc234daf9814" type="CoreNodeModels.Input.Filename" nickname="File Path" x="1336.58286479751" y="444.324495020819" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="True" IsFrozen="false" isPinned="false">
-      <System.String>..\..\..\..\..\..\..\..\..\..\..\..\..\ProgramData\Autodesk\RVT 2017\Family Templates\English_I\Window.rft</System.String>
-      <HintPath>C:\ProgramData\Autodesk\RVT 2017\Family Templates\English_I\Window.rft</HintPath>
-    </CoreNodeModels.Input.Filename>
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="b62414e4-8401-42b3-a5af-b373a1a34750" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Rectangle.ByCornerPoints" x="703.386010156416" y="82.1517084168103" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Rectangle.ByCornerPoints@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Point">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="False" />
-      <PortInfo index="2" default="False" />
-      <PortInfo index="3" default="False" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="d9bc6830-bb41-4841-985d-e398cbf6e049" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="425.62067816076" y="101.58610344684" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="Point.ByCoordinates(0,0,3);&#xA;Point.ByCoordinates(3,0,3);&#xA;Point.ByCoordinates(3,0,7);&#xA;Point.ByCoordinates(0,0,7);" ShouldFocus="false" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="08713e22-a061-427d-b3a9-792020b89d9b" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Vector.YAxis" x="800.661885635529" y="254.121559710243" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Vector.YAxis" />
-    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="cdd2e737-a035-48dd-85cf-f171ed8e3168" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Curve.Offset" x="943.970095046723" y="235.882333057909" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="ProtoGeometry.dll" function="Autodesk.DesignScript.Geometry.Curve.Offset@double">
-      <PortInfo index="0" default="False" />
-      <PortInfo index="1" default="True" />
-    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
-    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="a6570a72-f8f9-4a08-98d9-07633c884038" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="812.607789032989" y="344.152984314677" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="-0.25;" ShouldFocus="false" />
-  </Elements>
-  <Connectors>
-    <Dynamo.Graph.Connectors.ConnectorModel start="9f86d772-9857-4d5a-8c15-0f24416e8917" start_index="0" end="3147adca-d375-4a0a-bbef-df014828e202" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="2b8455fa-51a2-4ae0-932f-c0f590bad054" start_index="0" end="9f86d772-9857-4d5a-8c15-0f24416e8917" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="7025440b-3be5-42cb-80b8-edb48b5cf180" start_index="0" end="9f86d772-9857-4d5a-8c15-0f24416e8917" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="4bdc8e60-9c4f-4031-bce4-ab76837f42b9" start_index="0" end="3147adca-d375-4a0a-bbef-df014828e202" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="ee829d1e-9dfa-4bdb-85f1-c476c9be2c9b" start_index="0" end="3147adca-d375-4a0a-bbef-df014828e202" end_index="2" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="83941bdb-3f83-4d83-8673-64745fef9d45" start_index="0" end="3147adca-d375-4a0a-bbef-df014828e202" end_index="4" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="9cb517ac-ea8c-4545-b681-31b4fb9ac37b" start_index="0" end="83941bdb-3f83-4d83-8673-64745fef9d45" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="927f5953-fd4d-4513-a29f-cc234daf9814" start_index="0" end="3147adca-d375-4a0a-bbef-df014828e202" end_index="3" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="b62414e4-8401-42b3-a5af-b373a1a34750" start_index="0" end="2b8455fa-51a2-4ae0-932f-c0f590bad054" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="b62414e4-8401-42b3-a5af-b373a1a34750" start_index="0" end="cdd2e737-a035-48dd-85cf-f171ed8e3168" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9bc6830-bb41-4841-985d-e398cbf6e049" start_index="0" end="b62414e4-8401-42b3-a5af-b373a1a34750" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9bc6830-bb41-4841-985d-e398cbf6e049" start_index="1" end="b62414e4-8401-42b3-a5af-b373a1a34750" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9bc6830-bb41-4841-985d-e398cbf6e049" start_index="2" end="b62414e4-8401-42b3-a5af-b373a1a34750" end_index="2" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="d9bc6830-bb41-4841-985d-e398cbf6e049" start_index="3" end="b62414e4-8401-42b3-a5af-b373a1a34750" end_index="3" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="08713e22-a061-427d-b3a9-792020b89d9b" start_index="0" end="2b8455fa-51a2-4ae0-932f-c0f590bad054" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="08713e22-a061-427d-b3a9-792020b89d9b" start_index="0" end="7025440b-3be5-42cb-80b8-edb48b5cf180" end_index="1" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="cdd2e737-a035-48dd-85cf-f171ed8e3168" start_index="0" end="7025440b-3be5-42cb-80b8-edb48b5cf180" end_index="0" portType="0" />
-    <Dynamo.Graph.Connectors.ConnectorModel start="a6570a72-f8f9-4a08-98d9-07633c884038" start_index="0" end="cdd2e737-a035-48dd-85cf-f171ed8e3168" end_index="1" portType="0" />
-  </Connectors>
-  <Notes />
-  <Annotations />
-  <Presets />
-  <Cameras>
-    <Camera Name="Background Preview" eyeX="8.02186075661957" eyeY="5.7318273552817" eyeZ="-13.184814561346" lookX="-10.9259018819246" lookY="-0.113323395294004" lookZ="13.1652816447052" upX="0.132777613842531" upY="0.9781475780275" upZ="-0.159991806137704" />
-  </Cameras>
-</Workspace>
+{
+  "Uuid": "803fb2f9-4884-42de-915d-c7831d5e05fe",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "ByGeometry",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.FamilyType.ByGeometry@Autodesk.DesignScript.Geometry.Solid,string,Revit.Elements.Category,string,Revit.Elements.Material,string",
+      "Id": "b4db7dd383d44716aff97fb157015f88",
+      "Inputs": [
+        {
+          "Id": "b94c158c3b7f4e24b0b22036f45e0ea2",
+          "Name": "solidGeometry",
+          "Description": "Solid",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "40f6f032be6d4529a12fd5597f44e7de",
+          "Name": "name",
+          "Description": "Name fo the Family Type\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "9096b058c6434528acab2a4cbaf322e6",
+          "Name": "category",
+          "Description": "Family Type Category\n\nCategory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dfee25b1b9f14e5780dcd0786282247b",
+          "Name": "templatePath",
+          "Description": "Family Template to use for creation\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6bfc4c7543b549a98745a0cc3d7a6be7",
+          "Name": "material",
+          "Description": "Material to apply to the solids\n\nMaterial",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5374a9692e2140d7add1b2ac608c08e7",
+          "Name": "subcategory",
+          "Description": "Subcategory for the Family Type (optional)\n\nstring\nDefault value : \"\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "f4174b4f9e4f43688eeef28107c9fab7",
+          "Name": "FamilyType",
+          "Description": "Family Type",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create new Family Type from a solid geometry. This method exports the geometry to SAT and imports it into a new family document.\n\nFamilyType.ByGeometry (solidGeometry: Solid, name: string, category: Category, templatePath: string, material: Material, subcategory: string = \"\"): FamilyType"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.TSpline.TSplineSurface.ByTorusCenterRadii@Autodesk.DesignScript.Geometry.Point,double,double,int,int,Autodesk.DesignScript.Geometry.TSpline.TSplineInitialSymmetry,bool",
+      "Id": "2f468c11ee66468c9dbebe9021fa7477",
+      "Inputs": [
+        {
+          "Id": "6d951d57cc0a45a7bfcdba515cbe4850",
+          "Name": "center",
+          "Description": "Center of a torus\n\nPoint\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "74785b61e071431197e1bce489eaa0d6",
+          "Name": "innerRadius",
+          "Description": "Inner radius of a torus\n\ndouble\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ec1521bbb9ef4d0386058b914be471b5",
+          "Name": "outerRadius",
+          "Description": "Outer radius of a torus\n\ndouble\nDefault value : 2",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4629cab47b464249aacaa832b6894beb",
+          "Name": "innerRadiusSpans",
+          "Description": "Number of inner radial spans\n\nint\nDefault value : 8",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "66fb576f5b1145ff840e5616f62b2eb8",
+          "Name": "outerRadiusSpans",
+          "Description": "Number of outer radial spans\n\nint\nDefault value : 16",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "bd9a2c9a4be8459fae519ffb86d65cf6",
+          "Name": "symmetry",
+          "Description": "Symmetry options of a T-Spline Surface\n\nTSplineInitialSymmetry\nDefault value : Autodesk.DesignScript.Geometry.TSpline.TSplineInitialSymmetry.ByAxial(false, false, false)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "d3cb8dc229534d4aae8bb319f2c052fb",
+          "Name": "inSmoothMode",
+          "Description": "Show T-Spline Surface in box or smooth visualization\n\nbool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6861a4d1821248d08cf81cab8ff884e5",
+          "Name": "TSplineSurface",
+          "Description": "Toroidal T-Spline Surface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a T-Splines Torus with given center and radii, aligned with default World XY plane\n\nTSplineSurface.ByTorusCenterRadii (center: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), innerRadius: double = 1, outerRadius: double = 2, innerRadiusSpans: int = 8, outerRadiusSpans: int = 16, symmetry: TSplineInitialSymmetry = Autodesk.DesignScript.Geometry.TSpline.TSplineInitialSymmetry.ByAxial(false, false, false), inSmoothMode: bool = false): TSplineSurface"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "true;",
+      "Id": "a1e7da43ba7a41259bb4e87b6b627f5b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "44640410b05e407d9504c49f32045acc",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.TSpline.TSplineSurface.ToBRep@bool",
+      "Id": "5c4f35a9e24c475fadd987d5b5cc4ca9",
+      "Inputs": [
+        {
+          "Id": "9a525a4175aa4412a4fc63ad3254e6f0",
+          "Name": "tSplineSurface",
+          "Description": "Autodesk.DesignScript.Geometry.TSpline.TSplineSurface",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "a69a63af35264d19b995baad4e1f0c2c",
+          "Name": "matchTopology",
+          "Description": "Determines should resulted body has the same topology as TSpline has\n\nbool\nDefault value : true",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7e3fa7d464414d4b962aeb748e5fa310",
+          "Name": "Topology[]..[]",
+          "Description": "Topology entity (Solid or Surface)",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Convert TSpline surface to Solid or Surface depending on shape\n\nTSplineSurface.ToBRep (matchTopology: bool = true): Topology[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "C:\\Parallax\\Revit\\2018\\Templates_Families\\Generic Model.rft",
+      "Id": "29f82470fffd4ee8bffa3de62a624084",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "baca2ca4b9e340f796fe83e81becf834",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a string."
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Categories, DSRevitNodesUI",
+      "SelectedIndex": 228,
+      "NodeType": "ExtensionNode",
+      "Id": "2b85526e856d46e3b21fbc87db7f7c9d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2f414121fb5e4926ba369a4edde611ce",
+          "Name": "Category",
+          "Description": "The selected Category.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "All built-in categories."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Torus\";",
+      "Id": "ddd8364a5b9b40f6be4c0a211caa0a93",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "767b5c6fa2644ebe90480703668be259",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Material.ByName@string",
+      "Id": "e9be3aac41f84b73a6e79f883cda4749",
+      "Inputs": [
+        {
+          "Id": "2a98d869a0c94b40aa86ea3aec9784bb",
+          "Name": "name",
+          "Description": "The name of the material\n\nstring",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "89db0c06e0064e6ab00da7112da4e2f7",
+          "Name": "Material",
+          "Description": "Material",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Select a material from the current document by the name\n\nMaterial.ByName (name: string): Material"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"Default\";",
+      "Id": "339fc82d3c99493abf3cdfacffef9f09",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0a3f4d140643469d9eddafb7ac06fe80",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "6861a4d1821248d08cf81cab8ff884e5",
+      "End": "9a525a4175aa4412a4fc63ad3254e6f0",
+      "Id": "31f972a13b454d7ab106cb079b1cd318"
+    },
+    {
+      "Start": "44640410b05e407d9504c49f32045acc",
+      "End": "d3cb8dc229534d4aae8bb319f2c052fb",
+      "Id": "e3a9bd977c054e03bcff52cdc6d3f736"
+    },
+    {
+      "Start": "7e3fa7d464414d4b962aeb748e5fa310",
+      "End": "b94c158c3b7f4e24b0b22036f45e0ea2",
+      "Id": "266f6ba8965f4b8594361335e55e340c"
+    },
+    {
+      "Start": "baca2ca4b9e340f796fe83e81becf834",
+      "End": "dfee25b1b9f14e5780dcd0786282247b",
+      "Id": "862052c12d7b45a0ac218bd4c04de074"
+    },
+    {
+      "Start": "2f414121fb5e4926ba369a4edde611ce",
+      "End": "9096b058c6434528acab2a4cbaf322e6",
+      "Id": "1cdc482f76ea422ca01387eac9d38e3e"
+    },
+    {
+      "Start": "767b5c6fa2644ebe90480703668be259",
+      "End": "40f6f032be6d4529a12fd5597f44e7de",
+      "Id": "12d404e9e32947f087cba894de17aecb"
+    },
+    {
+      "Start": "89db0c06e0064e6ab00da7112da4e2f7",
+      "End": "6bfc4c7543b549a98745a0cc3d7a6be7",
+      "Id": "224589c57f814533acb2ac05aae1deda"
+    },
+    {
+      "Start": "0a3f4d140643469d9eddafb7ac06fe80",
+      "End": "2a98d869a0c94b40aa86ea3aec9784bb",
+      "Id": "2393d92177c24f86bcae6ff424f74474"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.1.0.5357",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -13.460053124063878,
+      "EyeY": 21.521049627992344,
+      "EyeZ": 38.164573981768037,
+      "LookX": -7.6905828402792178,
+      "LookY": -42.787469648437565,
+      "LookZ": -42.273956245670249,
+      "UpX": -0.096168444087108229,
+      "UpY": 0.84339144581288683,
+      "UpZ": -0.52862321126821121
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "FamilyType.ByGeometry",
+        "Id": "b4db7dd383d44716aff97fb157015f88",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1066.5,
+        "Y": 646.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "TSplineSurface.ByTorusCenterRadii",
+        "Id": "2f468c11ee66468c9dbebe9021fa7477",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 255.0,
+        "Y": 521.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "a1e7da43ba7a41259bb4e87b6b627f5b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 74.0,
+        "Y": 726.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "TSplineSurface.ToBRep",
+        "Id": "5c4f35a9e24c475fadd987d5b5cc4ca9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 594.0,
+        "Y": 521.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "String",
+        "Id": "29f82470fffd4ee8bffa3de62a624084",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 695.0,
+        "Y": 842.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Categories",
+        "Id": "2b85526e856d46e3b21fbc87db7f7c9d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 706.0,
+        "Y": 752.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "ddd8364a5b9b40f6be4c0a211caa0a93",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 791.0,
+        "Y": 636.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Material.ByName",
+        "Id": "e9be3aac41f84b73a6e79f883cda4749",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 670.0,
+        "Y": 943.0
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "339fc82d3c99493abf3cdfacffef9f09",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 527.0,
+        "Y": 946.0
+      }
+    ],
+    "Annotations": [],
+    "X": 228.885,
+    "Y": -165.04500000000007,
+    "Zoom": 0.8425
+  }
+}

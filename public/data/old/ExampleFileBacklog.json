@@ -1,0 +1,1234 @@
+[
+    {
+        "Name": "SiteLocation",
+        "imageFile": [
+            "SiteLocation"
+        ],
+        "dynFile": [
+            "SiteLocation"
+        ],
+        "folderPath": "Analyze/Action",
+        "inDepth": "Location is returned as a name, latitude, and longitude."
+    },
+    {
+        "Name": "ByViewNameDivisionsGridBoundary",
+        "imageFile": [
+            "ByViewNameDivisionsGridBoundary"
+        ],
+        "dynFile": [
+            "ByViewNameDivisionsGridBoundary"
+        ],
+        "folderPath": "Analyze/Daylighting/CloudDaylightingJob/Create",
+        "inDepth": "To run a cloud daylighting job, the job needs to be uploaded and run using the Upload Cloud Render Data and Do Cloud Render nodes. The respective view needs to be exported as well using the Export Cloud Render Data node."
+    },
+    {
+        "Name": "Parse",
+        "imageFile": [
+            "Parse"
+        ],
+        "dynFile": [
+            "Parse"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Create",
+        "inDepth": "An SDF file can be queried for data such as color, resolution, illuminance values, etc using the DaylightingResults Action and Query nodes."
+    },
+    {
+        "Name": "Colors",
+        "imageFile": [
+            "Colors"
+        ],
+        "dynFile": [
+            "Colors"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
+        "inDepth": "Color data is returned as a set of RGB values."
+    },
+    {
+        "Name": "IlluminanceValues",
+        "imageFile": [
+            "IlluminanceValues"
+        ],
+        "dynFile": [
+            "IlluminanceValues"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
+        "inDepth": "Illuminance data is returned as RGb lux values."
+    },
+    {
+        "Name": "Normals",
+        "imageFile": [
+            "Normals"
+        ],
+        "dynFile": [
+            "Normals"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
+        "inDepth": "Normal data is returned as vectors with x, y, z values and length."
+    },
+    {
+        "Name": "Points",
+        "imageFile": [
+            "Points"
+        ],
+        "dynFile": [
+            "Points"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
+        "inDepth": "Point data is returned as x, y, z values."
+    },
+    {
+        "Name": "ToImage",
+        "imageFile": [
+            "ToImage"
+        ],
+        "dynFile": [
+            "ToImage"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Action",
+        "inDepth": "The image can be previewed in Dynamo by using the Watch Image node."
+    },
+    {
+        "Name": "Resolution",
+        "imageFile": [
+            "Resolution"
+        ],
+        "dynFile": [
+            "Resolution"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
+        "inDepth": "Resolution values are returned for both x and y."
+    },
+    {
+        "Name": "XResolution",
+        "imageFile": [
+            "XResolution"
+        ],
+        "dynFile": [
+            "XResolution"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
+        "inDepth": "Resolution is returned as an integer."
+    },
+    {
+        "Name": "YResolution",
+        "imageFile": [
+            "YResolution"
+        ],
+        "dynFile": [
+            "YResolution"
+        ],
+        "folderPath": "Analyze/Daylighting/DaylightingResults/Query",
+        "inDepth": "Resolution is returned as an integer."
+    },
+    {
+        "Name": "ByRGB",
+        "imageFile": [
+            "ByRGB"
+        ],
+        "dynFile": [
+            "ByRGB"
+        ],
+        "folderPath": "Analyze/Daylighting/Illuminance/Create",
+        "inDepth": "The illuminance value is created from r, g, b values."
+    },
+    {
+        "Name": "ToFootCandles",
+        "imageFile": [
+            "ToFootCandles"
+        ],
+        "dynFile": [
+            "ToFootCandles"
+        ],
+        "folderPath": "Analyze/Daylighting/Illuminance/Action",
+        "inDepth": "The foot candles value is returned as a double."
+    },
+    {
+        "Name": "ToSRGB",
+        "imageFile": [
+            "ToSRGB"
+        ],
+        "dynFile": [
+            "ToSRGB"
+        ],
+        "folderPath": "Analyze/Daylighting/Illuminance/Action",
+        "inDepth": "sRGB is a single value measured in lux."
+    },
+    {
+        "Name": "B",
+        "imageFile": [
+            "B"
+        ],
+        "dynFile": [
+            "B"
+        ],
+        "folderPath": "Analyze/Daylighting/Illuminance/Query",
+        "inDepth": "B returns the blue value of a illuminance data point."
+    },
+    {
+        "Name": "G",
+        "imageFile": [
+            "G"
+        ],
+        "dynFile": [
+            "G"
+        ],
+        "folderPath": "Analyze/Daylighting/Illuminance/Query",
+        "inDepth": "G returns the green value of a illuminance data point."
+    },
+    {
+        "Name": "R",
+        "imageFile": [
+            "R"
+        ],
+        "dynFile": [
+            "R"
+        ],
+        "folderPath": "Analyze/Daylighting/Illuminance/Query",
+        "inDepth": "R returns the red value of a illuminance data point."
+    },
+    {
+        "Name": "Do Cloud Render",
+        "imageFile": [
+            "Do Cloud Render"
+        ],
+        "dynFile": [
+            "Do Cloud Render"
+        ],
+        "folderPath": "Analyze/Render/Action",
+        "inDepth": "Do Cloud Render will bring up a dialog box to confirm the render job and the required cloud credits. If Dynamo is running automatically, the node will run immediately after all inputs are connected. The renderings can be found online in your A360 account."
+    },
+    {
+        "Name": "Export Cloud Render Data",
+        "imageFile": [
+            "Export Cloud Render Data"
+        ],
+        "dynFile": [
+            "Export Cloud Render Data"
+        ],
+        "folderPath": "Analyze/Render/Action",
+        "inDepth": "Export Cloud Render Data takes 3D view names as strings. This node is used in conjunction with the Upload Cloud Render Data and Do Cloud Render nodes. This node exports a temporary .spd file to the OutputFileName path."
+    },
+    {
+        "Name": "Select RenderQuality",
+        "imageFile": [
+            "Select RenderQuality"
+        ],
+        "dynFile": [
+            "Select RenderQuality"
+        ],
+        "folderPath": "Analyze/Render/Action",
+        "inDepth": "Available qualities levels are Best, High, Standard, and Draft. Dynamo must be in Manual mode prior to adding this node to the canvas."
+    },
+    {
+        "Name": "Select RenderType",
+        "imageFile": [
+            "Select RenderType"
+        ],
+        "dynFile": [
+            "Select RenderType"
+        ],
+        "folderPath": "Analyze/Render/Action",
+        "inDepth": "Available render types are Image, Panorama, SolarStudyPreview, SolarStudy, and Illuminance. Dynamo must be in Manual mode prior to adding this node to the canvas."
+    },
+    {
+        "Name": "Select SkyModelType",
+        "imageFile": [
+            "Select SkyModelType"
+        ],
+        "dynFile": [
+            "Select SkyModelType"
+        ],
+        "folderPath": "Analyze/Render/Action",
+        "inDepth": "Available sky model types are Perez, Igawa, Render, DaylightFactor, CIEClear, CIEIntermediate, CIEOvercast, and CIEUniform. Dynamo must be in Manual mode prior to adding this node to the canvas."
+    },
+    {
+        "Name": "Upload Cloud Render Data",
+        "imageFile": [
+            "Upload Cloud Render Data"
+        ],
+        "dynFile": [
+            "Upload Cloud Render Data"
+        ],
+        "folderPath": "Analyze/Render/Action",
+        "inDepth": "Uploaded render view data is sent to Autodesk's A360 rendering service. This node is used in conjunction with the Export Cloud Render Data and Do Cloud Render nodes."
+    },
+    {
+        "Name": "ByViewNameWidthHeight",
+        "imageFile": [
+            "ByViewNameWidthHeight"
+        ],
+        "dynFile": [
+            "ByViewNameWidthHeight"
+        ],
+        "folderPath": "Analyze/Render/CloudRenderingJob/Create",
+        "inDepth": "Use this node in conjunction with the Export/Upload Cloud Render Data and Do Cloud Render nodes to create a rendering."
+    },
+    {
+        "Name": "ByDateInformation",
+        "imageFile": [
+            "ByDateInformation"
+        ],
+        "dynFile": [
+            "ByDateInformation"
+        ],
+        "folderPath": "Analyze/Render/DateTime/Create",
+        "inDepth": "Multiple DateTimes can be created by providing an input with a list of values. This is especially useful for creating multiple cloud renderings for several times of day."
+    },
+    {
+        "Name": "BySkyModelLocationDate",
+        "imageFile": [
+            "BySkyModelLocationDate"
+        ],
+        "dynFile": [
+            "BySkyModelLocationDate"
+        ],
+        "folderPath": "Analyze/Render/RenderingEnvironment/Create",
+        "inDepth": "Rendering environments are used by the Cloud Daylighting Job node."
+    },
+    {
+        "Name": "ByTypeConstants",
+        "imageFile": [
+            "ByTypeConstants"
+        ],
+        "dynFile": [
+            "ByTypeConstants"
+        ],
+        "folderPath": "Analyze/Render/SkyModel/Create",
+        "inDepth": "Sky models are used to create rendering environments."
+    },
+    {
+        "Name": "Contains",
+        "imageFile": [
+            "Contains"
+        ],
+        "dynFile": [
+            "Contains"
+        ],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Contains can take integers, strings, doubles, etc as inputs. This node can be useful for creating boolean masks."
+    },
+    {
+        "Name": "NewtonRootFind1DNoDeriv",
+        "imageFile": [
+            "NewtonRootFind1DNoDeriv"
+        ],
+        "dynFile": [
+            "NewtonRootFind1DNoDeriv"
+        ],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about NewtonRootFind1DNoDeriv..."
+    },
+    {
+        "Name": "NewtonRootFind1DWithDeriv",
+        "imageFile": [
+            "NewtonRootFind1DWithDeriv"
+        ],
+        "dynFile": [
+            "NewtonRootFind1DWithDeriv"
+        ],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Add in-depth information about NewtonRootFind1DWithDeriv..."
+    },
+    {
+        "Name": "Rank",
+        "imageFile": [
+            "Rank"
+        ],
+        "dynFile": [
+            "Rank"
+        ],
+        "folderPath": "BuiltIn/Action",
+        "inDepth": "Counts how many levels are in a list."
+    },
+    {
+        "Name": "Format",
+        "imageFile": [
+            "Format"
+        ],
+        "dynFile": [
+            "Format"
+        ],
+        "folderPath": "Core/DateTime/Action",
+        "inDepth": "Date time strings are written in a standard format. Refer to this web page for custom date and time format strings: https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings. Refer to this web page for standard formats: https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-date-and-time-format-strings."
+    },
+    {
+        "Name": "MinValue (dateTime, format)",
+        "imageFile": [
+            "MinValue (dateTime, format)"
+        ],
+        "dynFile": [
+            "MinValue (dateTime, format)"
+        ],
+        "folderPath": "Core/DateTime/Query",
+        "inDepth": "Add in-depth information about MinValue..."
+    },
+    {
+        "Name": "Formula (IN[0])",
+        "imageFile": [
+            "Formula (IN[0])"
+        ],
+        "dynFile": [
+            "Formula (IN[0])"
+        ],
+        "folderPath": "Core/Scripting/Action",
+        "inDepth": "Add in-depth information about Formula..."
+    },
+    {
+        "Name": "AllIndicesOf",
+        "imageFile": [
+            "AllIndicesOf"
+        ],
+        "dynFile": [
+            "AllIndicesOf"
+        ],
+        "folderPath": "Core/String/Action",
+        "inDepth": "AllIndicesOf returns the index of where a string begins in another string."
+    },
+    {
+        "Name": "String from Array",
+        "imageFile": [
+            "String from Array"
+        ],
+        "dynFile": [
+            "String from Array"
+        ],
+        "folderPath": "Core/String/Action",
+        "inDepth": "While a list of integers contains only integers, the string will contain commas that separate the numbers as well as curly brackets that contain the array."
+    },
+    {
+        "Name": "ByGeometry",
+        "imageFile": [
+            "ByGeometry"
+        ],
+        "dynFile": [
+            "ByGeometry"
+        ],
+        "folderPath": "Geometry/BoundingBox/Create",
+        "inDepth": "The bounding box geometry is returned as a cuboid."
+    },
+    {
+        "Name": "ByMatrix",
+        "imageFile": [
+            "ByMatrix"
+        ],
+        "dynFile": [
+            "ByMatrix"
+        ],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about ByMatrix..."
+    },
+    {
+        "Name": "Identity (matrix)",
+        "imageFile": [
+            "Identity (matrix)"
+        ],
+        "dynFile": [
+            "Identity (matrix)"
+        ],
+        "folderPath": "Geometry/CoordinateSystem/Create",
+        "inDepth": "Add in-depth information about Identity (matrix)..."
+    },
+    {
+        "Name": "Scale (coordinateSystem, plane, xamount, yamount, zamount)",
+        "imageFile": [
+            "Scale (coordinateSystem, plane, xamount, yamount, zamount)"
+        ],
+        "dynFile": [
+            "Scale (coordinateSystem, plane, xamount, yamount, zamount)"
+        ],
+        "folderPath": "Geometry/CoordinateSystem/Action",
+        "inDepth": "Skewed coordinate systems can be created by scaling non-uniformly from a rotated plane."
+    },
+    {
+        "Name": "Join",
+        "imageFile": [
+            "Join"
+        ],
+        "dynFile": [
+            "Join"
+        ],
+        "folderPath": "Geometry/Curve/Action",
+        "inDepth": "Some nodes that take curves as inputs may not accept polycurves."
+    },
+    {
+        "Name": "ByPointsTangentsKnotsDerivatives",
+        "imageFile": [
+            "ByPointsTangentsKnotsDerivatives"
+        ],
+        "dynFile": [
+            "ByPointsTangentsKnotsDerivatives"
+        ],
+        "folderPath": "Geometry/NurbsSurface/Create",
+        "inDepth": "Add in-depth information about ByPointsTangentsKnotsDerivatives..."
+    },
+    {
+        "Name": "Join",
+        "imageFile": [
+            "Join"
+        ],
+        "dynFile": [
+            "Join"
+        ],
+        "folderPath": "Geometry/Surface/Action",
+        "inDepth": "Some nodes that take surfaces as inputs may not accept polysurfaces."
+    },
+    {
+        "Name": "Rotate (vector, plane, degrees)",
+        "imageFile": [
+            "Rotate (vector, plane, degrees)"
+        ],
+        "dynFile": [
+            "Rotate (vector, plane, degrees)"
+        ],
+        "folderPath": "Geometry/Vector/Action",
+        "inDepth": "Planes can easily be derived from geometry for rotating a vector (i.e. at many points on a surface or curve)."
+    },
+    {
+        "Name": "ByFace",
+        "imageFile": [
+            "ByFace"
+        ],
+        "dynFile": [
+            "ByFace"
+        ],
+        "folderPath": "Revit/Elements/CurtainSystem/Create",
+        "inDepth": "A curtain system is a component that comprises panels, curtain grids, and mullions. It usually does not have a rectangular shape. In this example, a curtain system is added to the face of a cylinder mass."
+    },
+    {
+        "Name": "AddCurtainGrid",
+        "imageFile": [
+            "AddCurtainGrid"
+        ],
+        "dynFile": [
+            "AddCurtainGrid"
+        ],
+        "folderPath": "Revit/Elements/CurtainSystem/Action",
+        "inDepth": "Curtain grids and mullions can be added to or removed from curtain systems after they are created. In this example, the faces of a Revit mass are used to place a curtain system and add a grid."
+    },
+    {
+        "Name": "RemoveCurtainGrid",
+        "imageFile": [
+            "RemoveCurtainGrid"
+        ],
+        "dynFile": [
+            "RemoveCurtainGrid"
+        ],
+        "folderPath": "Revit/Elements/CurtainSystem/Action",
+        "inDepth": "Curtain grids and mullions can be added to or removed from curtain systems after they are created. In this example, a curtain grid is removed from an existing curtain system on a Revit mass."
+    },
+    {
+        "Name": "CurtainSystemType",
+        "imageFile": [
+            "CurtainSystemType"
+        ],
+        "dynFile": [
+            "CurtainSystemType"
+        ],
+        "folderPath": "Revit/Elements/CurtainSystem/Query",
+        "inDepth": "Add in-depth information about Name..."
+    },
+    {
+        "Name": "ByName",
+        "imageFile": [
+            "ByName"
+        ],
+        "dynFile": [
+            "ByName"
+        ],
+        "folderPath": "Revit/Elements/CurtainSystemType/Create",
+        "inDepth": "CurtainSystemType brings an existing Revit curtain system type into Dynamo for use with the CurtainSystem.ByFace node as well as Add and RemoveCurtainGrid."
+    },
+    {
+        "Name": "Name",
+        "imageFile": [
+            "Name"
+        ],
+        "dynFile": [
+            "Name"
+        ],
+        "folderPath": "Revit/Elements/CurtainSystemType/Query",
+        "inDepth": "Name returns the name of a curtain system type as a string."
+    },
+    {
+        "Name": "FromExisting",
+        "imageFile": [
+            "FromExisting"
+        ],
+        "dynFile": [
+            "FromExisting"
+        ],
+        "folderPath": "Revit/Elements/DimensionType/Create",
+        "inDepth": "Dimension types created from Dynamo will persist in the Revit document after Dynamo is closed."
+    },
+    {
+        "Name": "StyleType",
+        "imageFile": [
+            "StyleType"
+        ],
+        "dynFile": [
+            "StyleType"
+        ],
+        "folderPath": "Revit/Elements/DimensionType/Query",
+        "inDepth": "StyleType returns a dimension's style. Several Revit dimension styles are Aligned, Linear, Angular, Radial, etc."
+    },
+    {
+        "Name": "Select Direct Shape Room Bounding Option (geometry, category, material, name)",
+        "imageFile": [
+            "Select Direct Shape Room Bounding Option (geometry, category, material, name)"
+        ],
+        "dynFile": [
+            "Select Direct Shape Room Bounding Option (geometry, category, material, name)"
+        ],
+        "folderPath": "Revit/Elements/DirectShape/Action",
+        "inDepth": "Add in-depth information about Select Direct Shape Room Bounding Option..."
+    },
+    {
+        "Name": "Spacing Rule Layout (dividedPath)",
+        "imageFile": [
+            "Spacing Rule Layout (dividedPath)"
+        ],
+        "dynFile": [
+            "Spacing Rule Layout (dividedPath)"
+        ],
+        "folderPath": "Revit/Elements/DividedPath/Action",
+        "inDepth": "Add in-depth information about Spacing Rule Layout..."
+    },
+    {
+        "Name": "MoveByVector",
+        "imageFile": [
+            "MoveByVector"
+        ],
+        "dynFile": [
+            "MoveByVector"
+        ],
+        "folderPath": "Revit/Elements/Element/Action",
+        "inDepth": "The distance an element is moved is determined by the input vector's magnitude."
+    },
+    {
+        "Name": "ToString",
+        "imageFile": [
+            "ToString"
+        ],
+        "dynFile": [
+            "ToString"
+        ],
+        "folderPath": "Revit/Elements/Element/Action",
+        "inDepth": "Add in-depth information about ToString..."
+    },
+    {
+        "Name": "Description",
+        "imageFile": [
+            "Description"
+        ],
+        "dynFile": [
+            "Description"
+        ],
+        "folderPath": "Revit/Elements/FailureMessage/Query",
+        "inDepth": "Failure message descriptions contain information about the failure as well as suggestions or tips on how to address the issue."
+    },
+    {
+        "Name": "FailingElements",
+        "imageFile": [
+            "FailingElements"
+        ],
+        "dynFile": [
+            "FailingElements"
+        ],
+        "folderPath": "Revit/Elements/FailureMessage/Query",
+        "inDepth": "Returned elements come with their element ids which can be clicked in Dynamo to see the failing element in a Revit view."
+    },
+    {
+        "Name": "Severity",
+        "imageFile": [
+            "Severity"
+        ],
+        "dynFile": [
+            "Severity"
+        ],
+        "folderPath": "Revit/Elements/FailureMessage/Query",
+        "inDepth": "Failure severity levels are Warning, Error, and DocumentCorruption. The severity determines what actions are allowed in the Revit document."
+    },
+    {
+        "Name": "ByGeometry",
+        "imageFile": [
+            "ByGeometry"
+        ],
+        "dynFile": [
+            "ByGeometry"
+        ],
+        "folderPath": "Revit/Elements/FamilyType/Create",
+        "inDepth": "Families created with ByGeometry are actively linked to Revit as long as their name and templatePath inputs do not change."
+    },
+    {
+        "Name": "VoidByGeometry",
+        "imageFile": [
+            "VoidByGeometry"
+        ],
+        "dynFile": [
+            "VoidByGeometry"
+        ],
+        "folderPath": "Revit/Elements/FamilyType/Create",
+        "inDepth": "Add in-depth information about VoidByGeometry..."
+    },
+    {
+        "Name": "Fill Patterns (name, fillPatternTarget)",
+        "imageFile": [
+            "Fill Patterns (name, fillPatternTarget)"
+        ],
+        "dynFile": [
+            "Fill Patterns (name, fillPatternTarget)"
+        ],
+        "folderPath": "Revit/Elements/FillPatternElement/Action",
+        "inDepth": "Add in-depth information about Fill Patterns..."
+    },
+    {
+        "Name": "Select Filled Region Type (name)",
+        "imageFile": [
+            "Select Filled Region Type (name)"
+        ],
+        "dynFile": [
+            "Select Filled Region Type (name)"
+        ],
+        "folderPath": "Revit/Elements/FilledRegionType/Action",
+        "inDepth": "Add in-depth information about Select Filled Region Type..."
+    },
+    {
+        "Name": "AddPoint",
+        "imageFile": [
+            "AddPoint"
+        ],
+        "dynFile": [
+            "AddPoint"
+        ],
+        "folderPath": "Revit/Elements/Floor/Action",
+        "inDepth": "Add in-depth information about AddPoint..."
+    },
+    {
+        "Name": "MovePoint",
+        "imageFile": [
+            "MovePoint"
+        ],
+        "dynFile": [
+            "MovePoint"
+        ],
+        "folderPath": "Revit/Elements/Floor/Action",
+        "inDepth": "Add in-depth information about MovePoint..."
+    },
+    {
+        "Name": "Points",
+        "imageFile": [
+            "Points"
+        ],
+        "dynFile": [
+            "Points"
+        ],
+        "folderPath": "Revit/Elements/Floor/Query",
+        "inDepth": "Add in-depth information about Points..."
+    },
+    {
+        "Name": "ByName",
+        "imageFile": [
+            "ByName"
+        ],
+        "dynFile": [
+            "ByName"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Create",
+        "inDepth": "Add in-depth information about ByName..."
+    },
+    {
+        "Name": "FindByName",
+        "imageFile": [
+            "FindByName"
+        ],
+        "dynFile": [
+            "FindByName"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Create",
+        "inDepth": "Add in-depth information about FindByName..."
+    },
+    {
+        "Name": "SetValue",
+        "imageFile": [
+            "SetValue"
+        ],
+        "dynFile": [
+            "SetValue"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Action",
+        "inDepth": "Add in-depth information about SetValue..."
+    },
+    {
+        "Name": "SetValueToElementId",
+        "imageFile": [
+            "SetValueToElementId"
+        ],
+        "dynFile": [
+            "SetValueToElementId"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Action",
+        "inDepth": "Add in-depth information about SetValueToElementId..."
+    },
+    {
+        "Name": "Name",
+        "imageFile": [
+            "Name"
+        ],
+        "dynFile": [
+            "Name"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Query",
+        "inDepth": "Add in-depth information about Name..."
+    },
+    {
+        "Name": "ParameterGroup",
+        "imageFile": [
+            "ParameterGroup"
+        ],
+        "dynFile": [
+            "ParameterGroup"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Query",
+        "inDepth": "Add in-depth information about ParameterGroup..."
+    },
+    {
+        "Name": "ParameterType",
+        "imageFile": [
+            "ParameterType"
+        ],
+        "dynFile": [
+            "ParameterType"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Query",
+        "inDepth": "Add in-depth information about ParameterType..."
+    },
+    {
+        "Name": "Value",
+        "imageFile": [
+            "Value"
+        ],
+        "dynFile": [
+            "Value"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Query",
+        "inDepth": "Add in-depth information about Value..."
+    },
+    {
+        "Name": "Visible",
+        "imageFile": [
+            "Visible"
+        ],
+        "dynFile": [
+            "Visible"
+        ],
+        "folderPath": "Revit/Elements/GlobalParameter/Query",
+        "inDepth": "Add in-depth information about Visible..."
+    },
+    {
+        "Name": "Line Patterns (name)",
+        "imageFile": [
+            "Line Patterns (name)"
+        ],
+        "dynFile": [
+            "Line Patterns (name)"
+        ],
+        "folderPath": "Revit/Elements/LinePatternElement/Action",
+        "inDepth": "Add in-depth information about Line Patterns..."
+    },
+    {
+        "Name": "ById",
+        "imageFile": [
+            "ById"
+        ],
+        "dynFile": [
+            "ById"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Create",
+        "inDepth": "Add in-depth information about ById..."
+    },
+    {
+        "Name": "Execute",
+        "imageFile": [
+            "Execute"
+        ],
+        "dynFile": [
+            "Execute"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
+        "inDepth": "Add in-depth information about Execute..."
+    },
+    {
+        "Name": "Performance Adviser Rules (())",
+        "imageFile": [
+            "Performance Adviser Rules (())"
+        ],
+        "dynFile": [
+            "Performance Adviser Rules (())"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
+        "inDepth": "Add in-depth information about Performance Adviser Rules..."
+    },
+    {
+        "Name": "Performance Adviser Rules (performanceAdviserRule)",
+        "imageFile": [
+            "Performance Adviser Rules (performanceAdviserRule)"
+        ],
+        "dynFile": [
+            "Performance Adviser Rules (performanceAdviserRule)"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Action",
+        "inDepth": "Add in-depth information about Performance Adviser Rules..."
+    },
+    {
+        "Name": "Description",
+        "imageFile": [
+            "Description"
+        ],
+        "dynFile": [
+            "Description"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
+        "inDepth": "Add in-depth information about Description..."
+    },
+    {
+        "Name": "Enabled",
+        "imageFile": [
+            "Enabled"
+        ],
+        "dynFile": [
+            "Enabled"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
+        "inDepth": "Add in-depth information about Enabled..."
+    },
+    {
+        "Name": "Name",
+        "imageFile": [
+            "Name"
+        ],
+        "dynFile": [
+            "Name"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
+        "inDepth": "Add in-depth information about Name..."
+    },
+    {
+        "Name": "RuleId",
+        "imageFile": [
+            "RuleId"
+        ],
+        "dynFile": [
+            "RuleId"
+        ],
+        "folderPath": "Revit/Elements/PerformanceAdviserRule/Query",
+        "inDepth": "Add in-depth information about RuleId..."
+    },
+    {
+        "Name": "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
+        "imageFile": [
+            "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+        ],
+        "dynFile": [
+            "Select Phase (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+        ],
+        "folderPath": "Revit/Elements/Phase/Action",
+        "inDepth": "Add in-depth information about Select Phase..."
+    },
+    {
+        "Name": "Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)",
+        "imageFile": [
+            "Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+        ],
+        "dynFile": [
+            "Select Revision (name, revDate, description, issued, issuedBy, issuedTo, visibility, numberType)"
+        ],
+        "folderPath": "Revit/Elements/Revision/Action",
+        "inDepth": "Add in-depth information about Select Revision..."
+    },
+    {
+        "Name": "ByOutlineExtrusionTypeAndLevel",
+        "imageFile": [
+            "ByOutlineExtrusionTypeAndLevel"
+        ],
+        "dynFile": [
+            "ByOutlineExtrusionTypeAndLevel"
+        ],
+        "folderPath": "Revit/Elements/Roof/Create",
+        "inDepth": "Add in-depth information about ByOutlineExtrusionTypeAndLevel..."
+    },
+    {
+        "Name": "ByOutlineTypeAndLevel",
+        "imageFile": [
+            "ByOutlineTypeAndLevel"
+        ],
+        "dynFile": [
+            "ByOutlineTypeAndLevel"
+        ],
+        "folderPath": "Revit/Elements/Roof/Create",
+        "inDepth": "Add in-depth information about ByOutlineTypeAndLevel..."
+    },
+    {
+        "Name": "AddPoint",
+        "imageFile": [
+            "AddPoint"
+        ],
+        "dynFile": [
+            "AddPoint"
+        ],
+        "folderPath": "Revit/Elements/Roof/Action",
+        "inDepth": "Add in-depth information about AddPoint..."
+    },
+    {
+        "Name": "MovePoint",
+        "imageFile": [
+            "MovePoint"
+        ],
+        "dynFile": [
+            "MovePoint"
+        ],
+        "folderPath": "Revit/Elements/Roof/Action",
+        "inDepth": "Add in-depth information about MovePoint..."
+    },
+    {
+        "Name": "Points",
+        "imageFile": [
+            "Points"
+        ],
+        "dynFile": [
+            "Points"
+        ],
+        "folderPath": "Revit/Elements/Roof/Query",
+        "inDepth": "Add in-depth information about Points..."
+    },
+    {
+        "Name": "ByName",
+        "imageFile": [
+            "ByName"
+        ],
+        "dynFile": [
+            "ByName"
+        ],
+        "folderPath": "Revit/Elements/RoofType/Create",
+        "inDepth": "Add in-depth information about ByName..."
+    },
+    {
+        "Name": "Name",
+        "imageFile": [
+            "Name"
+        ],
+        "dynFile": [
+            "Name"
+        ],
+        "folderPath": "Revit/Elements/RoofType/Query",
+        "inDepth": "Add in-depth information about Name..."
+    },
+    {
+        "Name": "ByElementAndLocation",
+        "imageFile": [
+            "ByElementAndLocation"
+        ],
+        "dynFile": [
+            "ByElementAndLocation"
+        ],
+        "folderPath": "Revit/Elements/Tag/Create",
+        "inDepth": "Add in-depth information about ByElementAndLocation..."
+    },
+    {
+        "Name": "ByElementAndOffset",
+        "imageFile": [
+            "ByElementAndOffset"
+        ],
+        "dynFile": [
+            "ByElementAndOffset"
+        ],
+        "folderPath": "Revit/Elements/Tag/Create",
+        "inDepth": "Add in-depth information about ByElementAndOffset..."
+    },
+    {
+        "Name": "ByFace",
+        "imageFile": [
+            "ByFace"
+        ],
+        "dynFile": [
+            "ByFace"
+        ],
+        "folderPath": "Revit/Elements/Wall/Action",
+        "inDepth": "Add in-depth information about ByFace..."
+    },
+    {
+        "Name": "Wall Location (())",
+        "imageFile": [
+            "Wall Location (())"
+        ],
+        "dynFile": [
+            "Wall Location (())"
+        ],
+        "folderPath": "Revit/Elements/Wall/Action",
+        "inDepth": "Add in-depth information about Wall Location..."
+    },
+    {
+        "Name": "Wall Location (curve, height, level, wallType)",
+        "imageFile": [
+            "Wall Location (curve, height, level, wallType)"
+        ],
+        "dynFile": [
+            "Wall Location (curve, height, level, wallType)"
+        ],
+        "folderPath": "Revit/Elements/Wall/Action",
+        "inDepth": "Add in-depth information about Wall Location..."
+    },
+    {
+        "Name": "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)",
+        "imageFile": [
+            "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
+        ],
+        "dynFile": [
+            "Detail Level (cutFillColor, projectionFillColor, cutLineColor, projectionLineColor, cutFillPattern, projectionFillPattern, cutLinePattern, projectionLinePattern, cutLineWeight, projectionLineWeight, transparency, detailLevel, halftone)"
+        ],
+        "folderPath": "Revit/Filter/OverrideGraphicSettings/Action",
+        "inDepth": "Add in-depth information about Detail Level..."
+    },
+    {
+        "Name": "Name",
+        "imageFile": [
+            "Name"
+        ],
+        "dynFile": [
+            "Name"
+        ],
+        "folderPath": "Revit/Schedules/SchedulableField/Query",
+        "inDepth": "Add in-depth information about Name..."
+    },
+    {
+        "Name": "ByProperties",
+        "imageFile": [
+            "ByProperties"
+        ],
+        "dynFile": [
+            "ByProperties"
+        ],
+        "folderPath": "Revit/Schedules/ScheduleExportOptions/Create",
+        "inDepth": "Add in-depth information about ByProperties..."
+    },
+    {
+        "Name": "Name",
+        "imageFile": [
+            "Name"
+        ],
+        "dynFile": [
+            "Name"
+        ],
+        "folderPath": "Revit/Schedules/ScheduleField/Query",
+        "inDepth": "Add in-depth information about Name..."
+    },
+    {
+        "Name": "ByFieldTypeAndValue",
+        "imageFile": [
+            "ByFieldTypeAndValue"
+        ],
+        "dynFile": [
+            "ByFieldTypeAndValue"
+        ],
+        "folderPath": "Revit/Schedules/ScheduleFilter/Create",
+        "inDepth": "Add in-depth information about ByFieldTypeAndValue..."
+    },
+    {
+        "Name": "FiledId",
+        "imageFile": [
+            "FiledId"
+        ],
+        "dynFile": [
+            "FiledId"
+        ],
+        "folderPath": "Revit/Schedules/ScheduleFilter/Query",
+        "inDepth": "Add in-depth information about FiledId..."
+    },
+    {
+        "Name": "FilterType",
+        "imageFile": [
+            "FilterType"
+        ],
+        "dynFile": [
+            "FilterType"
+        ],
+        "folderPath": "Revit/Schedules/ScheduleFilter/Query",
+        "inDepth": "Add in-depth information about FilterType..."
+    },
+    {
+        "Name": "Value",
+        "imageFile": [
+            "Value"
+        ],
+        "dynFile": [
+            "Value"
+        ],
+        "folderPath": "Revit/Schedules/ScheduleFilter/Query",
+        "inDepth": "Add in-depth information about Value..."
+    },
+    {
+        "Name": "Select Model Element (Family Type)",
+        "imageFile": [
+            "Select Model Element (Family Type)"
+        ],
+        "dynFile": [
+            "Select Model Element (Family Type)"
+        ],
+        "folderPath": "Revit/Selection/Action",
+        "inDepth": "Add in-depth information about Select Model Element..."
+    },
+    {
+        "Name": "ClearAllFilters",
+        "imageFile": [
+            "ClearAllFilters"
+        ],
+        "dynFile": [
+            "ClearAllFilters"
+        ],
+        "folderPath": "Revit/Views/ScheduleView/Action",
+        "inDepth": "Add in-depth information about ClearAllFilters..."
+    },
+    {
+        "Name": "Schedule Filter Type",
+        "imageFile": [
+            "Schedule Filter Type"
+        ],
+        "dynFile": [
+            "Schedule Filter Type"
+        ],
+        "folderPath": "Revit/Views/ScheduleView/Action",
+        "inDepth": "Add in-depth information about Schedule Filter Type..."
+    },
+    {
+        "Name": "Schedule Type (())",
+        "imageFile": [
+            "Schedule Type (())"
+        ],
+        "dynFile": [
+            "Schedule Type (())"
+        ],
+        "folderPath": "Revit/Views/ScheduleView/Action",
+        "inDepth": "Add in-depth information about Schedule Type..."
+    },
+    {
+        "Name": "Schedule Type (category, name, scheduleType)",
+        "imageFile": [
+            "Schedule Type (category, name, scheduleType)"
+        ],
+        "dynFile": [
+            "Schedule Type (category, name, scheduleType)"
+        ],
+        "folderPath": "Revit/Views/ScheduleView/Action",
+        "inDepth": "Add in-depth information about Schedule Type..."
+    },
+    {
+        "Name": "ScheduleFilters",
+        "imageFile": [
+            "ScheduleFilters"
+        ],
+        "dynFile": [
+            "ScheduleFilters"
+        ],
+        "folderPath": "Revit/Views/ScheduleView/Query",
+        "inDepth": "Add in-depth information about ScheduleFilters..."
+    }
+]

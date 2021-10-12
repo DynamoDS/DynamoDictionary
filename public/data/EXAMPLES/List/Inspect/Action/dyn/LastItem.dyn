@@ -1,0 +1,343 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "LastItem",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "b62ffd655a064878af5a133f03dc71be",
+      "Inputs": [
+        {
+          "Id": "83600dc8859c45fcaee26ff97deb9511",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "70d45734883e481c81451349dc34ba52",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "99504bb3d36f46f58bd682827fde30d9",
+      "Inputs": [
+        {
+          "Id": "9e13b6619f894ff4971dba3b918bcdac",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "100574dcd7324e8a87d0fb097f62a818",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.RandomList@int",
+      "Id": "5a1112dec5a94e81bb6a36665401348f",
+      "Inputs": [
+        {
+          "Id": "6baa5772305a426fb20ea8b9e784fc81",
+          "Name": "amount",
+          "Description": "Amount of random numbers the result list will contain.\n\nint",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "c346ac14fa8441008eab2e82940287a1",
+          "Name": "number",
+          "Description": "List of random numbers between 0 and 1.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Produces a list containing the given amount of random doubles in the range of [0, 1).\n\nMath.RandomList (amount: int): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "x*5;",
+      "Id": "897cb08065054a8a901b5fa924750c8a",
+      "Inputs": [
+        {
+          "Id": "c7dea0c06911496d88e1639283748a3e",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "a1daa721c46340f28fb68326c9b5e5fb",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.Math.Floor@double",
+      "Id": "52bb7ce9098145d7945da516be0c9005",
+      "Inputs": [
+        {
+          "Id": "91f283c3758040659bc188af403f323b",
+          "Name": "number",
+          "Description": "Number to round up.\n\ndouble",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "03169a3fe3724ac183c245acd94b4106",
+          "Name": "integer",
+          "Description": "First integer smaller than the number.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Returns the first integer smaller than the number.\n\nMath.Floor (number: double): int"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "10;",
+      "Id": "036fbeae4f324769b2bcd91c0668e186",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "8a9605cd19084325aa700cc471493e30",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.LastItem@var[]..[]",
+      "Id": "7acee47ad6e84fab82b0c1d2f59563a7",
+      "Inputs": [
+        {
+          "Id": "d9c962b6524a4828b7c7ccd52ac29b57",
+          "Name": "list",
+          "Description": "List to get the last item of.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9d904255c9444067b85e3ceaa89ae2df",
+          "Name": "last",
+          "Description": "Last item in the list.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Retrieves the last item in a list.\n\nList.LastItem (list: var[]..[]): var[]..[]"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "70d45734883e481c81451349dc34ba52",
+      "End": "d9c962b6524a4828b7c7ccd52ac29b57",
+      "Id": "ec8b96a52a4341e59bc8b99c9c5ecdb4"
+    },
+    {
+      "Start": "c346ac14fa8441008eab2e82940287a1",
+      "End": "c7dea0c06911496d88e1639283748a3e",
+      "Id": "bda147bfcc9b4f6f8c9b400373d33e6e"
+    },
+    {
+      "Start": "a1daa721c46340f28fb68326c9b5e5fb",
+      "End": "91f283c3758040659bc188af403f323b",
+      "Id": "4add544eec93423c82b181a5625ae79e"
+    },
+    {
+      "Start": "03169a3fe3724ac183c245acd94b4106",
+      "End": "83600dc8859c45fcaee26ff97deb9511",
+      "Id": "4149e5c1f3174cd3b0f3b5f27f43e228"
+    },
+    {
+      "Start": "8a9605cd19084325aa700cc471493e30",
+      "End": "6baa5772305a426fb20ea8b9e784fc81",
+      "Id": "c9695195d83442e487880b6169b19ff1"
+    },
+    {
+      "Start": "9d904255c9444067b85e3ceaa89ae2df",
+      "End": "9e13b6619f894ff4971dba3b918bcdac",
+      "Id": "30af07c402234213bb21dd32238e0561"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -13.988694190979004,
+      "EyeY": 18.264490127563477,
+      "EyeZ": 21.429862976074219,
+      "LookX": 16.723785400390625,
+      "LookY": -5.2774238586425781,
+      "LookZ": -19.588394165039063,
+      "UpX": -0.009065740741789341,
+      "UpY": 0.99990254640579224,
+      "UpZ": 0.010618607513606548
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "b62ffd655a064878af5a133f03dc71be",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 336.294217450484,
+        "Y": 19.484818184733
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "99504bb3d36f46f58bd682827fde30d9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 779.294217450484,
+        "Y": 19.484818184733
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.RandomList",
+        "Id": "5a1112dec5a94e81bb6a36665401348f",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -472.705782549516,
+        "Y": 19.484818184733
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "897cb08065054a8a901b5fa924750c8a",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -156.70578254951602,
+        "Y": 23.698151518066332
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Math.Floor",
+        "Id": "52bb7ce9098145d7945da516be0c9005",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 25.294217450483984,
+        "Y": 19.484818184733
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "036fbeae4f324769b2bcd91c0668e186",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -651.705782549516,
+        "Y": 23.698151518066332
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List.LastItem",
+        "Id": "7acee47ad6e84fab82b0c1d2f59563a7",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 522.294217450484,
+        "Y": 19.484818184733
+      }
+    ],
+    "Annotations": [],
+    "X": -16.559445339853994,
+    "Y": 115.1918179437001,
+    "Zoom": 1.07333337109291
+  }
+}

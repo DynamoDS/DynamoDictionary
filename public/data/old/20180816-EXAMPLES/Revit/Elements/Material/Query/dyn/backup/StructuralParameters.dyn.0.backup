@@ -1,0 +1,30 @@
+<Workspace Version="1.2.1.3083" X="7" Y="-32" zoom="1" Name="Home" Description="" RunType="Automatic" RunPeriod="1000" HasRunWithoutCrash="True">
+  <NamespaceResolutionMap>
+    <ClassMap partialName="Point" resolvedName="Autodesk.DesignScript.Geometry.Point" assemblyName="ProtoGeometry.dll" />
+  </NamespaceResolutionMap>
+  <Elements>
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="a356618f-c9f5-490b-9db5-e7f743d0712a" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Material.ByName" x="410.5" y="481" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="false" assembly="RevitNodes.dll" function="Revit.Elements.Material.ByName@string">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+    <Dynamo.Graph.Nodes.CodeBlockNodeModel guid="2a829480-84e2-4474-80f1-699e593ffefb" type="Dynamo.Graph.Nodes.CodeBlockNodeModel" nickname="Code Block" x="71" y="436" isVisible="true" isUpstreamVisible="true" lacing="Disabled" isSelectedInput="False" IsFrozen="false" isPinned="false" CodeText="conc = &quot;Concrete, Cast In Situ&quot;;&#xA;co = &quot;Copper&quot;;&#xA;df = &quot;Default Floor&quot;;&#xA;gt = &quot;Glass - Transparent&quot;;&#xA;{conc, co, df, gt};" ShouldFocus="false" />
+    <Dynamo.Graph.Nodes.ZeroTouch.DSFunction guid="12d38e07-4c9b-43f2-8aa2-2cd76c5f70e3" type="Dynamo.Graph.Nodes.ZeroTouch.DSFunction" nickname="Material.StructuralParameters" x="640.5" y="482" isVisible="true" isUpstreamVisible="true" lacing="Shortest" isSelectedInput="False" IsFrozen="false" isPinned="true" assembly="RevitNodes.dll" function="Revit.Elements.Material.StructuralParameters">
+      <PortInfo index="0" default="False" />
+    </Dynamo.Graph.Nodes.ZeroTouch.DSFunction>
+  </Elements>
+  <Connectors>
+    <Dynamo.Graph.Connectors.ConnectorModel start="a356618f-c9f5-490b-9db5-e7f743d0712a" start_index="0" end="12d38e07-4c9b-43f2-8aa2-2cd76c5f70e3" end_index="0" portType="0" />
+    <Dynamo.Graph.Connectors.ConnectorModel start="2a829480-84e2-4474-80f1-699e593ffefb" start_index="4" end="a356618f-c9f5-490b-9db5-e7f743d0712a" end_index="0" portType="0" />
+  </Connectors>
+  <Notes>
+    <Dynamo.Graph.Notes.NoteModel guid="fbaa394c-7960-4feb-9cac-68873497dba3" text="This Dynamo example file has been created with the basic sample project in the Revit installation directory, typically found in: &#xD;&#xA;&#xD;&#xA;C:\Program Files\Autodesk\Revit 2017\Samples" x="17.5" y="112" />
+  </Notes>
+  <Annotations>
+    <Dynamo.Graph.Annotations.AnnotationModel guid="a887f384-6399-4c78-9d2c-bca2ad041c73" annotationText="Revit sample file: rac_basic_sample_project.rvt" left="7.5" top="44" width="316" height="170" fontSize="24" InitialTop="112" InitialHeight="140" TextblockHeight="58" backgrouund="#FF48B9FF">
+      <Models ModelGuid="fbaa394c-7960-4feb-9cac-68873497dba3" />
+    </Dynamo.Graph.Annotations.AnnotationModel>
+  </Annotations>
+  <Presets />
+  <Cameras>
+    <Camera Name="Background Preview" eyeX="-10.3516321182251" eyeY="13.9155826568604" eyeZ="16.0006294250488" lookX="16.1289100646973" lookY="-8.16507530212402" lookZ="-20.5040168762207" upX="0.0538851283490658" upY="0.996194660663605" upZ="-0.0685019418597221" />
+  </Cameras>
+</Workspace>

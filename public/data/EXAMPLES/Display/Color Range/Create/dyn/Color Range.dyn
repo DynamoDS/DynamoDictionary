@@ -1,0 +1,280 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "Color Range",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "UV": {
+        "Key": "Autodesk.DesignScript.Geometry.UV",
+        "Value": "ProtoGeometry.dll"
+      },
+      "Color": {
+        "Key": "DSCore.Color",
+        "Value": "DSCoreNodes.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.ColorRange, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "5e822bc374fa4a9189a652c3294e20df",
+      "Inputs": [
+        {
+          "Id": "17e275837d3a4b79939a951544d639b1",
+          "Name": "colors",
+          "Description": "A list of colors to include in the range.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "6cf6b63243ed4e83993e28ca2ba2ead5",
+          "Name": "indices",
+          "Description": "A list of values between 0.0 and 1.0 which position the input colors along the range.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5de8d2154fab4aad831c575d6d6cadbf",
+          "Name": "value",
+          "Description": "A list of values between 0.0 and 1.0. These values are used to look up the color within the range.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "573b572e4ceb45418c66d51f801319f0",
+          "Name": "color",
+          "Description": "The selected colors.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Get a color given a color range."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 165,
+        "G": 42,
+        "B": 42,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "e69ace36864b4c10a87bbedc523a1e89",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "f349835676fd461abb4f6b7fbedd270a",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a Color from the palette"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.ColorPalette, CoreNodeModels",
+      "InputValue": {
+        "R": 100,
+        "G": 149,
+        "B": 237,
+        "A": 255
+      },
+      "NodeType": "ColorInputNode",
+      "Id": "c4bfd3ff7c6d47398ad9995c51e1f31d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0e02cf0d077b40babdd31ab57832827e",
+          "Name": "Color",
+          "Description": "Selected Color.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Select a Color from the palette"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.CreateList, CoreNodeModels",
+      "VariableInputPorts": true,
+      "NodeType": "ExtensionNode",
+      "Id": "a37f5cb66d7f43169009a5a381d7110b",
+      "Inputs": [
+        {
+          "Id": "0e3a2da76f6e4cea879b4bc34c8b4cca",
+          "Name": "item0",
+          "Description": "Item Index #0",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "37dc257b886241af9e9b2a81df3bd57a",
+          "Name": "item1",
+          "Description": "Item Index #1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7b91fbdf8a6946328beba87cae42981f",
+          "Name": "list",
+          "Description": "A list",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Makes a new list out of the given inputs"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0..1..#10;",
+      "Id": "9b26336a7bd443a181390d315ab82f80",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "6774467d1c944ff49a280034b89ece03",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "f349835676fd461abb4f6b7fbedd270a",
+      "End": "0e3a2da76f6e4cea879b4bc34c8b4cca",
+      "Id": "39f8b91c9acf44d39033a4339ab8d523"
+    },
+    {
+      "Start": "0e02cf0d077b40babdd31ab57832827e",
+      "End": "37dc257b886241af9e9b2a81df3bd57a",
+      "Id": "cf33bac21bb8462ba52ac2661f9cc768"
+    },
+    {
+      "Start": "7b91fbdf8a6946328beba87cae42981f",
+      "End": "17e275837d3a4b79939a951544d639b1",
+      "Id": "51e3a3254a874ecdb02b3c63e610951e"
+    },
+    {
+      "Start": "6774467d1c944ff49a280034b89ece03",
+      "End": "5de8d2154fab4aad831c575d6d6cadbf",
+      "Id": "ec33fbdf23d14f759356972de4712c69"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": 8.36463737487793,
+      "EyeY": 13.138401985168457,
+      "EyeZ": 11.430645942687988,
+      "LookX": 1.1257592439651489,
+      "LookY": -9.0606575012207031,
+      "LookZ": -17.458831787109375,
+      "UpX": 0.016654269769787788,
+      "UpY": 0.96592581272125244,
+      "UpZ": -0.25828266143798828
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Color Range",
+        "Id": "5e822bc374fa4a9189a652c3294e20df",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 720.921562962177,
+        "Y": 55.154325112917434
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "e69ace36864b4c10a87bbedc523a1e89",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 281.8070718442234,
+        "Y": -26.264686767255796
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Color Palette",
+        "Id": "c4bfd3ff7c6d47398ad9995c51e1f31d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 281.8070718442234,
+        "Y": 68.861478078553148
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "List Create",
+        "Id": "a37f5cb66d7f43169009a5a381d7110b",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 491.60745751949912,
+        "Y": 9.6419207429188418
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "9b26336a7bd443a181390d315ab82f80",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 505.27419895928642,
+        "Y": 173.03192227176675
+      }
+    ],
+    "Annotations": [],
+    "X": -53.804291023313226,
+    "Y": 174.55520133306902,
+    "Zoom": 1.0181140440913166
+  }
+}

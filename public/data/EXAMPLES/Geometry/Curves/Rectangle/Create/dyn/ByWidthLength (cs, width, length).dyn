@@ -1,0 +1,475 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "ByWidthLength",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Autodesk.DesignScript.Geometry.Vector": {
+        "Key": "Autodesk.DesignScript.Geometry.Vector",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [
+    {
+      "Id": "bde97810b628405fbcb26ef734dac1ff",
+      "Name": "Number Slider",
+      "Type": "number",
+      "Value": "0.8",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "NumberType": "Double",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "Id": "af1290ff627b41909c35e72963676099",
+      "Name": "Number Slider",
+      "Type": "number",
+      "Value": "0.5",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "NumberType": "Double",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "Id": "d1cb45b71e5f4ef9b6da7c41293897a6",
+      "Name": "Number Slider",
+      "Type": "number",
+      "Value": "6.8",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "NumberType": "Double",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "Id": "986b2b32a0774e0281b5d987ba13d0ea",
+      "Name": "Number Slider",
+      "Type": "number",
+      "Value": "2.7",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "NumberType": "Double",
+      "Description": "A slider that produces numeric values."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 0.8,
+      "Id": "bde97810b628405fbcb26ef734dac1ff",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "20b427ad3a134347a25354ef0ecb5243",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 1.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 0.5,
+      "Id": "af1290ff627b41909c35e72963676099",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2ed6a02d1e8248c79377d2bd1fca4927",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "Autodesk.DesignScript.Geometry.Vector.ByCoordinates(a,b,0);\nAutodesk.DesignScript.Geometry.Vector.ByCoordinates(0,1,0);",
+      "Id": "e62f67299391410c865256b1bd486692",
+      "Inputs": [
+        {
+          "Id": "670fe820d0c8441382ddf27cf07a6e76",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dea9e99da97a4c79ab42b59a71c26145",
+          "Name": "b",
+          "Description": "b",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "804e5ac8a161433a81bebbb4b3eacee6",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3b203cf86036448f81f436f1cc1b3004",
+          "Name": "",
+          "Description": "Value of expression at line 2",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.Origin",
+      "Id": "685b530d76144596a776f442d4e45aef",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "3f532cb284244f509a57c8c5f4aea770",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Get the Origin point (0,0,0)\n\nPoint.Origin ( ): Point"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 6.8,
+      "Id": "d1cb45b71e5f4ef9b6da7c41293897a6",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c340e35006e34977aee2384f3f5fca7d",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 2.7,
+      "Id": "986b2b32a0774e0281b5d987ba13d0ea",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1dae6577a3bd490c97491f2cd407b91b",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "A slider that produces numeric values."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.CoordinateSystem.ByOriginVectors@Autodesk.DesignScript.Geometry.Point,Autodesk.DesignScript.Geometry.Vector,Autodesk.DesignScript.Geometry.Vector",
+      "Id": "c78eff99363a45e5a2df00504cecc7b3",
+      "Inputs": [
+        {
+          "Id": "8c3f049041734df6a02b1286625aacd2",
+          "Name": "origin",
+          "Description": "Point\nDefault value : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "e88102d9de0d40c99824294ce6ba144f",
+          "Name": "xAxis",
+          "Description": "Vector\nDefault value : Autodesk.DesignScript.Geometry.Vector.ByCoordinates(1, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dca0efc6d27e4ccd8e9b007454961325",
+          "Name": "yAxis",
+          "Description": "Vector\nDefault value : Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 1, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "af0641f663604763870fd688cee46102",
+          "Name": "CoordinateSystem",
+          "Description": "CoordinateSystem",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a CoordinateSystem at the origin with X and Y axis. Input Vectors are normalized before creating the CoordinateSystem.\n\nCoordinateSystem.ByOriginVectors (origin: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), xAxis: Vector = Autodesk.DesignScript.Geometry.Vector.ByCoordinates(1, 0, 0), yAxis: Vector = Autodesk.DesignScript.Geometry.Vector.ByCoordinates(0, 1, 0)): CoordinateSystem"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Rectangle.ByWidthLength@Autodesk.DesignScript.Geometry.CoordinateSystem,double,double",
+      "Id": "0731d8a9b91b4c29bf31ee12cf56d4b2",
+      "Inputs": [
+        {
+          "Id": "4767a413d7ec427ca7a5b1514f887c36",
+          "Name": "cs",
+          "Description": "CoordinateSystem\nDefault value : Autodesk.DesignScript.Geometry.CoordinateSystem.ByOrigin(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "7170f8e6df384a39a9418975e63815ef",
+          "Name": "width",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "83273acb10e548e88da40d0dfa1514d4",
+          "Name": "length",
+          "Description": "double\nDefault value : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "e96c1dea3a5340d1a0bba0af0dd77ad4",
+          "Name": "Rectangle",
+          "Description": "Rectangle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Create a Rectangle centered at the input origin in the CoordinateSystem XY Plane, with specified width (X Axis length), and length (Y Axis length).\n\nRectangle.ByWidthLength (cs: CoordinateSystem = Autodesk.DesignScript.Geometry.CoordinateSystem.ByOrigin(0, 0, 0), width: double = 1, length: double = 1): Rectangle"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "20b427ad3a134347a25354ef0ecb5243",
+      "End": "670fe820d0c8441382ddf27cf07a6e76",
+      "Id": "9887a90d5e9541f4b2de3ef6df9e0230"
+    },
+    {
+      "Start": "2ed6a02d1e8248c79377d2bd1fca4927",
+      "End": "dea9e99da97a4c79ab42b59a71c26145",
+      "Id": "726b900d66534eb587b06e5e1cf5cbfa"
+    },
+    {
+      "Start": "804e5ac8a161433a81bebbb4b3eacee6",
+      "End": "e88102d9de0d40c99824294ce6ba144f",
+      "Id": "f5741c07f9a04a4c9ad403cbd08232b6"
+    },
+    {
+      "Start": "3b203cf86036448f81f436f1cc1b3004",
+      "End": "dca0efc6d27e4ccd8e9b007454961325",
+      "Id": "a1604009704d481a99d60e814a1aa6f3"
+    },
+    {
+      "Start": "3f532cb284244f509a57c8c5f4aea770",
+      "End": "8c3f049041734df6a02b1286625aacd2",
+      "Id": "113cb7752c3a43e980d468cb0c087bf3"
+    },
+    {
+      "Start": "c340e35006e34977aee2384f3f5fca7d",
+      "End": "7170f8e6df384a39a9418975e63815ef",
+      "Id": "00d9d098965b45289baa0c0c8a3187e0"
+    },
+    {
+      "Start": "1dae6577a3bd490c97491f2cd407b91b",
+      "End": "83273acb10e548e88da40d0dfa1514d4",
+      "Id": "a08252b87f634fbe8ff8cccf1c329f00"
+    },
+    {
+      "Start": "af0641f663604763870fd688cee46102",
+      "End": "4767a413d7ec427ca7a5b1514f887c36",
+      "Id": "d95d37964e024fa5aedd7bcc5d608627"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -2.1979959044191566,
+      "EyeY": 4.665654200831888,
+      "EyeZ": 3.5841888917753235,
+      "LookX": 0.8963832959163418,
+      "LookY": -5.6003808989641666,
+      "LookZ": -3.1912583315138181,
+      "UpX": 0.1977739880298825,
+      "UpY": 0.68199835242291906,
+      "UpZ": -0.7041048861371676
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "bde97810b628405fbcb26ef734dac1ff",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -346.462450401732,
+        "Y": 877.99798263213
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "af1290ff627b41909c35e72963676099",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -347.207803711494,
+        "Y": 938.84115179585
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "e62f67299391410c865256b1bd486692",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 23.1669751795021,
+        "Y": 881.726494328203
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.Origin",
+        "Id": "685b530d76144596a776f442d4e45aef",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 491.390222574424,
+        "Y": 767.839226142163
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "d1cb45b71e5f4ef9b6da7c41293897a6",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 516.906553860211,
+        "Y": 1014.10582299576
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "986b2b32a0774e0281b5d987ba13d0ea",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 515.47271368538,
+        "Y": 1078.58625617881
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "CoordinateSystem.ByOriginVectors",
+        "Id": "c78eff99363a45e5a2df00504cecc7b3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 643.311506391418,
+        "Y": 845.683189750871
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Rectangle.ByWidthLength",
+        "Id": "0731d8a9b91b4c29bf31ee12cf56d4b2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1051.31820548344,
+        "Y": 854.170069385692
+      }
+    ],
+    "Annotations": [],
+    "X": 337.172795825295,
+    "Y": -488.545816249121,
+    "Zoom": 0.91218061722675
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "Uuid": "3c9d0464-8643-5ffe-96e5-ab1769818209",
+  "IsCustomNode": false,
+  "Description": "",
+  "Name": "GetDirectoryContents",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "613d1fdc74fd47d2a26056acb226f12b",
+      "Name": "Directory Path",
+      "Type": "string",
+      "Value": "C:\\Temp\\NewFolder",
+      "Description": "Allows you to select a directory on the system to get its path"
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "\"*.txt\";",
+      "Id": "e43d0ea9fd414c59a5c3d9a88508b1f2",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "117afe08f6b649328b783b51f0a3d1e0",
+          "Name": "",
+          "Description": "Value of expression at line 1",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows for DesignScript code to be authored directly"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.IO.FileSystem.GetDirectoryContents@var,string,bool",
+      "Id": "c4a0e85c00ab4cf8b01480771a21ffb9",
+      "Inputs": [
+        {
+          "Id": "a77f5e5d97014955bfab2b7535f39061",
+          "Name": "directory",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8c71fad42e4243babc5aa6aae75633d8",
+          "Name": "searchString",
+          "Description": "string\nDefault value : \"*.*\"",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "4893a10bec19406984a409fb6011d33a",
+          "Name": "includeSubdirectories",
+          "Description": "bool\nDefault value : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9f97ee5744ac424cab25390b5e4d9595",
+          "Name": "files",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "3ad7a4177b1d40eab684a31884f93a3a",
+          "Name": "directories",
+          "Description": "var",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "FileSystem.GetDirectoryContents (directory: var, searchString: string = \"*.*\", includeSubdirectories: bool = false): var[]..[]"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.Directory, CoreNodeModels",
+      "HintPath": "C:\\Temp\\NewFolder",
+      "InputValue": "C:\\Temp\\NewFolder",
+      "NodeType": "ExtensionNode",
+      "Id": "613d1fdc74fd47d2a26056acb226f12b",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7aa8ea8668bd42feb3936e35d19ed008",
+          "Name": "",
+          "Description": "Directory",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Allows you to select a directory on the system to get its path"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DirectoryObject, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "7bcd318db76c40ac846da99430b05d6e",
+      "Inputs": [
+        {
+          "Id": "3f33fbfe457747758f3c08beabd7a950",
+          "Name": "path",
+          "Description": "Path to the directory.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "9896cc93965944e8bb68e7516b9d223a",
+          "Name": "directory",
+          "Description": "Directory object.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Creates a directory object from a path"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "91e0507476934e948bd8546e4d1ce4dd",
+      "Inputs": [
+        {
+          "Id": "2df5a1c5762f4fdfb39e390a83b3a5e1",
+          "Name": "",
+          "Description": "Node to evaluate.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "d88f228be4584ba5b894bff75c96026e",
+          "Name": "",
+          "Description": "Watch contents.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Visualize the output of node."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "117afe08f6b649328b783b51f0a3d1e0",
+      "End": "8c71fad42e4243babc5aa6aae75633d8",
+      "Id": "d80eb89221884b31a45d97cc8196821b"
+    },
+    {
+      "Start": "9f97ee5744ac424cab25390b5e4d9595",
+      "End": "2df5a1c5762f4fdfb39e390a83b3a5e1",
+      "Id": "c3a7ba7eb7e64d889b21bae32d0d9310"
+    },
+    {
+      "Start": "7aa8ea8668bd42feb3936e35d19ed008",
+      "End": "3f33fbfe457747758f3c08beabd7a950",
+      "Id": "4216d5c9384c4c11a3428869e9246527"
+    },
+    {
+      "Start": "9896cc93965944e8bb68e7516b9d223a",
+      "End": "a77f5e5d97014955bfab2b7535f39061",
+      "Id": "b784771a62f2412db5fdee79921f2d1d"
+    }
+  ],
+  "Dependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.0.1.5055",
+      "RunType": "Automatic",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Background Preview",
+      "EyeX": -17.0,
+      "EyeY": 24.0,
+      "EyeZ": 50.0,
+      "LookX": 12.0,
+      "LookY": -13.0,
+      "LookZ": -58.0,
+      "UpX": 0.0,
+      "UpY": 1.0,
+      "UpZ": 0.0
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "e43d0ea9fd414c59a5c3d9a88508b1f2",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 626.074400658077,
+        "Y": 286.715461812496
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "FileSystem.GetDirectoryContents",
+        "Id": "c4a0e85c00ab4cf8b01480771a21ffb9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 761.196628611919,
+        "Y": 193.53397209998542
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory Path",
+        "Id": "613d1fdc74fd47d2a26056acb226f12b",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 353.08173858439835,
+        "Y": 193.53397209998542
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Directory.FromPath",
+        "Id": "7bcd318db76c40ac846da99430b05d6e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 546.39614543618654,
+        "Y": 193.53397209998542
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "91e0507476934e948bd8546e4d1ce4dd",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1104.2568866271718,
+        "Y": 193.53397209998542
+      }
+    ],
+    "Annotations": [],
+    "X": -164.98671489529806,
+    "Y": 70.33862054000258,
+    "Zoom": 0.93181152849833082
+  }
+}
