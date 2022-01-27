@@ -33,12 +33,12 @@ function Header(props){
         <div className='col-lg-12 col-md-12 col-sm-12 col-xs-12'
           style={{'display':'table', 'textAlign':'center', 'padding':'0px', 'height':'60px', left:'-25px'}}>
             <span className="title" style={{'fontSize':'18px', 'marginLeft':'15px'}}>
-            <a href="http://dynamobim.org/" target="_blank" rel="noopener noreferrer" style={{'display':'table-cell', 'width':'35px'}}>
+            <a href="https://dynamobim.org/" target="_blank" rel="noopener noreferrer" style={{'display':'table-cell', 'width':'35px'}}>
             <img src="images/src/icon.png" width="80%" id='dynamologo' alt="dynamoIcon" target="_blank" rel="noopener noreferrer" style={{"verticalAlign":"middle", "marginLeft":"0px", "marginTop":"-2px"}} />
             </a>
             <Link to='/' className='raleway' style={{'color':'white'}}>&nbsp; Dynamo Dictionary</Link>
-            <a href='http://dictionary.dynamobim.com/' className='raleway' style={{'color':'orangered'}}>&nbsp; 1.x</a>
-            <a href='http://dictionary.dynamobim.com/2' className='raleway' style={{'color':'orangered'}}>&nbsp; 2.x</a>
+            <a href='https://dictionary.dynamobim.com/' className='raleway' style={{'color':'orangered'}}>&nbsp; 1.x</a>
+            <a href='https://dictionary.dynamobim.com/2' className='raleway' style={{'color':'orangered'}}>&nbsp; 2.x</a>
             </span>
         </div>
         {

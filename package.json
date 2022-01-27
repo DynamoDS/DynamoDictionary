@@ -12,7 +12,7 @@
     "classnames": "^2.2.5",
     "d3": "^4.4.2",
     "eslint-config-react-app": "^5.2.1",
-    "jquery": "^3.1.1",
+    "jquery": "^3.6.0",
     "js-search": "^1.4.2",
     "lodash": "^4.17.21",
     "octokit": "^0.10.4",
@@ -36,7 +36,7 @@
     "test": "react-scripts test",
     "predeploy": "npm run build"
   },
-  "homepage": "http://dictionary.dynamobim.com/",
+  "homepage": "https://dictionary.dynamobim.com/",
   "browserslist": {
     "production": [
       ">0.2%",

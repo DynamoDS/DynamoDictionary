@@ -1,6 +1,6 @@
 # DynamoDictionary
 
-Live version here: http://dictionary.dynamobim.com
+Live version here: https://dictionary.dynamobim.com
 
 ## Installation
 
