@@ -6,7 +6,7 @@ function Home(props){
         <h1 className='raleway'>The Dynamo Dictionary</h1>
         <hr/>
         <p className="graytextlg" style={{"color":"lightgray"}}>Welcome to the Dynamo Dictionary, a searchable database for Dynamo functionality. Here you can find explanations for nodes, sample files, and links to more information on associated workflows. This site is constantly evolving as the community continues to add more information. Like the 
-          <a href="http://dynamoprimer.com/" target="_blank" rel="noopener noreferrer" style={{'color':'orangered'}}> Dynamo Primer</a>, 
+          <a href="https://dynamoprimer.com/" target="_blank" rel="noopener noreferrer" style={{'color':'orangered'}}> Dynamo Primer</a>, 
           this dictionary is open-source - check it out on our 
           <a href="https://github.com/DynamoDS/DynamoDictionary" target="_blank" rel="noopener noreferrer" style={{'color':'orangered'}} > Github page </a> 
           and contribute!</p>
@@ -26,21 +26,21 @@ function Home(props){
         <div className='iconSpread'>
             <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
-                    <a href='http://dynamobim.org/' target='_blank' rel="noopener noreferrer"><img alt='dynamo bim' src='images/home/dynamobim.jpg' width='100%' /> </a>
+                    <a href='https://dynamobim.org/' target='_blank' rel="noopener noreferrer"><img alt='dynamo bim' src='images/home/dynamobim.jpg' width='100%' /> </a>
                 </div>
-                <div className='text_over_imageL'><a href='http://dynamobim.org/' target='_blank' rel="noopener noreferrer">Community</a></div>
+                <div className='text_over_imageL'><a href='https://dynamobim.org/' target='_blank' rel="noopener noreferrer">Community</a></div>
             </div>
             <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
-                    <a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank' rel="noopener noreferrer"><img alt='dynamo studio' src='images/home/dynamostudio.jpg' width='100%' className='imgbutton' /> </a>
+                    <a href='https://www.autodesk.com/products/dynamo-studio/overview' target='_blank' rel="noopener noreferrer"><img alt='dynamo studio' src='images/home/dynamostudio.jpg' width='100%' className='imgbutton' /> </a>
                 </div>
-                <div className='text_over_imageR'><a href='http://www.autodesk.com/products/dynamo-studio/overview' target='_blank' rel="noopener noreferrer">Product</a></div>
+                <div className='text_over_imageR'><a href='https://www.autodesk.com/products/dynamo-studio/overview' target='_blank' rel="noopener noreferrer">Product</a></div>
             </div>
             <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
-                    <a href='http://dynamoprimer.com/' target='_blank' rel="noopener noreferrer"><img alt='dynamo primer' src='images/home/dynamoprimer.jpg' width='100%' /></a>
+                    <a href='httsp://dynamoprimer.com/' target='_blank' rel="noopener noreferrer"><img alt='dynamo primer' src='images/home/dynamoprimer.jpg' width='100%' /></a>
                 </div>
-                <div className='text_over_imageL'> <a href='http://dynamoprimer.com/' target='_blank' rel="noopener noreferrer">Learning</a></div>
+                <div className='text_over_imageL'> <a href='https://dynamoprimer.com/' target='_blank' rel="noopener noreferrer">Learning</a></div>
             </div>
             <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
