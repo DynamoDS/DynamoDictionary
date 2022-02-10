@@ -38,7 +38,7 @@ function Home(props){
             </div>
             <div className='imgHL col-md-3 col-xs-6'>
                 <div className='imgbutton'>
-                    <a href='httsp://dynamoprimer.com/' target='_blank' rel="noopener noreferrer"><img alt='dynamo primer' src='images/home/dynamoprimer.jpg' width='100%' /></a>
+                    <a href='https://dynamoprimer.com/' target='_blank' rel="noopener noreferrer"><img alt='dynamo primer' src='images/home/dynamoprimer.jpg' width='100%' /></a>
                 </div>
                 <div className='text_over_imageL'> <a href='https://dynamoprimer.com/' target='_blank' rel="noopener noreferrer">Learning</a></div>
             </div>
