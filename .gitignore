@@ -13,10 +13,12 @@ coverage
 # production
 build
 
+.npm-cache
+
 # misc
 .DS_Store
 .env
 npm-debug.log
-
+.npmrc
 node_modules
 configuration/*.json

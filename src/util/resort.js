@@ -1,4 +1,4 @@
-import _ from 'underscore';
+import _ from 'lodash';
 let resort = {};
 
 resort.removeDuplicates = function (data) {

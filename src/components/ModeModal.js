@@ -10,7 +10,7 @@ import {
   ModalTitle,
   ModalBody,
   ModalFooter
-} from 'react-modal-bootstrap';
+} from 'react-modal-bootstrap16';
 
 
 class ModeModal extends Component {

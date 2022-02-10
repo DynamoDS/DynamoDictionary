@@ -5,7 +5,7 @@
     - /EXAMPLES
     - Dynamo_Nodes_Documentation.json
     - Dynamo_Nodes_Revit.json   
-    - Revit_Library.xml 
+    - Node_Library.xml 
 ```
 
 The repository contains a *public* folder for all the data that can be exposed or globally accessed within the application.\
@@ -15,12 +15,12 @@ The data is parsed by the application into react components.
 
 The *public/data* directory consists of the following JSON and XML files:
 
-- **Revit_Library.xml**\
+- **Node_Library.xml**\
     This XML file contains the information regarding the hierarchy of all the nodes in the library in a nested format along with their input/output types, list icons and search tags.
 - **Dynamo_Nodes_Documentation.json**\
     This JSON file contains the metadata regarding all the general nodes used in Dynamo.
 - **Dynamo_Nodes_Revit.json**\
-    This JSON file contains the metadata regarding all the revit nodes used in Dynamo.
+    This JSON file contains the metadata regarding all the revit nodes used in Dynamo, it is later compiled into the Node_Library.xml file.
 
 The *public/data/EXAMPLES* directory consists of images and sample graphs related to all the nodes in the following structure:
 ```
@@ -140,11 +140,24 @@ It has 5 required keys:
 
 To manually add and document new nodes into the library, following steps are required:
 
-- Add the JSON object in Dynamo_Nodes_Documentation.json or Dynamo_Nodes_Revit.json depending upon the scope of the node to be added. (Refer [JSON Schema](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#json-schema-documentation-for-nodes))
-- Add the XML tags in the root node or append to the desired nested level if adding to an existing category. (Refer [XML Schema](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#xml-schema-documentation-for-library))
+- Add the JSON object in `Dynamo_Nodes_Documentation.json` if it is a Dynamo Node depending upon the scope of the node to be added. (Refer [JSON Schema](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#json-schema-documentation-for-nodes))
+- Add the XML tags in the root node or append to the desired nested level if adding to an existing category in `Node_Library.xml`. (Refer [XML Schema](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#xml-schema-documentation-for-library))
+- If the Nodes correspond to a specific host such as Revit, Civil3D, Alias etc. add the nodes in `Node_Library.xml` directly under a new section for the desired host, like the example below: 
+```
+<Category Name="Host-Name">
+    <Category Name="Node-1">
+        <Categtory  Name="Node-1">
+        <FullCategoryName>Host-Name.Node-1.Sub-Node</FullCategoryName>
+        <Name>Sub-Node</Name>
+            ...Refer XML Schema...
+        </Category>
+    </Category>
+</Categtory>
+```
 - Create folders in the *public/data/EXAMPLES* directory with the same name as the parent category and sub-categories, appropriately nested,\
-    create group folders (Create, Query or Action),\
-    create *dyn* and *img* folders and place .dyn files and images related to the node in them.(Refer [Folder Structure](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#folder-structure))
+    Create group folders (Create, Query or Action),\
+    Create `dyn` and `img` folders and place .dyn files and images related to the node in them. (Refer [Folder Structure](https://github.com/DynamoDS/DynamoDictionary_React/blob/master/public/data/README.md#folder-structure))\
+    Alternatively, images/files for host nodes can also be placed in `public/images/src/Resources`.
 
 It is important for the node to appear in the library correctly data that you update both the JSON and XML files along with creating the required folders.
 
