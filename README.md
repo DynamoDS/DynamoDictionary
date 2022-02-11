@@ -1,11 +1,12 @@
 # DynamoDictionary
 
-Live version here: http://dictionary.dynamobim.com
+Live version here: https://dictionary.dynamobim.com
 
 ## Installation
 
 - Node.js version 12 is required. [Download the installer here](https://nodejs.org) (or use [nvm](https://github.com/nvm-sh/nvm).)
 - Run `npm install` from the command line in the project root directory.
+- Note that the `project-lock.json` file has URLs that point to an Autodesk internal NPM mirror.  If you do not have access to that mirror, you will need to delete the `package-lock.json` before `npm install` will succeed.
 
 ## Run the Development Server
 - Run `npm start` from the command line in the project root directory.

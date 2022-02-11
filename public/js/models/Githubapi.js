@@ -51,7 +51,7 @@ function runSubmit(token, files, mainExampleFile, branchName, message, terminate
                 branchExists = true;
                 commitFiles(repo.getBranch(branchName));
             } else {
-                console.log('branch does not exist')
+                // console.log('branch does not exist')
                 var branch = repo.getBranch();
                 branch.createBranch(branchName)
                     .then(function (b) {
