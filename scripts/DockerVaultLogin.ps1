@@ -6,7 +6,7 @@ $ErrorActionPreference = "Stop"
 
 try
 {
-	docker exec $env:DOCKER_CONTAINER pwsh -command "$env:DOCKER_WORKSPACE\$env:COMMON_RESOURCES_DIR\scripts\VaultLogin.ps1 $env:ADS_USER_NAME $env:ADS_USER_PASSWORD"
+	docker exec $env:DOCKER_CONTAINER pwsh -command "$env:DOCKER_WORKSPACE\$env:COMMON_RESOURCES_DIR\scripts\VaultLogin.ps1 $env:SA_USERNAME $env:SA_PASSWORD"
 	
 	if($LASTEXITCODE -ne 0)
 	{
