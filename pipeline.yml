@@ -12,7 +12,12 @@ env:
   - DOCKER_CONTAINER : "build-dictionary"
   - URL_REPO_TOOLS : "https://github.com/DynamoDS/DynamoDictionary.git"
   - BRANCH_TOOLS : "cicdresources"
-
+jenkins_creds:
+  -
+    type: usernamePassword
+    credentialsId: common_service_account
+    username: SA_USERNAME
+    password: SA_PASSWORD
 timeout: 420
 check_changelog_updated_on_pr: false
 pipeline_os: "Windows"
