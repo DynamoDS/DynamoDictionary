@@ -40,11 +40,3 @@ soc2:
     hidden_email_list: dynamo_ws_access
     third_party_lib_paths:
       - "node_modules"
-
-deployment:
-  -
-      type: customized
-      scripts:
-          - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\DockerVaultLogin.ps1"
-          - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\DockerDeploy.ps1"
-          - "pwsh.exe -ExecutionPolicy ByPass -File .\\%COMMON_RESOURCES_DIR%\\scripts\\PostDeploy.ps1"
