@@ -18308,5 +18308,112 @@ value : bool = false</Description>
         </Dynamo.Search.SearchElements.ZeroTouchSearchElement>
       </Category>
     </Category>
+    <Category Name="Charts">
+      <Dynamo.Search.SearchElements.NodeModelSearchElement>
+        <FullCategoryName>Display.Charts</FullCategoryName>
+        <Name>Bar Chart</Name>
+        <Group>Create</Group>
+        <Description>Create a new Bar Chart.</Description>
+        <SearchTags>Charts.BarChart,Bar Chart,barchart</SearchTags>
+        <Inputs>
+          <InputParameter Name="labels" Tooltip="A list of labels for the bar chart categories." Type="List<string>" />
+          <InputParameter Name="values" Tooltip="A list of lists to supply values for the bars in each category." Type="List<List<double>>" />
+          <InputParameter Name="colors" Tooltip="A list of colors for each bar chart category." Type="List<color>" />
+        </Inputs>
+        <Outputs>
+          <OutputParameter Name="labels:values" Tooltip="Dictionary containing label:value key-pairs" Type="Dictionary<Label, Value>" />
+        </Outputs>
+        <SmallIcon>src\Resources\Display\SmallIcons\Display.Charts.BarChart.Small</SmallIcon>
+        <LargeIcon>src\Resources\Display\LargeIcons\Display.Charts.BarChart.Large</LargeIcon>
+      </Dynamo.Search.SearchElements.NodeModelSearchElement>
+      <Dynamo.Search.SearchElements.NodeModelSearchElement>
+        <FullCategoryName>Display.Charts</FullCategoryName>
+        <Name>Pie Chart</Name>
+        <Group>Create</Group>
+        <Description>Create a new Pie Chart.</Description>
+        <SearchTags>Charts.PieChart,Pie Chart,piechart</SearchTags>
+        <Inputs>
+          <InputParameter Name="labels" Tooltip="A list of string labels for each segment in the pie chart." Type="List<string>" />
+          <InputParameter Name="values" Tooltip="A list of double values to supply a value for each segment of the pie chart." Type="List<double>" />
+          <InputParameter Name="colors" Tooltip="A list of colors for each segment of the pie chart." Type="List<color>" />
+        </Inputs>
+        <Outputs>
+          <OutputParameter Name="labels:values" Tooltip="Dictionary containing label:value key-pairs" Type="Dictionary<Label, Value>" />
+        </Outputs>
+        <SmallIcon>src\Resources\Display\SmallIcons\Display.Charts.PieChart.Small</SmallIcon>
+        <LargeIcon>src\Resources\Display\LargeIcons\Display.Charts.PieChart.Large</LargeIcon>
+      </Dynamo.Search.SearchElements.NodeModelSearchElement>
+      <Dynamo.Search.SearchElements.NodeModelSearchElement>
+        <FullCategoryName>Display.Charts</FullCategoryName>
+        <Name>Heat Series Plot</Name>
+        <Group>Create</Group>
+        <Description>Create a new Heat Series Plot.</Description>
+        <SearchTags>Charts.HeatSeriesPlot,Heat Series Plot,heatseriesplot</SearchTags>
+        <Inputs>
+          <InputParameter Name="x-labels" Tooltip="A list of string labels for the x-axis." Type="List<string>" />
+          <InputParameter Name="y-labels" Tooltip="A list of string labels for the y-axis." Type="List<string>" />
+          <InputParameter Name="values" Tooltip="A list of lists each containing double values representing items in a column." Type="List<List<double>>" />
+          <InputParameter Name="colors" Tooltip="A list of colors used to generate a color range." Type="List<color>" />
+        </Inputs>
+        <Outputs>
+          <OutputParameter Name="labels:values" Tooltip="Dictionary containing label:value key-pairs" Type="Dictionary<Label, Value>" />
+        </Outputs>
+        <SmallIcon>src\Resources\Display\SmallIcons\Display.Charts.HeatedSeriesPlot.Small</SmallIcon>
+        <LargeIcon>src\Resources\Display\LargeIcons\Display.Charts.HeatedSeriesPlot.Large</LargeIcon>
+      </Dynamo.Search.SearchElements.NodeModelSearchElement>
+      <Dynamo.Search.SearchElements.NodeModelSearchElement>
+        <FullCategoryName>Display.Charts</FullCategoryName>
+        <Name>Index-Value Line Plot</Name>
+        <Group>Create</Group>
+        <Description>Create a new Index-Value Line Plot.</Description>
+        <SearchTags>Charts.Index-ValueLinePlot,Index Value Line Plot,indexvaluelineplot,indexvalue</SearchTags>
+        <Inputs>
+          <InputParameter Name="labels" Tooltip="A list of string labels for each line to be plotted." Type="List<string>" />
+          <InputParameter Name="values" Tooltip="List of lists each containing double values to be plotted against X-Axis values." Type="List<List<double>>" />
+          <InputParameter Name="colors" Tooltip="A list of colors for each line." Type="List<color>" />
+        </Inputs>
+        <Outputs>
+          <OutputParameter Name="labels:values" Tooltip="Dictionary containing label:value key-pairs" Type="Dictionary<Label, Value>" />
+        </Outputs>
+        <SmallIcon>src\Resources\Display\SmallIcons\Display.Charts.IndexValuePlot.Small</SmallIcon>
+        <LargeIcon>src\Resources\Display\LargeIcons\Display.Charts.IndexValuePlot.Large</LargeIcon>
+      </Dynamo.Search.SearchElements.NodeModelSearchElement>
+      <Dynamo.Search.SearchElements.NodeModelSearchElement>
+        <FullCategoryName>Display.Charts</FullCategoryName>
+        <Name>Scatter Plot</Name>
+        <Group>Create</Group>
+        <Description>Create a Scatter Plot.</Description>
+        <SearchTags>Charts.ScatterPlot,Scatter Plot,scatterplot</SearchTags>
+        <Inputs>
+          <InputParameter Name="labels" Tooltip="A list of string labels for each group of points to be plotted." Type="List<string>" />
+          <InputParameter Name="x-values" Tooltip="A list of lists each containing double values representing x-coordinates." Type="List<List<double>>" />
+          <InputParameter Name="y-values" Tooltip="A list of lists each containing double values representing y-coordinates." Type="List<List<double>>" />
+          <InputParameter Name="colors" Tooltip="A list of colors for each group of points." Type="List<color>" />
+        </Inputs>
+        <Outputs>
+          <OutputParameter Name="labels:values" Tooltip="Dictionary containing label:value key-pairs" Type="Dictionary<Label, Value>" />
+        </Outputs>
+        <SmallIcon>src\Resources\Display\SmallIcons\Display.Charts.ScartterPlot.Small</SmallIcon>
+        <LargeIcon>src\Resources\Display\LargeIcons\Display.Charts.ScartterPlot.Large</LargeIcon>
+      </Dynamo.Search.SearchElements.NodeModelSearchElement>
+      <Dynamo.Search.SearchElements.NodeModelSearchElement>
+        <FullCategoryName>Display.Charts</FullCategoryName>
+        <Name>XY Line Plot</Name>
+        <Group>Create</Group>
+        <Description>Create a XY line plot.</Description>
+        <SearchTags>Charts.ScatterPlot,Scatter Plot,scatterplot</SearchTags>
+        <Inputs>
+          <InputParameter Name="labels" Tooltip="A list of string labels for each line to be plotted." Type="List<string>" />
+          <InputParameter Name="x-values" Tooltip="A list of lists each containing double values representing x-coordinates for each point in a line." Type="List<List<double>>" />
+          <InputParameter Name="y-values" Tooltip="A list of lists each containing double values representing y-coordinates for each point in a line." Type="List<List<double>>" />
+          <InputParameter Name="colors" Tooltip="A list of colors for each line in the line plot." Type="List<color>" />
+        </Inputs>
+        <Outputs>
+          <OutputParameter Name="labels:values" Tooltip="Dictionary containing label:value key-pairs" Type="Dictionary<Label, Value>" />
+        </Outputs>
+        <SmallIcon>src\Resources\Display\SmallIcons\Display.Charts.XYLinePlot.Small</SmallIcon>
+        <LargeIcon>src\Resources\Display\LargeIcons\Display.Charts.XYLinePlot.Large</LargeIcon>
+      </Dynamo.Search.SearchElements.NodeModelSearchElement>
+    </Category>
   </Category>
 </LibraryTree>
