@@ -33,6 +33,7 @@ build:
 soc2:
   run_on_any_branch : true
   harmony:
+    product_name: Dynamo
     hidden_email_list: dynamo_ws_access
     repository: env.HARMONY_REPO
     third_party_lib_paths:
