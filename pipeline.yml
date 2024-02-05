@@ -20,7 +20,7 @@ pipeline_os: "Windows"
 force_slack_notification : true
 
 schedule:
-  cron_schedule: "once_a_month"
+  cron_schedule: "once_a_week"
 
 build:
   -
